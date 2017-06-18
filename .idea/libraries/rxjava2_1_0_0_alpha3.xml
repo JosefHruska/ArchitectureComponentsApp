@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="rxjava2-1.0.0-alpha3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/be5cd9620cdfa0ed57a63fac0bc09e1eeb976891/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/be5cd9620cdfa0ed57a63fac0bc09e1eeb976891/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/rxjava2/1.0.0-alpha3/ea2f32b796963fafd92222a052a5f93d35fb62fa/rxjava2-1.0.0-alpha3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
