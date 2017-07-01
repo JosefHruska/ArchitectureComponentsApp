@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="member_name_max_length">20</integer>
+    <integer name="transaction_name_max_length">30</integer>
+    <integer name="group_name_max_length">15</integer> <!-- maximum which is looking good in tabbar on small phones -->
+    <integer name="bank_account_name_length">24</integer>
+</resources>

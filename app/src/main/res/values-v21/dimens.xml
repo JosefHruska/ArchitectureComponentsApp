@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Margin of Card Views should be 8dp. However, Card Views on API < 21 draws shadow effect which took 2dp-->
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="horizontal_content_padding">64dp</dimen>
+    <dimen name="horizontal_content_margin">20dp</dimen>
+</resources>

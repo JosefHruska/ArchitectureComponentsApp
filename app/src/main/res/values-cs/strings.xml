@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="about">O aplikaci</string>
+    <string name="ad_explanation">Prosím shlédněte reklamu, která podporuje rozvoj Settle Up.</string>
+    <string name="ad_title">Výdaj byl přidán</string>
+    <string name="photo">Fotka</string>
+    <string name="add_receipt_photo">Přidat fotku účtenky</string>
+    <string name="adding_receipts">Přidávání fotek účtenek</string>
+    <string name="allow_editing">Umožnit editaci</string>
+    <string name="amount_left_to_distribute">Zbývá rozdělit %s</string>
+    <string name="anonymous">Anonym</string>
+    <string name="anyone_can_join">Kdo má odkaz, může se připojit ke skupině</string>
+    <string name="anyone_can_pay"><![CDATA[<b>Kdokoliv</b> může platit]]></string>
+    <string name="bank_account">Bankovní spojení</string>
+    <string name="basic">Basic</string>
+    <string name="basic_explanation">Basic plán je zadarmo a obsahuje všechny potřebné funkce. Občas po přidání nového výdaje uvidíte reklamu.</string>
+    <string name="basic_plan_active">Basic plán je aktivní</string>
+    <string name="cancel_subscription">Zrušit předplatné</string>
+    <string name="cant_delete_involved_member">Tohoto člena nemůžete smazat, protože je součástí některých plateb. Níže můžete vypnout zobrazování člena v nových platbách.</string>
+    <string name="cant_delete_last_member">Posledního člena ve skupině nelze smazat. Vlastník může smazat celou skupinu v menu Upravit skupinu.</string>
+    <string name="cant_join_group_offline">Pro připojení ke skupině se nejdříve připojte k internetu</string>
+    <string name="cant_leave_group_warning">Nemůžete opustit skupinu. Nejdříve převeďte vlastnictví nebo skupinu smažte.</string>
+    <string name="cant_share_nearby_offline_warning">Pro sdílení skupiny v okolí se musíte připojit k internetu</string>
+    <string name="cant_sign_in_offline">Pro přihlášení se nejdříve připojte k internetu</string>
+    <string name="cant_sign_out_offline">Pro odhlášení se nejdříve připojte k internetu</string>
+    <string name="change_plan_save_money">Ušetřete s ročním plánem</string>
+    <string name="changing_group_currency">Probíhá změna měny skupiny…</string>
+    <string name="choose_email_app">Vyberte emailovou aplikaci</string>
+    <string name="choose_from_gallery">Vybrat z galerie</string>
+    <string name="confirm_all_transactions_deleting">Pro smazání všech plateb zadejte jméno skupiny. Platby budou nenávratně smazány.</string>
+    <string name="confirm_group_deleting">Zadejte jméno skupiny pro její smazání. Skupina bude nenávratně smazána.</string>
+    <string name="confirm_group_leaving">Zadejte jméno skupiny pro její opuštění. Pokud vás některý z členů pozve, můžete se připojit znovu.</string>
+    <string name="continue_with_ad">Pokračovat s reklamou</string>
+    <string name="convert_debt_to_single_currency">Měna pro dluhy ve skupině</string>
+    <string name="create_group">Vytvořit skupinu</string>
+    <string name="create_new_group">Vytvořit skupinu</string>
+    <string name="create_new_member">Vytvořit člena</string>
+    <string name="create_new_member_hint">Napište jméno člena</string>
+    <string name="creating_group">Vytváření skupiny…</string>
+    <string name="current_exchange_rate">Aktuální směnný kurz</string>
+    <string name="date_and_time"><![CDATA[Datum & čas]]></string>
+    <string name="debt_settlement">Vyrovnání dluhu</string>
+    <string name="default_weight">Výchozí váha</string>
+    <string name="default_weight_help">Výchozí váha je vhodná pro páry a rodiny, které fungují jako samostatná finanční jednotka a neřeší mezi sebou peníze.\nPříklad: Ve skupině tří členů má jeden člen váhu 2. To znamená, že výdaje budou vždy rozděleny v poměru 1:1:2.</string>
+    <string name="delete">Smazat</string>
+    <string name="delete_all_transactions">Smazat všechny platby</string>
+    <string name="delete_group">Smazat skupinu</string>
+    <string name="delete_member_message">Přejete si odebrat tohoto člena?</string>
+    <string name="delete_photo">Smazat fotku</string>
+    <string name="delete_receipt_message">Přejete si smazat tuto účtenku?</string>
+    <string name="delete_transaction_message">Přejete si smazat tuto platbu?</string>
+    <string name="deleting_group">Mazání skupiny…</string>
+    <string name="deleting_transactions">Mazání plateb…</string>
+    <string name="desc_backspace">Backspace</string>
+    <string name="desc_calculator">Kalkulačka</string>
+    <string name="desc_change_photo">Změnit fotku</string>
+    <string name="desc_close_drawer">Zavřít levé menu</string>
+    <string name="desc_decimal_point">Desetinná čárka</string>
+    <string name="desc_group_color">Barva skupiny</string>
+    <string name="desc_open_drawer">Otevřít levé menu</string>
+    <string name="desc_permission_popup_menu">Změna oprávnění</string>
+    <string name="desc_previous">Předchozí</string>
+    <string name="discard">Zahodit</string>
+    <string name="discard_edited_transaction_message">Přejete si zahodit změny v této platbě?</string>
+    <string name="discard_new_transaction_message">Přejete si zahodit tuto platbu?</string>
+    <string name="discount"><![CDATA[Sleva <b>%d%%</b>]]></string>
+    <string name="done">Hotovo</string>
+    <string name="edit_group">Upravit skupinu</string>
+    <string name="edit_transactions_and_members">Mohou měnit platby &amp; členy</string>
+    <string name="exchange_rate_date">Směnný kurz z %s</string>
+    <string name="expense">Výdaj</string>
+    <string name="expenses">Výdaje</string>
+    <string name="extra_colors">Více barev skupin</string>
+    <string name="finish">Dokončit</string>
+    <string name="fixed_exchange_rate">Fixní směnný kurz</string>
+    <string name="for_whom">Za koho</string>
+    <string name="for_whom_title">Za koho?</string>
+    <string name="get_premium">Získejte Premium</string>
+    <string name="gift_plan_active">Váš Premium plán za odměnu je platný do %s</string>
+    <string name="group_name">Název skupiny</string>
+    <string name="group_owner">Vlastník skupiny</string>
+    <string name="groups_upgraded_description">Nejaktivnější skupiny z předchozí verze Settle Up byly převedeny. Pokud chcete používat některé starší skupiny, naleznete je v levém menu pod \"Moje skupiny\".</string>
+    <string name="groups_upgraded_title">Převod skupin dokončen</string>
+    <string name="history">Historie</string>
+    <string name="how_much_title">Kolik?</string>
+    <string name="how_to_activate_basic">Pro aktivaci je nutné zrušit vaše předplatné v Obchodu Play</string>
+    <string name="include_in_new_transactions">Zobrazovat tohoto člena v nových platbách</string>
+    <string name="individual_amount_larger_than_total">Zadali jste o %s více v jednotlivých částkách než je celková částka</string>
+    <string name="invalid_amount">Částka nemůže být 0, nebo jste zadali neplatný výraz</string>
+    <string name="invalid_expression">Neplatný výraz</string>
+    <string name="invite_description">Každý bude moci přidávat výdaje ze svého zařízení</string>
+    <string name="invite_link_description">Klikněte na odkaz pro připojení se ke skupině</string>
+    <string name="invite_link_title">Skupina \'%s\' v Settle Up</string>
+    <string name="invite_your_friends">Pozvěte Vaše přátele</string>
+    <string name="join_group">Připojit se ke skupině</string>
+    <string name="join_nearby_group">Připojit se ke skupině v okolí</string>
+    <string name="join_nearby_help">Probíhá vyhledávání skupin v okolí. Ujistěte se, že někdo sdílí skupinu v okolí ve své aplikaci.</string>
+    <string name="join_nearby_offline_warning">Pro připojení ke skupinám v okolí se připojte k internetu</string>
+    <string name="joining_group">Probíhá připojování ke skupině…</string>
+    <string name="joining_link_disabled">Připojování ke skupině přes odkaz je zakázáno</string>
+    <string name="joining_via_link">Připojování přes odkaz</string>
+    <string name="keep">Ponechat</string>
+    <string name="leave_group">Opustit skupinu</string>
+    <string name="leaving_group">Probíhá opuštění skupiny…</string>
+    <string name="legacy_groups">Skupiny ze staré verze</string>
+    <string name="link_disabled_error">Připojování ke skupině přes odkaz je zakázáno. Kontaktujte vlastníka skupiny, aby to povolil.</string>
+    <string name="loading_ad">Probíhá načítání reklamy…</string>
+    <string name="make_read_only">Omezit pouze pro čtení</string>
+    <string name="member_deleted">Člen byl smazán</string>
+    <string name="member_paid_for"><![CDATA[<b>%s</b> platil(a) za]]></string>
+    <string name="member_sent_to"><![CDATA[<b>%s</b> převedl(a)]]></string>
+    <string name="members">Členové</string>
+    <string name="members_spent">Členové utratili</string>
+    <string name="minimize_debts">Minimalizovat počet dluhů</string>
+    <string name="minimize_debts_help">Minimalizace dluhů snižuje počet převodů mezi členy. Může se ovšem stát, že členové budou dlužit někomu, kdo za ně přímo neplatil. Pokud vám to vadí, vypněte minimalizaci.</string>
+    <string name="missing_member">Chybějící člen</string>
+    <string name="monthly_plan_active">Váš měsíční plán je aktivní</string>
+    <string name="monthly_price">%s za měsíc</string>
+    <string name="more_colors_available_premium">+%s více barev v Premium plánu</string>
+    <string name="more_members_paid">Víc členů</string>
+    <string name="multiple_members">Více členů</string>
+    <string name="my_color">Moje barva</string>
+    <string name="my_groups">Moje skupiny</string>
+    <string name="name">Jméno</string>
+    <string name="nearby_error">Nezdařilo se připojit k zařízením v okolí. Ověřte, že je Vaše zařízení připojeno k internetu.</string>
+    <string name="new_content_1">Přepracovaná a intuitivnější aplikace</string>
+    <string name="new_content_10">Přihlášení přes Google, Facebook nebo email</string>
+    <string name="new_content_11">Přístup pouze pro čtení</string>
+    <string name="new_content_2">Jednoduché sdílení skupin přes odkaz</string>
+    <string name="new_content_3">Dluhy v jedné měně zadarmo</string>
+    <string name="new_content_4">Různé barvy skupin</string>
+    <string name="new_content_5">Synchronizace fotek účtenek</string>
+    <string name="new_content_6">Kalkulačka v zadávání plateb</string>
+    <string name="new_content_7">Přehled dluhů ve všech skupinách</string>
+    <string name="new_content_8">Filtrování plateb zadarmo</string>
+    <string name="new_content_9">Obrázky členů</string>
+    <string name="new_member">Nový člen</string>
+    <string name="next">Další</string>
+    <string name="no_ads">Bez reklam</string>
+    <string name="no_debts">Bez dluhů</string>
+    <string name="no_groups_description">Tato aplikace je postavená na skupinách.\nKliknutím na odkaz, který jste dostali od přátel, se připojíte ke skupině \n\n\nnebo</string>
+    <string name="no_groups_title">Začněme</string>
+    <string name="no_recent_activity">Ve Vašich skupinách není žádná aktivita</string>
+    <string name="offline_warning">Tato akce není možná bez internetu</string>
+    <string name="onboarding_header_one">Máte s přáteli společné výdaje?</string>
+    <string name="onboarding_header_three">Pořádek dělá přátele</string>
+    <string name="onboarding_header_two">Osvoboďte peněženku od účtenek</string>
+    <string name="onboarding_subheader_one">Settle Up spravuje výdaje vaší party - hodí se cestovatelům, spolubydlícím i dalším.</string>
+    <string name="onboarding_subheader_three">Už žádné dohadování při placení. Settle Up ukáže, kdo má platit, a snižuje počet převodů.</string>
+    <string name="onboarding_subheader_two">Všechny výdaje jsou zálohovány\na každý ve skupině je uvidí.</string>
+    <string name="one_member_warning">Pro přidávání plateb potřebujete alespoň dva členy.\n\nChcete si vést osobní výdaje? Zkuste aplikaci Wallet od našich přátel.</string>
+    <string name="other">Jiná měna</string>
+    <string name="overview">Přehled</string>
+    <string name="owner_only_warning">Toto může měnit jenom vlastník skupiny (%s)</string>
+    <string name="permissions">Oprávnění</string>
+    <string name="plans">Plány</string>
+    <string name="premium_expiration_explanation">Premium plán je bez reklam, budete moci nahrávat fotky účtenek a získáte barvy navíc</string>
+    <string name="premium">Premium</string>
+    <string name="premium_expiration_title">Váš Premium plán vypršel</string>
+    <string name="preparing_photo">Probíhá zpracování fotky…</string>
+    <string name="preparing_receipt">Probíhá zpracování účtenky…</string>
+    <string name="purpose">Za co</string>
+    <string name="purpose_hint">např. %s</string>
+    <string name="read_only_access">Přístup pouze pro čtení</string>
+    <string name="receipt_deleted">Účtenka byla smazána</string>
+    <string name="receipt_photo">Fotka účtenky</string>
+    <string name="receipt_photo_being_uploaded">Fotka účtenky se nahrává</string>
+    <string name="recent_activity">Poslední aktivita</string>
+    <string name="remove">Odebrat</string>
+    <string name="remove_ads">Odebrat reklamy</string>
+    <string name="remove_from_group">Odebrat ze skupiny</string>
+    <string name="remove_permission">Odebrat oprávnění</string>
+    <string name="removing_group">Probíhá odebrání skupiny…</string>
+    <string name="sample_purpose_1">Vepřo-knedlo-zelo</string>
+    <string name="sample_purpose_10">15 zelených</string>
+    <string name="sample_purpose_2">Maso na grilovačku</string>
+    <string name="sample_purpose_3">Kino s holkama</string>
+    <string name="sample_purpose_4">Svíčková U Švejka</string>
+    <string name="sample_purpose_5">Penzion Šumava</string>
+    <string name="sample_purpose_6">Taxi na letiště</string>
+    <string name="sample_purpose_7">Popracovní pivo</string>
+    <string name="sample_purpose_8">Kapr a salát</string>
+    <string name="sample_purpose_9">Vlak do Brna</string>
+    <string name="save">Uložit</string>
+    <string name="saving_transaction">Probíhá ukládání platby…</string>
+    <string name="search_currencies">Vyhledat měny</string>
+    <string name="search_results_empty_state">Žádné výsledky</string>
+    <string name="search_transactions">Vyhledat platby</string>
+    <string name="select_all">Vybrat vše</string>
+    <string name="select_none">Odznačit vše</string>
+    <string name="send_feedback">Poslat zpětnou vazbu</string>
+    <string name="settle_debt">Vyrovnat dluh</string>
+    <string name="settle_debts">Vyrovnat dluhy</string>
+    <string name="share_group">Sdílet skupinu</string>
+    <string name="share_group_description">Po kliknutí na odkaz uvidí Vaši přátelé platby a dluhy anonymně na webu. Potom se mohou připojit ke skupině.</string>
+    <string name="share_link">Sdílet odkaz</string>
+    <string name="share_link_chooser">Sdílet odkaz přes:</string>
+    <string name="share_nearby">Sdílet do okolí</string>
+    <string name="share_nearby_help">Probíhá sdílení skupiny do okolí. Ostatní se mohou připojit z levého menu v aplikaci.</string>
+    <string name="show_all">Ukázat vše</string>
+    <string name="show_groups">Moje skupiny</string>
+    <string name="sign_in">Přihlásit se</string>
+    <string name="sign_out">Odhlásit se</string>
+    <string name="signing_out">Probíhá odhlašování…</string>
+    <string name="simple_split">Jednoduché rozdělení</string>
+    <string name="skip">Přeskočit</string>
+    <string name="somebody">Někdo</string>
+    <string name="somebody_added_expense"><![CDATA[<b>%1$s</b> přidal(a) výdaj: <b>%2$s</b>]]></string>
+    <string name="somebody_added_expense_no_purpose"><![CDATA[<b>%1$s</b> přidal(a) výdaj]]></string>
+    <string name="somebody_added_member"><![CDATA[<b>%1$s</b> přidal(a) člena: <b>%2$s</b>]]></string>
+    <string name="somebody_added_transfer"><![CDATA[<b>%1$s</b>přidal(a) převod: <b>%2$s</b>]]></string>
+    <string name="somebody_changed_expense"><![CDATA[<b>%1$s</b> změnil(a) výdaj: <b>%2$s</b>]]></string>
+    <string name="somebody_changed_expense_no_purpose"><![CDATA[<b>%1$s</b> změnil(a) výdaj]]></string>
+    <string name="somebody_changed_group_currency"><![CDATA[<b>%1$s</b> změnil(a) měnu skupiny na <b>%2$s</b>]]></string>
+    <string name="somebody_changed_member"><![CDATA[<b>%1$s</b> změnil(a) člena: <b>%2$s</b>]]></string>
+    <string name="somebody_changed_transfer"><![CDATA[<b>%1$s</b> změnil(a) převod: <b>%2$s</b>]]></string>
+    <string name="somebody_deleted_all_transactions"><![CDATA[<b>%1$s</b> smazal(a) všechny platby]]></string>
+    <string name="somebody_joined_group"><![CDATA[<b>%1$s</b> se připojil(a) ke skupině]]></string>
+    <string name="somebody_left_group"><![CDATA[<b>%1$s</b> opustil(a) skupinu]]></string>
+    <string name="somebody_removed_expense"><![CDATA[<b>%1$s</b> smazal(a) výdaj: <b>%2$s</b>]]></string>
+    <string name="somebody_removed_expense_no_purpose"><![CDATA[<b>%1$s</b> smazal(a) výdaj]]></string>
+    <string name="somebody_removed_member"><![CDATA[<b>%1$s</b> smazal(a) člena: <b>%2$s</b>]]></string>
+    <string name="somebody_removed_transfer"><![CDATA[<b>%1$s</b> smazal(a) převod: <b>%2$s</b>]]></string>
+    <string name="something_went_wrong">Něco se pokazilo</string>
+    <string name="split_by_amounts">Rozdělení částkami</string>
+    <string name="split_by_weights">Rozdělení vahami</string>
+    <string name="split_evenly">Rovnoměrné rozdělení</string>
+    <string name="statistics_text"><![CDATA[Settle Up má <b>%1$s</b> uživatelů, kteří vytvořili <b>%2$s</b> skupin se svými přáteli. Každý uživatel je součástí průměrně <b>%3$s</b> skupin.]]></string>
+    <string name="step_continue">Pokračovat</string>
+    <string name="summary">Shrnutí</string>
+    <string name="summary_premium_ad">Fotky účtenek lze přidávat v Premium plánu</string>
+    <string name="switch_to_monthly">Přepnout na měsíční plán</string>
+    <string name="switch_to_single">Jeden platící</string>
+    <string name="take_picture">Vyfotit</string>
+    <string name="this_is_me">To jsem já</string>
+    <string name="this_member_doesnt_exist_anymore">Tento člen už neexistuje</string>
+    <string name="this_transaction_doesnt_exist_anymore">Tato platba už neexistuje</string>
+    <string name="timeout_warning">Operaci se nepodařilo dokončit. Zkuste to později.</string>
+    <string name="today_exchange_rate">Dnešní směnný kurz</string>
+    <string name="total_paid">Utraceno celkem</string>
+    <string name="transaction_deleted">Platba byla smazána</string>
+    <string name="transactions">Platby</string>
+    <string name="transactions_empty_state">Zatím žádné platby</string>
+    <string name="transactions_read_only_warning">V režimu pro čtení nemůžete přidávat nové platby</string>
+    <string name="transfer">Převod</string>
+    <string name="transfer_between">Převod mezi</string>
+    <string name="transfer_from">Převod od:</string>
+    <string name="transfer_ownership">Převést vlastnictví</string>
+    <string name="transfer_to">Převod komu:</string>
+    <string name="update_description">Přepracovali jsme Vaši oblíbenou aplikaci. Nyní je hezčí a intuitivnější.</string>
+    <string name="update_title">Vítejte v novém Settle Up</string>
+    <string name="upgrade">Převést</string>
+    <string name="upgrading_group">Probíhá převod skupiny…</string>
+    <string name="upgrading_groups">Probíhá převod Vašich skupin…</string>
+    <string name="uploading">Probíhá nahrávání…</string>
+    <string name="view_receipt_photo">Zobrazit fotku účtenky</string>
+    <string name="what_does_it_mean">Co to znamená?</string>
+    <string name="what_is_new">Co je nového?</string>
+    <string name="who_are_you">Kdo jste?</string>
+    <string name="who_paid">Kdo platil</string>
+    <string name="who_paid_title">Kdo platil?</string>
+    <string name="who_should_pay"><![CDATA[<b>%s</b> má platit]]></string>
+    <string name="yearly_plan_active">Váš roční plán je aktivní</string>
+    <string name="yearly_price">%s ročně</string>
+    <string name="your_first_group">Vaše první skupina</string>
+    <string name="zero_payers">Je nutné zvolit alespoň jednoho platícího</string>
+    <string name="lose_access">Ztratit přístup</string>
+    <string name="removing_legacy_group_warning">Pokud odeberete skupinu ze staré verze, ztratíte k ní navždy přístup.</string>
+    <string name="somebody_upgraded_group"><![CDATA[<b>%1$s</b> převedl skupinu ze staré verze]]></string>
+    <string name="verifying_purchase">Ověřování nákupu…</string>
+    <plurals name="activities_to_be_synced">
+        <item quantity="one">aktivita čekající na synchronizaci</item>
+        <item quantity="few">aktivity čekající na synchronizaci</item>
+        <item quantity="other">aktivit čekajících na synchronizaci</item>
+    </plurals>
+    <plurals name="member">
+        <item quantity="one">%s člen</item>
+        <item quantity="few">%s členové</item>
+        <item quantity="other">%s členů</item>
+    </plurals>
+    <plurals name="expense">
+        <item quantity="one">%s výdaj</item>
+        <item quantity="few">%s výdaje</item>
+        <item quantity="other">%s výdajů</item>
+    </plurals>
+    <plurals name="number_of_changes">
+        <item quantity="one">%d změna</item>
+        <item quantity="few">%d změny</item>
+        <item quantity="other">%d změn</item>
+    </plurals>
+    <string name="desc_from">Od</string>
+    <string name="desc_to">Pro</string>
+    <string name="desc_multiply">Krát</string>
+    <string name="desc_minus">Mínus</string>
+    <string name="desc_equals">Rovná se</string>
+    <string name="desc_divide">Děleno</string>
+    <string name="report">Nahlásit</string>
+    <string name="feedback_email_subject">Settle Up: Zpětná vazba</string>
+    <string name="error_email_subject">Settle Up Chyba</string>
+    <string name="error_email_body">Co jste dělali předtím, než chyba nastala?\n\n\n</string>
+    <string name="add_member">Přidat člena</string>
+    <string name="transaction_added"><![CDATA[Přidána platba <b>%s</b>]]></string>
+    <string name="transaction_changed"><![CDATA[Změněna platba <b>%s</b>]]></string>
+    <string name="transaction_removed"><![CDATA[Odebrána platba <b>%s</b>]]></string>
+    <string name="member_added"><![CDATA[Přidán člen <b>%s</b>]]></string>
+    <string name="member_changed"><![CDATA[Změněn člen <b>%s</b>]]></string>
+    <string name="member_removed"><![CDATA[Odebrán člen <b>%s</b>]]></string>
+    <string name="purchase_failed">Nákup nebyl dokončen</string>
+    <string name="upgrading_your_account">Probíhá převod Vašeho účtu…</string>
+    <string name="what_is_premium">Co to je Premium?</string>
+    <string name="ok_thanks">Dobře, díky</string>
+    <string name="premium_reward_gift_title">Máme pro Vás dárek</string>
+    <string name="premium_reward_subscription_title">Vítejte v Premium plánu</string>
+    <string name="premium_reward_new"><![CDATA[Získáváte <b>%s Premium plánu</b> na vyzkoušení všech funkcí]]></string>
+    <string name="premium_reward_legacy_update"><![CDATA[Získáváte <b>%s Premium plánu</b> protože jste věrný uživatel aplikace Dlužníček (od teď už pouze Settle Up)]]></string>
+    <string name="premium_reward_legacy_subscription">Děkujeme za placení předplatného ve staré verzi! Užijte si všechny funkce odemknuté</string>
+    <string name="premium_reward_legacy_vip"><![CDATA[Získáváte <b>%s Premium plánu</b> za pomoc v minulosti]]></string>
+    <plurals name="day_count">
+        <item quantity="one">%d den</item>
+        <item quantity="few">%d dny</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="month_count">
+        <item quantity="one">%d měsíc</item>
+        <item quantity="few">%d měsíce</item>
+        <item quantity="other">%d měsíců</item>
+    </plurals>
+    <string name="change_empty_state">Zatím žádné aktivity</string>
+    <string name="sign_in_failed">Přihlášení se nezdařilo</string>
+    <string name="progress_dialog_loading" translation_description="Loading text in dialog">Načítání…</string>
+    <string name="sign_in_default" translation_description="Button text to sign in">Přihlásit</string>
+    <string name="general_error" translation_description="Toast text flashing general error">Nastala chyba.</string>
+    <string name="next_default" translation_description="Button text to continue">Další</string>
+    <string name="email_hint" translation_description="Hint in email input field">E-mail</string>
+    <string name="password_hint" translation_description="Hint for password input field">Heslo</string>
+    <string name="required_field" translation_description="Inline error for required field">Toto pole nemůže být prázné.</string>
+    <string name="invalid_email_address" translation_description="Inline error for invalid email address">E-mailová adresa není validní</string>
+    <string name="missing_email_address" translation_description="Inline error for empty email address in input field">Pro pokračování zadejte e-mailovou adresu</string>
+    <string name="progress_dialog_checking_accounts" translation_description="Progress dialog text while checking for existing accounts">Kontrola existujících účtů…</string>
+    <string name="title_register_email" translation_description="Title for signup form">Zaregistrovat</string>
+    <string name="name_hint" translation_description="Hint for last name input field">Jméno &amp; příjmení</string>
+    <string name="button_text_save" translation_description="Button text to save input form">Uložit</string>
+    <string name="progress_dialog_signing_up" translation_description="Dialog text while waiting for server's signup response">Probíhá registrace…</string>
+    <plurals name="error_weak_password" translation_description="Inline error for weak password">
+        <item quantity="one" translation_description="Inline error for weak password">Heslo není dost silné. Použijte minimálně %1$d znak.</item>
+        <item quantity="few">Heslo není dost silné. Použijte minimálně %1$d znaky.</item>
+        <item quantity="other" translation_description="Inline error for weak password">Heslo není dost silné. Použijte minimálně %1$d znaků.</item>
+    </plurals>
+    <string name="email_account_creation_error" translation_description="Inline error for signup failure">Registrace se nezdařila</string>
+    <string name="error_user_collision" translation_description="Inline error when user signs up using an existing email account">Pro tento e-mail už existuje účet.</string>
+    <string name="welcome_back_idp_header" translation_description="Inline subtitle to users whose signup was interrupted since an existing account was detected">Už máte účet</string>
+    <string name="welcome_back_email_header" translation_description="Message for returning users">Vítejte zpět!</string>
+    <string name="welcome_back_idp_prompt" translation_description="Message to users that need to sign in using existing IDP accounts">
+        Už u nás máte účet <xliff:g id="email_addr" example="jane.doe@example.com" translation_description="">%1$s</xliff:g>.
+        Přihlaste se pomocí <xliff:g id="provider_name" example="Google" translation_description="">%2$s</xliff:g>.
+    </string>
+    <string name="welcome_back_password_prompt_body" translation_description="Message to users that need to sign in using existing email accounts">
+        Už jste použil(a) účet <xliff:g id="email_addr" example="jane.doe@example.com" translation_description="">%1$s</xliff:g>
+        pro přihlášení. Zadejte heslo k tomuto účtu.
+    </string>
+    <string name="progress_dialog_signing_in" translation_description="Progress dialog text">Přihlašování…</string>
+    <string name="trouble_signing_in" translation_description="Link leading to forgot password flow">Nedaří se přihlásit?</string>
+    <string name="title_recover_password_activity" translation_description="Recover password screen title">Zapomenuté heslo</string>
+    <string name="title_confirm_recover_password" translation_description="Password recovery confirmation message">Zkontrolujte svůj e-mail</string>
+    <string name="password_recovery_body" translation_description="Password recovery message body">Nechte si poslat instrukce k obnově hesla na e-mail.</string>
+    <string name="button_text_send" translation_description="Button text to send recovery email">Poslat</string>
+    <string name="confirm_recovery_body" translation_description="Alert dialog displayed after password recovery email is sent">Pro obnovení hesla postupujte podle instrukcí v e-mailu poslaném na %1$s.</string>
+    <string name="progress_dialog_sending" translation_description="Progress dialog while password recovery email is being sent">Posílání…</string>
+    <string name="error_email_does_not_exist" translation_description="Inline error when user attempt signin with invalid account">Účet s tímto e-mailem neexistuje</string>
+    <string name="auth_picker_description">Díky přihlášení\nbudou vaše skupiny\nzálohovány a synchronizovány.</string>
+    <string name="sign_up">Zaregistrovat</string>
+    <string name="idp_name_email">E-mail</string>
+</resources>

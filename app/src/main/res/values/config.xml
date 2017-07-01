@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_application_id" translatable="false">1235089953284557</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb1235089953284557</string>
+    <string name="dynamic_links_app_id" translatable="false">aa6a2</string>
+    <string name="web_app_domain" translatable="false">https://app.settleup.info</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-1216360424749462~1081319846</string>
+    <string name="admob_ad_unit_id" translatable="false">ca-app-pub-1216360424749462/9331839448</string>
+    <string name="google_play_license_key" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApAI7VpOWr5kaWDxvyi3Vb7R9NjfCfsE76GdWt8z/pq0yuGJjT/DMpWLU8xwy4CYhEkCEpzJsEtpUW5dFgyCzCjSl8uucgOQ75JnhUEB7bQYbmUNLAQDcC6D7IERS29pdHzJksirK/psY9bFSJc6wy1thFAMi3m3HamhtWN7vH+WVvTCb6RL2QLLcu5VMs1rnHQ3/CidLaU4saCMI6AAivfEZqJJa1BUm+sI/w2BeWIC3c430b2nBnpEFePCd7KDXXkVpvdfUhNaA9S2OmJVf60sBsM2++/s+W8YB+PmTP1sgzUsqg4WXH8mD+yz1Gqh7MLqj8t7cx+Ra2Y/6NrqIkwIDAQAB</string>
+</resources>
