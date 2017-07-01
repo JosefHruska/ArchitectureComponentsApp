@@ -8,6 +8,7 @@ import cz.pepa.runapp.ui.base.BaseViewModel
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class MainViewModel: cz.pepa.runapp.ui.base.BaseViewModel() {
+class MainViewModel: BaseViewModel() {
+
 
 }

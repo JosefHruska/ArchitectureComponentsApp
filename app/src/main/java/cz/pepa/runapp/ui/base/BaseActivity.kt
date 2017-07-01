@@ -1,7 +1,6 @@
 package cz.pepa.runapp.ui.base
 
 import android.arch.lifecycle.LifecycleActivity
-import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -14,9 +13,9 @@ import android.os.PersistableBundle
 
 abstract class BaseActivity: LifecycleActivity() {
 
-    private lateinit var mViewModel: ViewModel
+    private lateinit var mViewModel: BaseViewModel
 
-    abstract fun getViewModel(): ViewModel
+    abstract fun getViewModel(): BaseViewModel
 
     abstract fun getLayoutRes(): Int
 
