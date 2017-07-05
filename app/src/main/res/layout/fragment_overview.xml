@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vGroupContent"
+    style="@style/Layout.Scroll">
+
+    <LinearLayout style="@style/Layout.Cards"
+        android:paddingBottom="96dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/vTodayCard"
+            style="@style/Layout.Card">
+
+            <LinearLayout
+                android:id="@+id/vTotalSpentContent"
+                style="@style/Layout"
+                android:background="@drawable/ripple_background">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.CardTitle"
+                    android:text="@string/total_paid"
+                    android:textAppearance="@style/ListHeader" />
+
+                <include layout="@layout/include_today" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

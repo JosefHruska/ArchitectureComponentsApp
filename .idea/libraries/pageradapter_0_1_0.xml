@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="pageradapter-0.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/851ed7faba5e8d0be177f7b88e19cbe3ccc26c51/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/851ed7faba5e8d0be177f7b88e19cbe3ccc26c51/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/eu.inloop/pageradapter/0.1.0/b0ae0d1a8f9bfb2b5d3aac99e5a413c788db5471/pageradapter-0.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

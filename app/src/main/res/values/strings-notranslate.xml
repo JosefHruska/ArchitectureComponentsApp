@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Settle Up</string>
+    <string name="app_name" translatable="false">RunApp</string>
     <string name="blank" translatable="false"></string>  <!-- Onboarding library sets TextView which we don't use -->
     <string name="equals" translatable="false">=</string>
     <string name="decimal_point" translatable="false">.</string>

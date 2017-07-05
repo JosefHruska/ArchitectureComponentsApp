@@ -1,4 +1,4 @@
-package cz.pepa.runapp.ui
+package cz.pepa.runapp.ui.main
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData

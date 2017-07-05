@@ -21,6 +21,8 @@ import java.text.DateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
+
+
 /**
  * TODO: Add description
  *
@@ -55,7 +57,11 @@ object Fit {
         // Create the Google API Client
         mClient = GoogleApiClient.Builder(app())
                 .addApi(Fitness.HISTORY_API)
+                .addApi(Fitness.SESSIONS_API)
                 .addScope(Scope(Scopes.FITNESS_ACTIVITY_READ_WRITE))
+                .addScope(Scope(Scopes.FITNESS_BODY_READ_WRITE))
+                .addScope(Scope(Scopes.FITNESS_NUTRITION_READ_WRITE))
+                .addScope(Scope(Scopes.FITNESS_LOCATION_READ_WRITE))
                 .addConnectionCallbacks(
                         object : GoogleApiClient.ConnectionCallbacks {
                             override fun onConnected(bundle: Bundle?) {
@@ -77,7 +83,7 @@ object Fit {
                         }
                 )
                 .enableAutoManage(activity, 0) { result ->
-
+                    ld("failed - reason : $result")
                 }
                 .build()
     }
@@ -96,11 +102,11 @@ object Fit {
             // Create a new dataset and insertion request.
 //            val dataSet = insertFitnessData()
 
-            // [START insert_dataset]
-            // Then, invoke the History API to insert the data and await the result, which is
-            // possible here because of the {@link AsyncTask}. Always include a timeout when calling
-            // await() to prevent hanging that can occur from the service being shutdown because
-            // of low memory or other conditions.
+//             [START insert_dataset]
+//             Then, invoke the History API to insert the data and await the result, which is
+//             possible here because of the {@link AsyncTask}. Always include a timeout when calling
+//             await() to prevent hanging that can occur from the service being shutdown because
+////             of low memory or other conditions.
 //            ld( "Inserting the dataset in the History API.")
 //            val insertStatus = Fitness.HistoryApi.insertData(mClient, dataSet)
 //                    .await(1, TimeUnit.MINUTES)
@@ -121,53 +127,38 @@ object Fit {
             // [START read_dataset]
             // Invoke the History API to fetch the data with the query and await the result of
             // the read request.
-            val dataReadResult = Fitness.HistoryApi.readData(mClient, DataType.TYPE_STEP_COUNT_DELTA).await(30, TimeUnit.SECONDS)
+
+            val dataReadResult = Fitness.HistoryApi.readData(mClient, readRequest).setResultCallback {
+                dataReadResult ->
+                dataReadResult.buckets.forEach {
+                    it.dataSets.forEach {
+                        it.dataPoints.forEach {
+                            ld("data type : ${it.dataType}")
+                            ld("data value : ${it.getValue(Field.FIELD_STEPS)}")
+
+                        }
+                    }
+                }
+            }
             // [END read_dataset]
 
             // For the sake of the sample, we'll print the data so we can see what we just added.
             // In general, logging fitness information should be avoided for privacy reasons.
 //            printData(dataReadResult.total)
-            ld("Size of data is ${dataReadResult.total?.toString()}")
+//            dataReadResult.buckets.forEach {
+//                it.dataSets.forEach {
+//                    it.dataPoints.forEach {
+//                        ld("data type : ${it.dataType}")
+//                        ld("data value : ${it.getValue(Field.FIELD_STEPS)}")
+//
+//                    }
+//                }
+//            }
+           // ld("Size of data is ${dataReadResult.buckets.size}")
             return null
         }
     }
 
-    /**
-     * Create and return a [DataSet] of step count data for insertion using the History API.
-     */
-    private fun insertFitnessData(): DataSet {
-        ld( "Creating a new data insert request.")
-
-        // [START build_insert_data_request]
-        // Set a start and end time for our data, using a start time of 1 hour before this moment.
-        val cal = Calendar.getInstance()
-        val now = Date()
-        cal.time = now
-        val endTime = cal.timeInMillis
-        cal.add(Calendar.HOUR_OF_DAY, -1)
-        val startTime = cal.timeInMillis
-
-        // Create a data source
-        val dataSource = DataSource.Builder()
-                .setAppPackageName(app().packageName) // TODO: Maybe replace?
-                .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
-                .setStreamName(" - step count")
-                .setType(DataSource.TYPE_RAW)
-                .build()
-
-        // Create a data set
-        val stepCountDelta = 950
-        val dataSet = DataSet.create(dataSource)
-        // For each data point, specify a start time, end time, and the data value -- in this case,
-        // the number of new steps.
-        val dataPoint = dataSet.createDataPoint()
-                .setTimeInterval(startTime, endTime, TimeUnit.MILLISECONDS)
-        dataPoint.getValue(Field.FIELD_STEPS).setInt(stepCountDelta)
-        dataSet.add(dataPoint)
-        // [END build_insert_data_request]
-
-        return dataSet
-    }
 
     /**
      * Return a [DataReadRequest] for all step count changes in the past week.
@@ -179,20 +170,25 @@ object Fit {
         val now = Date()
         cal.time = now
         val endTime = cal.timeInMillis
-        cal.add(Calendar.MONTH, -1)
+        cal.add(Calendar.YEAR, -4)
         val startTime = cal.timeInMillis
 
         val dateFormat = DateFormat.getDateInstance()
         ld( "Range Start: " + dateFormat.format(startTime))
         ld( "Range End: " + dateFormat.format(endTime))
-
+        val ds = DataSource.Builder()
+                .setAppPackageName("com.google.android.gms")
+                .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
+                .setType(DataSource.TYPE_DERIVED)
+                .setStreamName("estimated_steps")
+                .build()
         val readRequest = DataReadRequest.Builder()
                 // The data request can specify multiple data types to return, effectively
                 // combining multiple data queries into one call.
                 // In this example, it's very unlikely that the request is for several hundred
                 // datapoints each consisting of a few steps and a timestamp.  The more likely
                 // scenario is wanting to see how many steps were walked per day, for 7 days.
-                .aggregate(DataType.TYPE_CALORIES_EXPENDED, DataType.AGGREGATE_CALORIES_EXPENDED)
+                .aggregate(ds, DataType.AGGREGATE_STEP_COUNT_DELTA)
                 // Analogous to a "Group By" in SQL, defines how data should be aggregated.
                 // bucketByTime allows for a time span, whereas bucketBySession would allow
                 // bucketing by "sessions", which would need to be defined in code.

@@ -4,7 +4,6 @@ import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.ViewModelProviders
 import android.graphics.Color
 import android.os.Bundle
-import android.os.PersistableBundle
 import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logger.LogView
 import cz.pepa.runapp.logger.LogWrapper
@@ -25,12 +24,11 @@ abstract class BaseActivity: LifecycleActivity() {
     abstract fun getViewModel(): BaseViewModel
 
     abstract fun getLayoutRes(): Int
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setupViewModel()
         setContentView(getLayoutRes())
-        initializeLogging()
+//        initializeLogging()
         initUi()
     }
 
