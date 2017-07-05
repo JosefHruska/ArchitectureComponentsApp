@@ -1,7 +1,7 @@
 package io.stepuplabs.settleup.util.extensions
 
-import io.stepuplabs.settleup.R
-import io.stepuplabs.settleup.app
+import cz.pepa.runapp.R
+import cz.pepa.runapp.app
 
 /**
  * Utils related to string manipulation.

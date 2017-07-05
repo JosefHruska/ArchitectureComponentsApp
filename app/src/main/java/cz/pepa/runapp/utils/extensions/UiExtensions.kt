@@ -21,8 +21,6 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.MotionEventCompat
 import android.support.v7.widget.PopupMenu
 import android.text.Editable
-import android.text.Html
-import android.text.Spanned
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -33,6 +31,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
+import cz.pepa.runapp.extensions.isLargerOrEqualApi
 import cz.pepa.runapp.ui.base.BaseActivity
 import org.jetbrains.anko.*
 
@@ -92,23 +91,6 @@ fun notification(context: Context, func: NotificationCompat.Builder.() -> Unit):
     return builder.build()
 }
 
-fun String.toHtml(): Spanned {
-    if (isLargerOrEqualApi(24)) {
-        return Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
-    } else {
-        @Suppress("DEPRECATION")
-        return Html.fromHtml(this)
-    }
-}
-
-fun Spanned.toHtml(): String {
-    if (isLargerOrEqualApi(24)) {
-        return Html.toHtml(this, Html.FROM_HTML_MODE_LEGACY)
-    } else {
-        @Suppress("DEPRECATION")
-        return Html.toHtml(this)
-    }
-}
 
 fun Boolean.toVisibility(): Int {
     return if (this) View.VISIBLE else View.GONE

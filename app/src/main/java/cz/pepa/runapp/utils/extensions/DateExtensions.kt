@@ -1,8 +1,7 @@
 package io.stepuplabs.settleup.util.extensions
 
 import android.text.format.DateFormat
-import io.stepuplabs.settleup.R
-import io.stepuplabs.settleup.app
+import cz.pepa.runapp.R
 import java.text.SimpleDateFormat
 import java.util.*
 

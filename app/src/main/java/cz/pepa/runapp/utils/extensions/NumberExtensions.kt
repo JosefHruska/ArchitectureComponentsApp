@@ -1,5 +1,7 @@
 package io.stepuplabs.settleup.util.extensions
 
+import bd
+import removeTrailingZeros
 import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.NumberFormat

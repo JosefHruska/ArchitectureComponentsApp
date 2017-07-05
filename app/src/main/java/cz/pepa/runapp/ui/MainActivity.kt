@@ -1,34 +1,12 @@
 package cz.pepa.runapp.ui
 
-import android.graphics.Color
-import android.os.AsyncTask
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.gms.common.Scopes
-import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.common.api.Scope
-import com.google.android.gms.fitness.Fitness
-import com.google.android.gms.fitness.data.DataSet
-import com.google.android.gms.fitness.data.DataSource
-import com.google.android.gms.fitness.data.DataType
-import com.google.android.gms.fitness.data.Field
-import com.google.android.gms.fitness.request.DataDeleteRequest
-import com.google.android.gms.fitness.request.DataReadRequest
-import com.google.android.gms.fitness.result.DataReadResult
 import cz.pepa.runapp.R
-import cz.pepa.runapp.logger.Log
-import cz.pepa.runapp.logger.LogView
-import cz.pepa.runapp.logger.LogWrapper
-import cz.pepa.runapp.logger.MessageOnlyLogFilter
 import cz.pepa.runapp.logic.Fit
 import cz.pepa.runapp.ui.base.BaseActivity
 import cz.pepa.runapp.ui.base.BaseViewModel
-import io.stepuplabs.settleup.util.ld
-import kotlinx.android.synthetic.main.activity_test_fit.*
-import java.text.DateFormat
-import java.util.*
-import java.util.concurrent.TimeUnit
 
 /**
  * TODO: Add description
@@ -52,9 +30,6 @@ class MainActivity: BaseActivity() {
     }
 
 
-
-
-
     /**
      * Track whether an authorization activity is stacking over the current activity, i.e. when
      * a known auth error is being resolved, such as showing the account chooser or presenting a
@@ -73,7 +48,7 @@ class MainActivity: BaseActivity() {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING)
         }
 
-        Fit.buildFitnessClient()
+        Fit.buildFitnessClient(this)
     }
 
 

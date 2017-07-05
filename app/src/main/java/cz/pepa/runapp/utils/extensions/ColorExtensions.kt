@@ -1,4 +1,4 @@
-package io.stepuplabs.settleup.util.extensions
+package cz.pepa.runapp.extensions
 
 import android.app.Activity
 import android.content.res.ColorStateList
@@ -14,9 +14,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import com.github.clans.fab.FloatingActionButton
-import com.github.clans.fab.FloatingActionMenu
-import io.stepuplabs.settleup.R
+import cz.pepa.runapp.R
+import io.stepuplabs.settleup.util.extensions.toColor
 
 /**
  * Utils related to changing color of views.
@@ -35,26 +34,6 @@ fun ProgressBar.setColor(color: Int) {
     if (isLargerOrEqualApi(21)) {
         this.indeterminateDrawable.setTint(color)
     }
-}
-
-fun FloatingActionMenu.setStateColors(color: Int) {
-    this.menuButtonColorNormal = ColorStateList.valueOf(color).getColorForState(intArrayOf(android.R.attr.state_focused), color)
-    this.menuButtonColorPressed = ColorStateList.valueOf(color).getColorForState(intArrayOf(android.R.attr.state_pressed), color)
-}
-
-fun FloatingActionMenu.setMenuIconColor(color: Int) {
-    this.menuIconView.setColorFilter(color)
-}
-
-fun FloatingActionButton.setButtonIconColor(color: Int) {
-    val fabIcon = this.getDrawableCompat(R.drawable.ic_nearby)
-    fabIcon.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-    this.setImageDrawable(fabIcon)
-}
-
-fun FloatingActionButton.setStateColors(color: Int) {
-    this.colorNormal = ColorStateList.valueOf(color).getColorForState(intArrayOf(android.R.attr.state_focused), color)
-    this.colorPressed = ColorStateList.valueOf(color).getColorForState(intArrayOf(android.R.attr.state_pressed), color)
 }
 
 fun AppCompatEditText.setColor(color: Int) {

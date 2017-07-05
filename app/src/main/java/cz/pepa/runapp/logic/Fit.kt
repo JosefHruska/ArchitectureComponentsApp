@@ -2,6 +2,7 @@ package cz.pepa.runapp.logic
 
 import android.os.AsyncTask
 import android.os.Bundle
+import android.support.v4.app.FragmentActivity
 import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.Scope
@@ -50,7 +51,7 @@ object Fit {
      * can address. Examples of this include the user never having signed in before, or
      * having multiple accounts on the device and needing to specify which account to use, etc.
      */
-    fun buildFitnessClient() {
+    fun buildFitnessClient(activity: FragmentActivity) {
         // Create the Google API Client
         mClient = GoogleApiClient.Builder(app())
                 .addApi(Fitness.HISTORY_API)
@@ -75,13 +76,9 @@ object Fit {
                             }
                         }
                 )
-//                .enableAutoManage(this, 0) { result ->
-//                    ld( "Google Play services connection failed. Cause: " + result.toString())
-////                    Snackbar.make(
-////                            this@MainActivity.findViewById(R.id.main_activity_view),
-////                            "Exception while connecting to Google Play services: " + result.errorMessage!!,
-////                            Snackbar.LENGTH_INDEFINITE).show()
-//                }
+                .enableAutoManage(activity, 0) { result ->
+
+                }
                 .build()
     }
 
@@ -97,22 +94,22 @@ object Fit {
     private class InsertAndVerifyDataTask : AsyncTask<Void, Void, Void>() {
         override fun doInBackground(vararg params: Void): Void? {
             // Create a new dataset and insertion request.
-            val dataSet = insertFitnessData()
+//            val dataSet = insertFitnessData()
 
             // [START insert_dataset]
             // Then, invoke the History API to insert the data and await the result, which is
             // possible here because of the {@link AsyncTask}. Always include a timeout when calling
             // await() to prevent hanging that can occur from the service being shutdown because
             // of low memory or other conditions.
-            ld( "Inserting the dataset in the History API.")
-            val insertStatus = Fitness.HistoryApi.insertData(mClient, dataSet)
-                    .await(1, TimeUnit.MINUTES)
-
-            // Before querying the data, check to see if the insertion succeeded.
-            if (!insertStatus.isSuccess) {
-                ld( "There was a problem inserting the dataset.")
-                return null
-            }
+//            ld( "Inserting the dataset in the History API.")
+//            val insertStatus = Fitness.HistoryApi.insertData(mClient, dataSet)
+//                    .await(1, TimeUnit.MINUTES)
+//
+//            // Before querying the data, check to see if the insertion succeeded.
+//            if (!insertStatus.isSuccess) {
+//                ld( "There was a problem inserting the dataset.")
+//                return null
+//            }
 
             // At this point, the data has been inserted and can be read.
             ld( "Data insert was successful!")
@@ -124,13 +121,13 @@ object Fit {
             // [START read_dataset]
             // Invoke the History API to fetch the data with the query and await the result of
             // the read request.
-            val dataReadResult = Fitness.HistoryApi.readData(mClient, readRequest).await(1, TimeUnit.MINUTES)
+            val dataReadResult = Fitness.HistoryApi.readData(mClient, DataType.TYPE_STEP_COUNT_DELTA).await(30, TimeUnit.SECONDS)
             // [END read_dataset]
 
             // For the sake of the sample, we'll print the data so we can see what we just added.
             // In general, logging fitness information should be avoided for privacy reasons.
-            printData(dataReadResult)
-
+//            printData(dataReadResult.total)
+            ld("Size of data is ${dataReadResult.total?.toString()}")
             return null
         }
     }
@@ -182,7 +179,7 @@ object Fit {
         val now = Date()
         cal.time = now
         val endTime = cal.timeInMillis
-        cal.add(Calendar.WEEK_OF_YEAR, -1)
+        cal.add(Calendar.MONTH, -1)
         val startTime = cal.timeInMillis
 
         val dateFormat = DateFormat.getDateInstance()
@@ -195,7 +192,7 @@ object Fit {
                 // In this example, it's very unlikely that the request is for several hundred
                 // datapoints each consisting of a few steps and a timestamp.  The more likely
                 // scenario is wanting to see how many steps were walked per day, for 7 days.
-                .aggregate(DataType.TYPE_STEP_COUNT_DELTA, DataType.AGGREGATE_STEP_COUNT_DELTA)
+                .aggregate(DataType.TYPE_CALORIES_EXPENDED, DataType.AGGREGATE_CALORIES_EXPENDED)
                 // Analogous to a "Group By" in SQL, defines how data should be aggregated.
                 // bucketByTime allows for a time span, whereas bucketBySession would allow
                 // bucketing by "sessions", which would need to be defined in code.
