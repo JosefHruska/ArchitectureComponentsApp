@@ -22,8 +22,31 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintGuide_percent="0.5"/>
 
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
+    <cz.pepa.runapp.ui.common.TitledValue
+        android:id="@+id/vSteps"
+        style="@style/TextView"
+        android:layout_marginLeft="48dp"
+        app:layout_constraintBottom_toBottomOf="@id/vGuideline"
+        app:layout_constraintLeft_toRightOf="@id/vTodayProgress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name="@string/steps" />
+
+    <cz.pepa.runapp.ui.common.TitledValue
+        android:id="@+id/vDistance"
+        style="@style/TextView"
+        android:layout_marginLeft="48dp"
+        app:layout_constraintBottom_toBottomOf="@id/vGuideline"
+        app:layout_constraintLeft_toRightOf="@id/vSteps"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name="@string/distance" />
+
+    <cz.pepa.runapp.ui.common.TitledValue
+        android:id="@+id/vCalories"
+        style="@style/TextView"
+        android:layout_marginLeft="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/vTodayProgress"
+        app:layout_constraintTop_toTopOf="@id/vGuideline"
+        app:name="@string/calories" />
     
 </android.support.constraint.ConstraintLayout>

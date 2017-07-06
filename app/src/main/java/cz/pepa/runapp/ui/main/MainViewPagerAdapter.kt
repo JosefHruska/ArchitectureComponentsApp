@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.ViewGroup
 import cz.pepa.runapp.ui.base.BaseFragment
+import cz.pepa.runapp.ui.main.group.GroupTabFragment
 import eu.inloop.pager.UpdatableFragmentPagerAdapter
 
 /**
@@ -57,4 +58,5 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
     override fun getPageTitle(position: Int): CharSequence? {
         return Tabs.get()[position].title
     }
+
 }

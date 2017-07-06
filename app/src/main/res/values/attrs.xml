@@ -31,4 +31,9 @@
     <declare-styleable name="BulletText">
         <attr name="text" />
     </declare-styleable>
+
+    <declare-styleable name="TitledValue">
+        <attr name="name" format="reference" />
+        <attr name="value" format="reference"/>
+    </declare-styleable>
 </resources>

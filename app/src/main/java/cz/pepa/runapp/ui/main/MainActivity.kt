@@ -30,6 +30,7 @@ class MainActivity: BaseActivity() {
     private var authInProgress = false
 
     private lateinit var vHeader: View
+    private lateinit var mViewPagerAdapter: MainViewPagerAdapter
 
 
     override fun getViewModel(): BaseViewModel {
@@ -96,6 +97,9 @@ class MainActivity: BaseActivity() {
 
     private fun setupViewPager() {
         vTabs.setupWithViewPager(vViewPager)
+
+        mViewPagerAdapter = MainViewPagerAdapter(supportFragmentManager) {}
+        vViewPager.adapter = mViewPagerAdapter
     }
 }
 

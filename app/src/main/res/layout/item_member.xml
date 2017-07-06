@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="64dp"
+    style="@style/Layout.ListItem">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/vAvatar"
+        style="@style/Image.AvatarMember"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@drawable/avatar_multiple" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vName"
+        style="@style/TextView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:textAppearance="@style/ListPrimary"
+        app:layout_constraintLeft_toRightOf="@+id/vAvatar"
+        app:layout_constraintTop_toTopOf="@id/vAvatar"
+        tools:text="Liz Weganburg" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vEmail"
+        style="@style/TextView"
+        android:layout_marginTop="23dp"
+        android:textAppearance="@style/ListSecondary"
+        app:layout_constraintTop_toTopOf="@id/vName"
+        app:layout_constraintLeft_toLeftOf="@id/vName"
+        tools:text="susanweg@gmail.com" />
+
+</android.support.constraint.ConstraintLayout>

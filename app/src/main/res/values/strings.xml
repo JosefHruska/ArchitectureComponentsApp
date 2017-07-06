@@ -3,6 +3,11 @@
     <string name="something_went_wrong">Something went wrong</string>
     <string name="report">Report</string>
     <string name="anonymous">Anonymous</string>
+    
+    <!--Main-->
+    <string name="steps">steps</string>
+    <string name="calories">calories</string>
+    <string name="distance">distance</string>
 
     <!-- Main screen: -->
     <string name="total_paid">Total spent</string>

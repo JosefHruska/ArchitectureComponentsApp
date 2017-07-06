@@ -7,5 +7,9 @@
     <LinearLayout style="@style/Layout.Cards"
         android:paddingBottom="96dp">
 
+        <include
+            android:id="@+id/vMembers"
+            layout="@layout/include_members_card" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

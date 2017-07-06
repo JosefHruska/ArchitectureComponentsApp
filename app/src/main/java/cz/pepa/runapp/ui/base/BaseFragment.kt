@@ -1,6 +1,7 @@
 package cz.pepa.runapp.ui.base
 
 import android.arch.lifecycle.LifecycleFragment
+import android.arch.lifecycle.ViewModel
 import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
@@ -22,6 +23,8 @@ import org.jetbrains.anko.inputMethodManager
  */
 
 abstract class BaseFragment(): LifecycleFragment() {
+
+    protected var mViewModel: ViewModel? = null
 
     abstract fun getContentResId(): Int
 
