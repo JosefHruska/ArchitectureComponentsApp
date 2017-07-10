@@ -8,8 +8,8 @@ import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logger.LogView
 import cz.pepa.runapp.logger.LogWrapper
 import cz.pepa.runapp.logger.MessageOnlyLogFilter
-import io.stepuplabs.settleup.util.ld
 import kotlinx.android.synthetic.main.activity_test_fit.*
+import ld
 
 /**
  * TODO: Add description
@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_test_fit.*
 
 abstract class BaseActivity: LifecycleActivity() {
 
-    private lateinit var mViewModel: BaseViewModel
+    protected lateinit var mViewModel: BaseViewModel
 
     abstract fun getViewModel(): BaseViewModel
 
@@ -38,7 +38,8 @@ abstract class BaseActivity: LifecycleActivity() {
 
 
     private fun setupViewModel() {
-       mViewModel = ViewModelProviders.of(this).get(getViewModel()::class.java)
+        mViewModel = ViewModelProviders.of(this).get(getViewModel()::class.java)
+        mViewModel.onStart()
     }
 
 

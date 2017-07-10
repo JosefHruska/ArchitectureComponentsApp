@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="120dp">
     
     <ImageView
         android:id="@+id/vTodayProgress"
@@ -29,7 +29,8 @@
         app:layout_constraintBottom_toBottomOf="@id/vGuideline"
         app:layout_constraintLeft_toRightOf="@id/vTodayProgress"
         app:layout_constraintTop_toTopOf="parent"
-        app:name="@string/steps" />
+        app:name="@string/steps"
+        app:value="@string/steps"/>
 
     <cz.pepa.runapp.ui.common.TitledValue
         android:id="@+id/vDistance"
@@ -43,6 +44,7 @@
     <cz.pepa.runapp.ui.common.TitledValue
         android:id="@+id/vCalories"
         style="@style/TextView"
+        android:layout_width="60dp"
         android:layout_marginLeft="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/vTodayProgress"

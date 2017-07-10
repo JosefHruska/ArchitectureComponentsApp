@@ -33,7 +33,7 @@
     </declare-styleable>
 
     <declare-styleable name="TitledValue">
-        <attr name="name" format="reference" />
-        <attr name="value" format="reference"/>
+        <attr name="name" format="string" />
+        <attr name="value" format="string"/>
     </declare-styleable>
 </resources>

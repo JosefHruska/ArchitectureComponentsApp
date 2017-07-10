@@ -1,17 +1,26 @@
 package cz.pepa.runapp.ui.main
 
+import android.app.Activity
+import android.arch.lifecycle.Observer
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.View
 import cz.pepa.runapp.R
+import cz.pepa.runapp.data.Tab
+import cz.pepa.runapp.extensions.askForPermission
+import cz.pepa.runapp.extensions.isPermissionGranted
+import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logic.Fit
 import cz.pepa.runapp.ui.base.BaseActivity
 import cz.pepa.runapp.ui.base.BaseViewModel
+import cz.pepa.runapp.ui.common.Ids
 import io.stepuplabs.settleup.util.extensions.popupMenuOnClick
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_drawer_header.*
 import kotlinx.android.synthetic.main.include_drawer_header.view.*
+import org.jetbrains.anko.*
 
 /**
  * TODO: Add description
@@ -41,17 +50,39 @@ class MainActivity: BaseActivity() {
         return R.layout.activity_main
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        if (requestCode == Ids.PERMISSION_FINE_LOCATION) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Fit.buildFitnessClient(this)
+            } else {
+
+            }
+        }
+    }
+
     override fun initUi() {
         setupDrawer()
         setupViewPager()
+        setupGroups()
+        initGoogleFit()
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING)
         }
-        Fit.buildFitnessClient(this)
+
+
+    }
+
+    private fun initGoogleFit() {
+        if (!isPermissionGranted(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+            askForPermission(android.Manifest.permission.ACCESS_FINE_LOCATION, Ids.PERMISSION_FINE_LOCATION)
+        } else {
+            Fit.buildFitnessClient(this)
+        }
     }
 
     private fun setupDrawer() {
@@ -97,9 +128,37 @@ class MainActivity: BaseActivity() {
 
     private fun setupViewPager() {
         vTabs.setupWithViewPager(vViewPager)
+        Tabs.setListener( object : Tabs.Listener {
+            override fun allTabsChanged() {
+                mViewPagerAdapter.notifyDataSetChanged()
+            }
 
+            override fun topChanged(position: Int) {
+                Log.e("FUCK", "YEAH")
+            }
+        })
         mViewPagerAdapter = MainViewPagerAdapter(supportFragmentManager) {}
         vViewPager.adapter = mViewPagerAdapter
+    }
+
+
+    private fun setupGroups() {
+        val groupsObserver = Observer<MutableList<Tab>> {
+            it?.let { Tabs.setTabs(it) }
+        }
+        (mViewModel as MainViewModel).getTabs().observe(this, groupsObserver)
+    }
+
+    companion object {
+        fun start(activity: Activity, showMigrationSuccessDialog: Boolean = false) {
+            val intent = activity.intentFor<MainActivity>().clearTop().singleTop()
+            intent.putExtra("SHOW_MIGRATION_SUCCESS", showMigrationSuccessDialog)
+            activity.startActivity(intent)
+        }
+
+        fun startAndCloseOtherActivities(activity: Activity) {
+            activity.startActivity(activity.intentFor<MainActivity>().newTask().clearTask()) // This will call finish() on all other running activities.
+        }
     }
 }
 

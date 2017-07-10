@@ -1,8 +1,9 @@
-package io.stepuplabs.settleup.firebase.database
+package cz.pepa.runapp.database
 
 import com.google.firebase.database.FirebaseDatabase
-import io.stepuplabs.settleup.firebase.Auth
-import io.stepuplabs.settleup.util.logError
+import cz.pepa.runapp.logic.Auth
+import isDatabaseConnected
+
 
 /**
  * Main access point to Firebase Realtime Database. Handles initialization.
@@ -35,12 +36,12 @@ object Database {
 
     fun sync() {
         if (Auth.isSignedIn()) {
-            DatabaseRead.userGroups().subscribe({
-                it?.forEach {
-                    syncGroup(it.getId(), true)
-                }
-            }, { logError(it) })
-            keepSynced("exchangeRatesToUsd/latest", true)
+//            DatabaseRead.userGroups().subscribe({
+//                it?.forEach {
+//                    syncGroup(it.getId(), true)
+//                }
+//            }, { logError(it) })
+//            keepSynced("exchangeRatesToUsd/latest", true)
         }
     }
 

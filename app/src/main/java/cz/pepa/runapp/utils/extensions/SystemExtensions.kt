@@ -9,6 +9,8 @@ import android.os.Handler
 import android.os.Looper
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import cz.pepa.runapp.app
+import org.jetbrains.anko.connectivityManager
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
@@ -58,3 +60,9 @@ fun Application.doLater(delay: Long, task: () -> (Unit)) {
         }
     }
 }
+
+fun isDeviceOnline(): Boolean {
+    val activeNetworkInfo = app().connectivityManager.activeNetworkInfo
+    return activeNetworkInfo != null && activeNetworkInfo.isConnected
+}
+

@@ -3,7 +3,6 @@ package cz.pepa.runapp
 import android.app.Application
 import android.os.StrictMode
 import android.support.v7.app.AppCompatDelegate
-import cz.pepa.runapp.BuildConfig
 
 /**
  * TODO: Add description
@@ -12,6 +11,8 @@ import cz.pepa.runapp.BuildConfig
  */
 
 class App : Application() {
+
+    private var mIsInitialized = false
 
     override fun onCreate() {
         super.onCreate()
@@ -37,6 +38,12 @@ class App : Application() {
                     .build())
         }
     }
+
+
+    fun isInitialized(): Boolean {
+        return mIsInitialized
+    }
+
 }
 
 private var gApp: App? = null

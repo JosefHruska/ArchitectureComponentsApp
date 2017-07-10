@@ -1,4 +1,4 @@
-package io.stepuplabs.settleup.firebase.database
+package cz.pepa.runapp.database
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

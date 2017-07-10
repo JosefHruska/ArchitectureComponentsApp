@@ -34,9 +34,9 @@ class TitledValue @JvmOverloads constructor(context: Context, attrs: AttributeSe
         }
 
     private fun setAttributes(attrs: AttributeSet?) {
-        setCustomAttributes(attrs, R.styleable.TitleListButtonCard, {
-            title = it.getString(R.styleable.TitledValue_name)
-            value = it.getString(R.styleable.TitledValue_value)
+        setCustomAttributes(attrs, R.styleable.TitledValue, {
+            it.getString(R.styleable.TitledValue_name)?.let { title = it }
+            it.getString(R.styleable.TitledValue_value)?.let { value = it }
         })
     }
 

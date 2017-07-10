@@ -31,6 +31,9 @@
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/vTabs"
+                android:background="@color/accent"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

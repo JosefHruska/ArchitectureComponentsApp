@@ -1,4 +1,3 @@
-package io.stepuplabs.settleup.util
 
 import android.os.Looper
 import android.util.Log

@@ -1,7 +1,12 @@
 package cz.pepa.runapp.ui.main.group
 
+import android.arch.lifecycle.MutableLiveData
+import cz.pepa.runapp.data.DummyFittnes
+import cz.pepa.runapp.data.TodayItem
+import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.logic.Fit
 import cz.pepa.runapp.ui.base.BaseViewModel
+import logError
 
 /**
  * TODO: Add description
@@ -11,7 +16,22 @@ import cz.pepa.runapp.ui.base.BaseViewModel
 
 class GroupViewModel: BaseViewModel() {
 
+    val mMembers = MutableLiveData<List<DummyFittnes>>()
+    val mToday = MutableLiveData<TodayItem>()
+
+    override fun onStart() {
+        loadDummyFitness()
+        loadToday()
+    }
+
+    fun loadToday() {
+        DatabaseRead.today(mToday).subscribe({
+            mToday.value = it
+        },{logError(Throwable(), "FUCK")})
+    }
+
     fun loadDummyFitness() {
         mMembers.value = Fit.getDummyFitnessData()
     }
+
 }

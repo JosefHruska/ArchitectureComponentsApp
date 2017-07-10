@@ -5,9 +5,10 @@
     <string name="anonymous">Anonymous</string>
     
     <!--Main-->
-    <string name="steps">steps</string>
-    <string name="calories">calories</string>
-    <string name="distance">distance</string>
+    <string name="steps">Steps</string>
+    <string name="calories">Calories</string>
+    <string name="distance">Distance</string>
+    <string name="today">Today</string>
 
     <!-- Main screen: -->
     <string name="total_paid">Total spent</string>
