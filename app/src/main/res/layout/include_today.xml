@@ -44,7 +44,6 @@
     <cz.pepa.runapp.ui.common.TitledValue
         android:id="@+id/vCalories"
         style="@style/TextView"
-        android:layout_width="60dp"
         android:layout_marginLeft="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/vTodayProgress"

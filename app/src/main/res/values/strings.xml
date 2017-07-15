@@ -9,6 +9,7 @@
     <string name="calories">Calories</string>
     <string name="distance">Distance</string>
     <string name="today">Today</string>
+    <string name="goals">Goals</string>
 
     <!-- Main screen: -->
     <string name="total_paid">Total spent</string>

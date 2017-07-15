@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager
 import android.view.ViewGroup
 import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.main.group.GroupTabFragment
+import cz.pepa.runapp.ui.main.overview.OverviewFragment
 import eu.inloop.pager.UpdatableFragmentPagerAdapter
 
 /**

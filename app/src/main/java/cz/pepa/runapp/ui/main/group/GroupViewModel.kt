@@ -6,6 +6,7 @@ import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.logic.Fit
 import cz.pepa.runapp.ui.base.BaseViewModel
+import io.reactivex.android.schedulers.AndroidSchedulers
 import logError
 
 /**
@@ -25,7 +26,7 @@ class GroupViewModel: BaseViewModel() {
     }
 
     fun loadToday() {
-        DatabaseRead.today(mToday).subscribe({
+        DatabaseRead.today(mToday).observeOn(AndroidSchedulers.mainThread()).subscribe({
             mToday.value = it
         },{logError(Throwable(), "FUCK")})
     }

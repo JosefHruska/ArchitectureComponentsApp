@@ -14,6 +14,10 @@ fun BigDecimal.isNegative(): Boolean {
     return this < BigDecimal.ZERO
 }
 
+fun Float.formatPercentage(): Int {
+    return this.toInt()
+}
+
 fun BigDecimal.divideWithScale(number: BigDecimal): BigDecimal {
     return divide(number, 20, RoundingMode.HALF_UP)
 }

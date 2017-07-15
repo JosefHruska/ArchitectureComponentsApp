@@ -8,7 +8,7 @@ package cz.pepa.runapp.data
 
 class TodayItem() : DatabaseModel() {
 
-    var steps: Int? = null
-    var distance: Float? = null
-    var calories: Float? = null
+    var steps: Int = 0
+    var distance: Float = 0F
+    var calories: Float = 0F
 }

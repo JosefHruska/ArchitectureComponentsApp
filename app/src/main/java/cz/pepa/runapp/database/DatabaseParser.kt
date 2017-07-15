@@ -1,7 +1,8 @@
 package cz.pepa.runapp.database
 import com.google.firebase.database.DataSnapshot
 import cz.pepa.runapp.data.DatabaseModel
-import rx.Observable
+import io.reactivex.Flowable
+
 
 //
 ///**
@@ -10,14 +11,17 @@ import rx.Observable
 // * @author David Vávra (david@stepuplabs.io)
 // */
 //
-fun <T : DatabaseModel> Observable<DataSnapshot?>.toObjectObservable(type: Class<T>): Observable<T?> {
-    return this.map {
-        if (it == null) {
-            return@map null
-        }
+fun <T : DatabaseModel> Flowable<DataSnapshot>.toObjectObservable(type: Class<T>): Flowable<T> {
+    return this.flatMap {
         val data = it.getValue(type)
         data?.setId(it.key)
-        data
+        val snapshotObject = if (data == null) {
+            Flowable.empty<T>()
+//            data!!
+        } else {
+            Flowable.just(data)
+        }
+        snapshotObject
     }
 }
 //
@@ -44,12 +48,15 @@ fun <T : DatabaseModel> Observable<DataSnapshot?>.toObjectObservable(type: Class
 //}
 //
 
-fun <T> Observable<DataSnapshot?>.toPrimitiveObservable(type: Class<T>): rx.Observable<T?> {
-    return this.map {
-        if (it == null) {
-            return@map null
-        }
+fun <T> Flowable<DataSnapshot>.toPrimitiveObservable(type: Class<T>): Flowable<T> {
+    return this.flatMap {
         it.getValue(type)
+        val snapshotObject = if (it.getValue(type) == null) {
+            Flowable.empty<T>()
+        } else {
+            Flowable.just(it.getValue(type))
+        }
+        snapshotObject
     }
 }
 //

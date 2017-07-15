@@ -4,8 +4,8 @@ import android.arch.lifecycle.MutableLiveData
 import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.data.User
 import cz.pepa.runapp.logic.Auth
+import io.reactivex.Flowable
 import io.stepuplabs.settleup.util.extensions.todayBegin
-import rx.Observable
 
 
 /**
@@ -17,7 +17,7 @@ object DatabaseRead {
     //
 //    // Users:
 //
-    fun user(): Observable<User?> {
+    fun user(): Flowable<User> {
         return DatabaseQuery().apply { path = "users/${Auth.getUserId()}" }
                 .observe()
                 .toObjectObservable(User::class.java)
@@ -30,7 +30,7 @@ object DatabaseRead {
 //        return mToday
 //    }
 
-    fun today(mToday: MutableLiveData<TodayItem> ): Observable<TodayItem?> {
+    fun today(mToday: MutableLiveData<TodayItem>): Flowable<TodayItem> {
         return DatabaseQuery().apply { path = "days/${Auth.getUserId()}/${todayBegin()}" }
                 .observe()
                 .toPrimitiveObservable(TodayItem::class.java)
@@ -278,7 +278,7 @@ object DatabaseRead {
 //
 //    // Internal state:
 //
-    fun connected(): rx.Observable<Boolean> {
+fun connected(): Flowable<Boolean> {
         return DatabaseQuery().apply { path = ".info/connected" }
                 .observe()
                 .toPrimitiveObservable(Boolean::class.java)
