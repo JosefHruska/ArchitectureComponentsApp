@@ -1,0 +1,35 @@
+package cz.pepa.runapp.data
+
+import com.google.android.gms.fitness.data.Goal
+
+/**
+ * TODO: Add description
+ *
+ * @author Josef Hruška (josef@stepuplabs.io)
+ */
+class GoalData() : DatabaseModel() {
+
+    var name: String? = "undefined"
+    lateinit var goalType: GoalType
+    lateinit var recurrence: GoalRecurrence
+    var recurrencePeriod: Int? = null
+    var startTime: Long = 0L
+    var endTime: Long = 0L
+    var durationObjective: Goal.DurationObjective? = null
+    var frequencyObjective: Goal.FrequencyObjective? = null
+    var metricObjective: Goal.MetricObjective? = null
+
+
+    enum class GoalType {
+        METRIC,
+        FREQUENCY,
+        DURATION
+    }
+
+    enum class GoalRecurrence {
+        DAILY,
+        WEEKLY,
+        MONTHLY
+    }
+
+}

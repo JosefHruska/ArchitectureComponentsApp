@@ -1,13 +1,18 @@
 package io.stepuplabs.settleup.util.extensions
 
+import com.gojuno.koptional.None
+import com.gojuno.koptional.Optional
+
 /**
  * Various utils related to nullable stuff.
  *
  * @author Josef Hruška (josef@stepuplabs.io), David Vávra (david@stepuplabs.io)
  */
 
-fun <T1, T2> ifNotNull(value1: T1?, value2: T2?, bothNotNull: (T1, T2) -> (Unit)) {
-    if (value1 != null && value2 != null) {
-        bothNotNull(value1, value2)
-    }
+fun <T: Any> Optional<T>.isNullOrNone(): Boolean {
+    return (this is None || this.toNullable() == null) // Use only for already checked Optional
+}
+
+fun <T : Any> Optional<T>.toSome(): T {
+    return this.toNullable()!!
 }

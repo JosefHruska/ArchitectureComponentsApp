@@ -31,16 +31,19 @@
             style="@style/Layout.Card">
 
             <LinearLayout
-                android:id="@+id/vGoalContent"
+
                 style="@style/Layout"
                 android:background="@drawable/ripple_background">
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/vGoalsTitle"
                     style="@style/TextView.CardTitle"
                     android:text="@string/goals"
                     android:textAppearance="@style/ListHeader" />
 
-                <include layout="@layout/include_goals" />
+                <include
+                    android:id="@+id/vGoals"
+                    layout="@layout/include_goals" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>

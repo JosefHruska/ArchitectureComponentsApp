@@ -1,3 +1,11 @@
+import com.gojuno.koptional.Optional
+import com.gojuno.koptional.toOptional
+import cz.pepa.runapp.data.UserInfo
+import cz.pepa.runapp.database.DatabaseRead
+import cz.pepa.runapp.database.combineLatest
+import io.reactivex.Flowable
+import io.stepuplabs.settleup.util.extensions.todayBegin
+
 //package cz.pepa.runapp.database
 //
 //
@@ -18,7 +26,7 @@
 // *
 // * @author David Vávra (david@stepuplabs.io)
 // */
-//object DatabaseCombine {
+object DatabaseCombine {
 //
 //    val DEFAULT_CURRENCIES = listOf("USD", "EUR", "INR")
 //    val BASIC_COLORS = listOf("#FF9800", "#E91E63", "#2196F3", "#4CAF50", "#795548")
@@ -57,6 +65,16 @@
 //            GroupTabData(debts, totalPaid, circles, whoShouldPay, readOnly, groupId)
 //        })
 //    }
+    fun isSynced(): Flowable<Optional<Boolean>> {
+    return combineLatest(DatabaseRead.userInfo(), Flowable.just(todayBegin().toOptional()), {
+        userInfo: UserInfo, today: Long ->
+        (userInfo.lastSync == today)
+    })
+}
+
+
+}
+
 //
 //    fun groupCircles(groupId: String): Observable<CirclesResult?> {
 //        return combineLatest(
@@ -72,7 +90,6 @@
 //            CirclesResult(balances, circles.sortedBy { it.size }, members, currency, transactions.size, groupId)
 //        })
 //    }
-//
 //    fun overviewCircles(): Observable<OverviewCirclesResult?> {
 //        return DatabaseRead.userGroups()
 //                .mapSubQueries { DatabaseRead.group(it.getId()) }

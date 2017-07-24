@@ -2,6 +2,7 @@ package cz.pepa.runapp.ui.main.group
 
 import android.arch.lifecycle.MutableLiveData
 import cz.pepa.runapp.data.DummyFittnes
+import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.logic.Fit
@@ -19,6 +20,8 @@ class GroupViewModel: BaseViewModel() {
 
     val mMembers = MutableLiveData<List<DummyFittnes>>()
     val mToday = MutableLiveData<TodayItem>()
+    val mGoal = MutableLiveData<List<Goal>>()
+
 
     override fun onStart() {
         loadDummyFitness()
@@ -26,9 +29,12 @@ class GroupViewModel: BaseViewModel() {
     }
 
     fun loadToday() {
-        DatabaseRead.today(mToday).observeOn(AndroidSchedulers.mainThread()).subscribe({
-            mToday.value = it
+        DatabaseRead.today().observeOn(AndroidSchedulers.mainThread()).subscribe({
+            mToday.value = it.toNullable()
         },{logError(Throwable(), "FUCK")})
+//        DatabaseRead.goals().observeOn(AndroidSchedulers.mainThread()).subscribe({
+//            mGoal.value = it.toNullable()
+//        },{logError(Throwable(), "FUCK")})
     }
 
     fun loadDummyFitness() {

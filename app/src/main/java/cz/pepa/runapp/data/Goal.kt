@@ -6,4 +6,10 @@ package cz.pepa.runapp.data
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-data class Goal(val name: String, val progress: Float, val value: Float)
+class Goal() {
+
+    var name: String? = null
+    var percentage: Double? = null
+    var currentValue: Double? = null
+    var targetValue: Double? = null
+}

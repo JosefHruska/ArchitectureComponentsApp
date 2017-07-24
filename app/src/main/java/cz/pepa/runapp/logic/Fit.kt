@@ -1,20 +1,24 @@
 package cz.pepa.runapp.logic
 
-import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.Scope
 import com.google.android.gms.fitness.Fitness
-import com.google.android.gms.fitness.data.DataSet
 import com.google.android.gms.fitness.data.DataSource
 import com.google.android.gms.fitness.data.DataType
+import com.google.android.gms.fitness.data.Goal
 import com.google.android.gms.fitness.request.DataReadRequest
+import com.google.android.gms.fitness.request.GoalsReadRequest
 import cz.pepa.runapp.app
 import cz.pepa.runapp.data.DummyFittnes
+import cz.pepa.runapp.data.GoalData
 import cz.pepa.runapp.data.TodayItem
+import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.DatabaseWrite
+import io.reactivex.schedulers.Schedulers
+import io.stepuplabs.settleup.util.extensions.*
 import ld
 import lw
 import org.jetbrains.anko.doAsync
@@ -54,6 +58,7 @@ object Fit {
      * can address. Examples of this include the user never having signed in before, or
      * having multiple accounts on the device and needing to specify which account to use, etc.
      */
+
     fun buildFitnessClient(activity: FragmentActivity) {
         // Create the Google API Client
         mClient = GoogleApiClient.Builder(app())
@@ -71,6 +76,8 @@ object Fit {
                                 // Now you can make calls to the Fitness APIs.  What to do?
                                 // Look at some data!!
                                 updateTodayData()
+                                getGoal()
+                                checkDaySync()
                             }
 
                             override fun onConnectionSuspended(i: Int) {
@@ -90,16 +97,76 @@ object Fit {
                 .build()
     }
 
-    /**
-     * Create a [DataSet] to insert data into the History API, and
-     * then create and execute a [DataReadRequest] to verify the insertion succeeded.
-     * By using an [AsyncTask], we can schedule synchronous calls, so that we can query for
-     * data after confirming that our insert was successful. Using asynchronous calls and callbacks
-     * would not guarantee that the insertion had concluded before the read request was made.
-     * An example of an asynchronous call using a callback can be found in the example
-     * on deleting data below.
-     */
+    fun checkDaySync() {
+        DatabaseRead.userInfo().observeOn(Schedulers.computation()).subscribe {
+            if (!it.isNullOrNone()) {
+                if (it.toSome().lastSync != todayBegin()) {
+                    syncMissingDays(it.toSome().lastSync)
+                }
+            } else {
+                syncMissingDays(lastMonth()) /* userInfo/user.id  is not created yet - probably*/
+            }
+        }
+    }
+
+    fun syncMissingDays(from: Long, to: Long = todayBegin()) {
+        doAsync {
+            val readRequest = getDaysData(from, to)
+            val dataReadResult = Fitness.HistoryApi.readData(mClient, readRequest)
+            dataReadResult.setResultCallback {
+                result ->
+                val days = mutableMapOf<Long, TodayItem>()
+                result.buckets.forEach {
+                    val day = TodayItem()
+                    val stepField = it.dataSets[0].dataPoints.find { it.dataType.fields[0].name == "steps" }
+                    val caloriesField = it.dataSets[0].dataPoints.find { it.dataType.fields[0].name == "calories" }
+                    val distanceField = it.dataSets[0].dataPoints.find { it.dataType.fields[0].name == "distance" }
+                    day.steps = stepField?.getValue(stepField.dataType.fields[0])?.asInt() ?: 0
+                    day.calories = caloriesField?.getValue(caloriesField.dataType.fields[0])?.asFloat() ?: 0F
+                    day.distance = distanceField?.getValue(distanceField.dataType.fields[0])?.asFloat() ?: 0F
+                    day.dayStart = it.getStartTime(TimeUnit.MILLISECONDS)
+                    val time = day.dayStart
+                    days.put(time, day)
+                    ld("Dejt is  + ${it.getStartTime(TimeUnit.MILLISECONDS).formatDate()}")
+                }
+                val lastSyncedDay = result.buckets.last().getStartTime(TimeUnit.MILLISECONDS)
+                uiThread {
+                    DatabaseWrite.updateMissingDays(days, lastSyncedDay)
+                }
+            }
+        }
+    }
+
     fun updateTodayData() {
+        doAsync {
+            val today = TodayItem()
+            val readRequest = getTodayData()
+            val dataReadResult = Fitness.HistoryApi.readData(mClient, readRequest)
+            dataReadResult.setResultCallback {
+                dataReadResult ->
+                for (bucket in dataReadResult.buckets) {
+                    bucket.dataSets.forEach {
+                        it.dataPoints.forEach {
+                            lw("data type : ${it.dataType}")
+                            lw("data value : ${it.getValue(it.dataType.fields[0])}")
+                            when (it.dataType.fields[0].name) {
+                                "steps" -> today.steps = it.getValue(it.dataType.fields[0]).asInt()
+                                "calories" -> today.calories = it.getValue(it.dataType.fields[0]).asFloat()
+                                "distance" -> today.distance = it.getValue(it.dataType.fields[0]).asFloat()
+                            }
+                        }
+                    }
+                }
+                lw("Created today item with ${today.steps} steps, ${today.calories} calories and ${today.distance} distance")
+                uiThread {
+                    DatabaseWrite.updateToday(today)
+                }
+            }
+
+        }
+    }
+
+    fun updateGoal() {
         doAsync {
             val today = TodayItem()
             val readRequest = getTodayData()
@@ -163,5 +230,99 @@ object Fit {
 
         return readRequest
 
+    }
+
+    fun getDaysData(from: Long, to: Long): DataReadRequest {
+        val endTime = to
+        val startTime = from
+
+        val dateFormat = DateFormat.getDateInstance()
+        lw("Range Start: " + dateFormat.format(startTime))
+        lw("Range End: " + dateFormat.format(endTime))
+        val ds = DataSource.Builder()
+                .setAppPackageName("com.google.android.gms")
+                .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
+                .setType(DataSource.TYPE_DERIVED)
+                .setStreamName("estimated_steps")
+                .build()
+        val readRequest = DataReadRequest.Builder()
+                .enableServerQueries()
+                .aggregate(ds, DataType.AGGREGATE_STEP_COUNT_DELTA)
+                .aggregate(DataType.TYPE_DISTANCE_DELTA, DataType.AGGREGATE_DISTANCE_DELTA)
+                .aggregate(DataType.TYPE_CALORIES_EXPENDED, DataType.AGGREGATE_CALORIES_EXPENDED)
+                .bucketByTime(1, TimeUnit.DAYS)
+                .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
+                .build();
+
+
+        return readRequest
+
+    }
+
+    fun getGoal() {
+        doAsync {
+            Fitness.GoalsApi.readCurrentGoals(
+                    mClient,
+                    GoalsReadRequest.Builder()
+//                            .addDataType(DataType.TYPE_STEP_COUNT_DELTA)
+//                            .addDataType(DataType.TYPE_CALORIES_EXPENDED)
+//                            .addDataType(DataType.TYPE_DISTANCE_DELTA)
+                            .addObjectiveType(Goal.OBJECTIVE_TYPE_FREQUENCY)
+                            .build()).setResultCallback {
+                val stepGoals = it.goals
+                val goals = it.goals.map {
+                    val goalData = GoalData()
+                    val type: GoalData.GoalType
+                    var durationObjective: Goal.DurationObjective? = null
+                    var frequencyObjective: Goal.FrequencyObjective? = null
+                    var metricObjective: Goal.MetricObjective? = null
+                    val recurrenceUnit: GoalData.GoalRecurrence
+                    when (it.objectiveType) {
+                        Goal.OBJECTIVE_TYPE_FREQUENCY -> {
+                            type = GoalData.GoalType.FREQUENCY
+                            frequencyObjective = it.frequencyObjective
+                        }
+                        Goal.OBJECTIVE_TYPE_DURATION -> {
+                            type = GoalData.GoalType.DURATION
+                            durationObjective = it.durationObjective
+                        }
+                        else -> {
+                            type = GoalData.GoalType.METRIC
+                            metricObjective = it.metricObjective
+                        }
+                    }
+
+                    when (it.recurrence.unit) {
+                        1 -> recurrenceUnit = GoalData.GoalRecurrence.DAILY
+                        2 -> recurrenceUnit = GoalData.GoalRecurrence.WEEKLY
+                        else -> recurrenceUnit = GoalData.GoalRecurrence.MONTHLY
+                    }
+
+                    goalData.apply { it.activityName?.let { name = it }; goalType = type; recurrence = recurrenceUnit; recurrencePeriod = it.recurrence.count; startTime = it.getStartTime(Calendar.getInstance(), TimeUnit.MILLISECONDS); endTime = it.getEndTime(Calendar.getInstance(), TimeUnit.MILLISECONDS) }
+                    durationObjective?.let { goalData.durationObjective = it }
+                    frequencyObjective?.let { goalData.frequencyObjective = it }
+                    metricObjective?.let { goalData.metricObjective = it }
+                    goalData
+                }
+                uiThread {
+                    ld("size ${stepGoals.size}")
+                    ld("name ${stepGoals[0].activityName}")
+                    ld("objective type ${stepGoals[0].objectiveType}")
+                    ld("metric ${stepGoals[0].metricObjective}")
+                    ld("recurence ${stepGoals[0].recurrence}")
+
+                    DatabaseWrite.updateGoals(goals)
+                }
+            }
+
+            Fitness.GoalsApi.readCurrentGoals(
+                    mClient,
+                    GoalsReadRequest.Builder()
+                            .addDataType(DataType.TYPE_CALORIES_EXPENDED)
+                            .build()).setResultCallback {
+                val stepGoals = it.goals
+
+            }
+        }
     }
 }

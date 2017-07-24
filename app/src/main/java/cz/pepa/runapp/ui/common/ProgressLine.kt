@@ -9,7 +9,6 @@ import android.graphics.RectF
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
-import android.widget.LinearLayout
 import com.app.progreswheelview.R
 import java.text.DecimalFormat
 
@@ -26,8 +25,8 @@ class ProgressLine @JvmOverloads constructor(context: Context, attrs: AttributeS
     private var mUnderLineSize = 5f
     private var mValueTextSize = 48f
     private var mDefTextSize = 24f
-    private var layoutHeight = 0
-    private var layoutWidth = 0
+    private var layoutHeight = 60
+    private var layoutWidth = 60
 
     //Colors (with defaults)
     private var mProgressColor = 0x61b50CCC//Color.GREEN;
@@ -93,7 +92,7 @@ class ProgressLine @JvmOverloads constructor(context: Context, attrs: AttributeS
     }
 
     private fun calculateBarScale() {
-        mScale = if (mPercentage > 100) 1 else mPercentage * 0.01f
+        mScale = if (mPercentage > 100) 1F else mPercentage * 0.01f
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -213,6 +212,7 @@ class ProgressLine @JvmOverloads constructor(context: Context, attrs: AttributeS
     }
 
     fun setProgressColor(color: Int) {
-        mProgressColor = color
+        mProgressLinePaint.color = color
+        invalidate()
     }
 }

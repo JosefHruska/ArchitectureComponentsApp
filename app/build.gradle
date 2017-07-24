@@ -90,6 +90,9 @@ dependencies {
     // Line and circle progress indicator
     compile 'com.zekapp.library:progreswheelview:1.1.2'
 
+    // Optional Rx Wrapper
+    compile 'com.gojuno.koptional:koptional:1.1.0'
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'

@@ -1,10 +1,7 @@
 
 package cz.pepa.runapp.database
 
-import cz.pepa.runapp.data.DatabaseModel
-import cz.pepa.runapp.data.Tab
-import cz.pepa.runapp.data.TodayItem
-import cz.pepa.runapp.data.User
+import cz.pepa.runapp.data.*
 import cz.pepa.runapp.logic.Auth
 import io.stepuplabs.settleup.util.extensions.todayBegin
 import logError
@@ -22,9 +19,23 @@ object DatabaseWrite {
 //    const val CONNECT_FIREBASE_TIMEOUT = 30 // seconds
 //
     fun updateToday(todayItem: TodayItem) {
-        val today =TodayItem().apply { this.steps = todayItem.steps; this.distance = todayItem.distance; this.calories = todayItem.calories }
+        val today = TodayItem().apply { this.steps = todayItem.steps; this.distance = todayItem.distance; this.calories = todayItem.calories; this.dayStart = todayBegin()  }
         update("/days/${Auth.getUserId()}/${todayBegin()}", today )
 }
+
+    fun updateMissingDays(todayItems: Map<Long, TodayItem>, lastSyncedDay: Long) {
+        todayItems.forEach {
+            update("/days/${Auth.getUserId()}/${it.key}", it.value, {
+                update("/userInfo/${Auth.getUserId()}", UserInfo().apply { lastSync = lastSyncedDay })
+            })
+        }
+    }
+
+    fun updateGoals(goals: List<GoalData>) {
+        goals.forEachIndexed { index, goalData ->
+            update("/goals/${Auth.getUserId()}/$index", goalData)
+        }
+    }
 
 
 

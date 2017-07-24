@@ -19,5 +19,10 @@ class Ids {
         const val PROVIDER_FACEBOOK = "facebook"
         const val PROVIDER_EMAIL = "email"
 
+        // FIT OBJECTIVE TYPES
+        const val GOAL_METRIC = 1
+        const val GOAL_FREQUENCY = 2
+        const val GOAL_DURATION = 3
+
     }
 }
