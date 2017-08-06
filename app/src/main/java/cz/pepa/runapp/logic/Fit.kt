@@ -14,6 +14,7 @@ import com.google.android.gms.fitness.request.GoalsReadRequest
 import cz.pepa.runapp.app
 import cz.pepa.runapp.data.DummyFittnes
 import cz.pepa.runapp.data.GoalData
+import cz.pepa.runapp.data.GoalMetricObjective
 import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.DatabaseWrite
@@ -264,10 +265,9 @@ object Fit {
             Fitness.GoalsApi.readCurrentGoals(
                     mClient,
                     GoalsReadRequest.Builder()
-//                            .addDataType(DataType.TYPE_STEP_COUNT_DELTA)
-//                            .addDataType(DataType.TYPE_CALORIES_EXPENDED)
-//                            .addDataType(DataType.TYPE_DISTANCE_DELTA)
-                            .addObjectiveType(Goal.OBJECTIVE_TYPE_FREQUENCY)
+                            .addDataType(DataType.TYPE_STEP_COUNT_DELTA)
+                            .addDataType(DataType.TYPE_CALORIES_EXPENDED)
+                            .addDataType(DataType.TYPE_DISTANCE_DELTA)
                             .build()).setResultCallback {
                 val stepGoals = it.goals
                 val goals = it.goals.map {
@@ -301,7 +301,7 @@ object Fit {
                     goalData.apply { it.activityName?.let { name = it }; goalType = type; recurrence = recurrenceUnit; recurrencePeriod = it.recurrence.count; startTime = it.getStartTime(Calendar.getInstance(), TimeUnit.MILLISECONDS); endTime = it.getEndTime(Calendar.getInstance(), TimeUnit.MILLISECONDS) }
                     durationObjective?.let { goalData.durationObjective = it }
                     frequencyObjective?.let { goalData.frequencyObjective = it }
-                    metricObjective?.let { goalData.metricObjective = it }
+                    metricObjective?.let { goalData.metricObjective = GoalMetricObjective().apply { value = it.value; goalTypeName = it.dataTypeName } }
                     goalData
                 }
                 uiThread {

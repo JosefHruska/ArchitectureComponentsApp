@@ -18,6 +18,10 @@ fun Float.formatPercentage(): Int {
     return this.toInt()
 }
 
+fun Double.formatPercentage(): Int {
+    return this.toInt()
+}
+
 fun BigDecimal.divideWithScale(number: BigDecimal): BigDecimal {
     return divide(number, 20, RoundingMode.HALF_UP)
 }

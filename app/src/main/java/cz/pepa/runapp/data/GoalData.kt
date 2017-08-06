@@ -17,7 +17,7 @@ class GoalData() : DatabaseModel() {
     var endTime: Long = 0L
     var durationObjective: Goal.DurationObjective? = null
     var frequencyObjective: Goal.FrequencyObjective? = null
-    var metricObjective: Goal.MetricObjective? = null
+    var metricObjective: GoalMetricObjective? = null
 
 
     enum class GoalType {

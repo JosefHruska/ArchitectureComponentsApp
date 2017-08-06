@@ -26,6 +26,7 @@ class GroupViewModel: BaseViewModel() {
     override fun onStart() {
         loadDummyFitness()
         loadToday()
+
     }
 
     fun loadToday() {

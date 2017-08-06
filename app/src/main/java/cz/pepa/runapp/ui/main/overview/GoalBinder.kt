@@ -5,6 +5,7 @@ import cz.pepa.runapp.R
 import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.ui.common.DataBinder
 import cz.pepa.runapp.ui.common.ProgressLine
+import formatPercentage
 import io.stepuplabs.settleup.util.extensions.toColor
 
 /**
@@ -17,9 +18,9 @@ class GoalBinder : DataBinder<Goal>() {
 
     override fun bind(data: Goal, view: View) {
         view as ProgressLine
-//        view.setPercentage(data.progress.formatPercentage())
-//        view.setName(data.name)
-//        view.setValueText(data.value.toInt())
+        view.setPercentage(data.percentage.formatPercentage())
+        view.setName(data.name)
+        view.setValueText(data.targetValue.toInt())
         view.setProgressColor(R.color.blue_paypal.toColor())
     }
 }

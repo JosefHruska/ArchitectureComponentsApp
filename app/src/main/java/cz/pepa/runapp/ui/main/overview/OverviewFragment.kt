@@ -1,19 +1,24 @@
 package cz.pepa.runapp.ui.main.overview
 
 import android.arch.lifecycle.Observer
+import com.gojuno.koptional.Optional
 import cz.pepa.runapp.R
 import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.data.TodayItem
+import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.base.BaseViewModel
 import cz.pepa.runapp.ui.common.RecyclerAdapter
 import cz.pepa.runapp.ui.main.group.GroupViewModel
 import cz.pepa.runapp.utils.extensions.formatCalories
 import cz.pepa.runapp.utils.extensions.formatDistance
+import io.stepuplabs.settleup.util.extensions.isNullOrNone
+import io.stepuplabs.settleup.util.extensions.toSome
 import kotlinx.android.synthetic.main.fragment_overview.*
 import kotlinx.android.synthetic.main.fragment_overview.view.*
 import kotlinx.android.synthetic.main.include_goals.view.*
 import kotlinx.android.synthetic.main.include_today.*
+import ld
 
 /**
  * TODO: Add description
@@ -52,12 +57,13 @@ class OverviewFragment: BaseFragment() {
     }
 
     fun subscribeGoals() {
-        val goalObserver = Observer<List<Goal>> {
-            it?.let {
-                mGoalsAdapter.setData(it, GoalBinder())
+        val goalObserver = Observer<Optional<MutableList<Goal>>> {
+            if (it != null && !it.isNullOrNone()) {
+                mGoalsAdapter.setData(it.toSome(), GoalBinder())
             }
         }
-        (mViewModel as GroupViewModel).mGoal.observe(this, goalObserver)
+        ld("GOALS are :${GoalLogic.goals.value}")
+        GoalLogic.goals.observe(this, goalObserver)
     }
 
     fun setupGoals() {

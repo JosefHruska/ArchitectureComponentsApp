@@ -13,6 +13,7 @@ import cz.pepa.runapp.extensions.askForPermission
 import cz.pepa.runapp.extensions.isPermissionGranted
 import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logic.Fit
+import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseActivity
 import cz.pepa.runapp.ui.base.BaseViewModel
 import cz.pepa.runapp.ui.common.Ids
@@ -65,6 +66,7 @@ class MainActivity: BaseActivity() {
         setupViewPager()
         setupGroups()
         initGoogleFit()
+        GoalLogic.loadGoals()
     }
 
 

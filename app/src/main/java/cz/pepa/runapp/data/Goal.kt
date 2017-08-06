@@ -8,8 +8,8 @@ package cz.pepa.runapp.data
 
 class Goal() {
 
-    var name: String? = null
-    var percentage: Double? = null
-    var currentValue: Double? = null
-    var targetValue: Double? = null
+    var name: String = ""
+    var percentage: Double = 0.0
+    var currentValue: Double = 0.0
+    var targetValue: Double = 0.0
 }
