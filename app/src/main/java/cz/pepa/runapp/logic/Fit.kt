@@ -101,7 +101,7 @@ object Fit {
     fun checkDaySync() {
         DatabaseRead.userInfo().observeOn(Schedulers.computation()).subscribe {
             if (!it.isNullOrNone()) {
-                if (it.toSome().lastSync != todayBegin()) {
+                if (it.toSome().lastSync != yesterdayBegin()) {
                     syncMissingDays(it.toSome().lastSync)
                 }
             } else {
@@ -137,12 +137,15 @@ object Fit {
             }
         }
     }
-
     fun updateTodayData() {
         doAsync {
             val today = TodayItem()
             val readRequest = getTodayData()
             val dataReadResult = Fitness.HistoryApi.readData(mClient, readRequest)
+            val caloriesReadResult = Fitness.HistoryApi.readData(mClient, detailedCaloriesData())
+            val calories: MutableList<Pair<Float, DataSource>> = mutableListOf()
+            var caloriesTodaySum: Double? = null
+            var stepsAndDistanceLoaded: Boolean = false
             dataReadResult.setResultCallback {
                 dataReadResult ->
                 for (bucket in dataReadResult.buckets) {
@@ -152,18 +155,43 @@ object Fit {
                             lw("data value : ${it.getValue(it.dataType.fields[0])}")
                             when (it.dataType.fields[0].name) {
                                 "steps" -> today.steps = it.getValue(it.dataType.fields[0]).asInt()
-                                "calories" -> today.calories = it.getValue(it.dataType.fields[0]).asFloat()
                                 "distance" -> today.distance = it.getValue(it.dataType.fields[0]).asFloat()
                             }
                         }
                     }
+                    stepsAndDistanceLoaded = true
                 }
+
                 lw("Created today item with ${today.steps} steps, ${today.calories} calories and ${today.distance} distance")
+                val x = caloriesTodaySum
                 uiThread {
-                    DatabaseWrite.updateToday(today)
+                    caloriesTodaySum?.let {
+                        DatabaseWrite.updateToday(today)
+                    }
                 }
             }
-
+            caloriesReadResult.setResultCallback {
+                caloriesResult ->
+                val dataSet = caloriesResult.dataSets.first()
+                dataSet.dataPoints.forEach {
+                    lw("data type : ${it.dataType}")
+                    lw("data value : ${it.getValue(it.dataType.fields[0])}")
+                    when (it.dataType.fields[0].name) {
+                        "calories" -> {
+                            calories.add(Pair(it.getValue(it.dataType.fields[0]).asFloat(), it.originalDataSource))
+                        }
+                    }
+                }
+                caloriesTodaySum = calories.filter { it.second.streamName == "from_activities" }.sumByDouble { it.first.toDouble() }
+                today.calories = calories.filter { it.second.streamName == "from_activities" }.sumByDouble { it.first.toDouble() }.toFloat()
+                ld("Calories sum is $caloriesTodaySum")
+                val s = stepsAndDistanceLoaded
+                uiThread {
+                    if (stepsAndDistanceLoaded) {
+                        DatabaseWrite.updateToday(today)
+                    }
+                }
+            }
         }
     }
 
@@ -201,14 +229,8 @@ object Fit {
      * Return a [DataReadRequest] for all step count changes in the past week.
      */
     fun getTodayData(): DataReadRequest {
-        // [START build_read_data_request]
-        // Setting a start and end date using a range of 1 week before this moment.
-        val cal = Calendar.getInstance()
-        val now = Date()
-        cal.time = now
-        val endTime = cal.timeInMillis
-        cal.add(Calendar.DAY_OF_MONTH, -1)
-        val startTime = cal.timeInMillis
+        val endTime = todayEnd()
+        val startTime = todayBegin()
 
         val dateFormat = DateFormat.getDateInstance()
         lw("Range Start: " + dateFormat.format(startTime))
@@ -231,6 +253,19 @@ object Fit {
 
         return readRequest
 
+    }
+
+        fun detailedCaloriesData(): DataReadRequest {
+            val ds = DataSource.Builder()
+                    .setAppPackageName("com.google.android.gms")
+                    .setStreamName("from_activities")
+                    .setType(DataSource.TYPE_DERIVED)
+                    .setDataType(DataType.TYPE_CALORIES_EXPENDED).build()
+            return DataReadRequest.Builder()
+                    .enableServerQueries()
+                    .setTimeRange(todayBegin(), todayEnd(), TimeUnit.MILLISECONDS)
+                    .read(DataType.TYPE_CALORIES_EXPENDED)
+                    .build()
     }
 
     fun getDaysData(from: Long, to: Long): DataReadRequest {

@@ -106,6 +106,26 @@ fun currentTime(): Long {
     return Calendar.getInstance().timeInMillis
 }
 
+fun todayEnd(): Long {
+    val today = Calendar.getInstance()
+    today.set(Calendar.HOUR_OF_DAY, 23)
+    today.set(Calendar.MINUTE, 59)
+    today.set(Calendar.SECOND, 59)
+    today.set(Calendar.MILLISECOND, 0)
+    return today.timeInMillis
+}
+
+fun yesterdayBegin(): Long {
+    val today = Calendar.getInstance()
+    today.set(Calendar.HOUR_OF_DAY, 0)
+    today.set(Calendar.MINUTE, 0)
+    today.set(Calendar.SECOND, 0)
+    today.set(Calendar.MILLISECOND, 0)
+    today.roll(Calendar.DAY_OF_YEAR, -1)
+    return today.timeInMillis
+}
+
+
 fun todayBegin(): Long {
     val today = Calendar.getInstance()
     today.set(Calendar.HOUR_OF_DAY, 0)

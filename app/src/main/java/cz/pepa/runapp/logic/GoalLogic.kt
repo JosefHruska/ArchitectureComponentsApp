@@ -10,6 +10,7 @@ import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.combineLatest
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.stepuplabs.settleup.util.extensions.todayBegin
 import ld
 import java.util.concurrent.TimeUnit
 
@@ -37,7 +38,7 @@ object GoalLogic {
             goalsData.forEach {
                 when (it.goalType) {
                     GoalData.GoalType.METRIC -> {
-                        goals.add(formatMetricGoal(it, days))
+                        goals.add(formatMetricGoal(it, days.reversed()))
                     }
                     GoalData.GoalType.FREQUENCY -> {
 //                        formatFrequencyGoal(it, days)
@@ -84,7 +85,7 @@ object GoalLogic {
         var goalTitlePeriod: String? = null
         when (goalData.recurrence) {
             GoalData.GoalRecurrence.DAILY -> {
-                progressPercentage = calculateGoalProgress(days.take(1), goalSubject, targetValue)
+                progressPercentage = calculateGoalProgress(listOf(days.find { it.dayStart == todayBegin() }!!), goalSubject, targetValue)
                 goalTitlePeriod = app().getString(R.string.recurrence_day)
             }
             GoalData.GoalRecurrence.WEEKLY -> {
@@ -189,8 +190,8 @@ object GoalLogic {
     fun calculateGoalProgress(daysOfWeek: List<TodayItem>, goalSubject: GoalSubject, targetValue: Double): Double {
         val overallValue = when (goalSubject) {
             GoalSubject.CALORIES -> daysOfWeek.sumByDouble { it.calories.toDouble() }
-            GoalSubject.DISTANCE -> daysOfWeek.sumByDouble { it.calories.toDouble() }
-            GoalSubject.STEPS -> daysOfWeek.sumByDouble { it.calories.toDouble() }
+            GoalSubject.DISTANCE -> daysOfWeek.sumByDouble { it.distance.toDouble() }
+            GoalSubject.STEPS -> daysOfWeek.sumByDouble { it.steps.toDouble() }
         }
         val percentageProgess: Double = overallValue / (targetValue / 100)
         return percentageProgess

@@ -7,6 +7,7 @@ import cz.pepa.runapp.ui.common.DataBinder
 import cz.pepa.runapp.ui.common.ProgressLine
 import formatPercentage
 import io.stepuplabs.settleup.util.extensions.toColor
+import org.jetbrains.anko.doAsync
 
 /**
  * TODO: Add description
@@ -18,6 +19,7 @@ class GoalBinder : DataBinder<Goal>() {
 
     override fun bind(data: Goal, view: View) {
         view as ProgressLine
+        doAsync {  }
         view.setPercentage(data.percentage.formatPercentage())
         view.setName(data.name)
         view.setValueText(data.targetValue.toInt())
