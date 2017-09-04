@@ -11,9 +11,12 @@
     <color name="gray_7">#222222</color>
     <color name="gray_8">#757575</color>
     <color name="white">#ffffff</color>
+    <color name="yellow">#ffeb3b</color>
+    <color name="red">#f44336</color>
+    <color name="blue">#f44336</color>
     <color name="red_negative">#f7412d</color>
     <color name="green_positive">#47b04b</color>
-    <color name="blue_paypal">#27366b</color>
+    <color name="blue_paypal">#2196f3</color>
     <color name="premium">#eba500</color>
     <!-- Additional colors: -->
     <color name="primary">#202020</color>

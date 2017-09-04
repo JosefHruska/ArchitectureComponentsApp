@@ -1,4 +1,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string-array name="spinner_set_goal_card">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
     <!-- Generic: -->
     <string name="something_went_wrong">Something went wrong</string>
     <string name="report">Report</string>
@@ -429,4 +442,5 @@
     <string name="error_email_does_not_exist" translation_description="Inline error when user attempt signin with invalid account">That email address doesn\'t match an existing account</string>
     <string name="auth_picker_description">Sign in to allow for backup\nand synchronization\nof your groups.</string>
     <string name="sign_up">Sign up</string>
+
 </resources>

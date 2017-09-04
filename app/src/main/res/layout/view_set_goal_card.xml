@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    
+    <TextView
+        android:id="@+id/vTextDescription"
+        style="@style/Layout"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/vAmountLayout"
+        style="@style/Layout.TextInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/vAmount"
+            style="@style/EditText"
+            android:hint="@string/default_weight"
+            android:inputType="numberDecimal" />
+
+    </android.support.design.widget.TextInputLayout>
+    
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/vUnitSpinner"
+        style="@style/Layout"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+    
+    <LinearLayout
+        android:id="@+id/vColorBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <FrameLayout
+            android:id="@+id/vFirstPart"
+            style="@style/Layout"
+            android:layout_weight="20"
+            android:layout_height="32dp"
+            android:background="@color/red_negative"
+            />
+
+        <FrameLayout
+            android:id="@+id/vSecondPart"
+            android:layout_height="32dp"
+            android:layout_weight="60"
+            style="@style/Layout"
+            android:background="@color/yellow"
+            />
+
+        <FrameLayout
+            android:id="@+id/vThirdPart"
+            android:layout_height="32dp"
+            android:layout_weight="20"
+            style="@style/Layout"
+            />
+
+        <SeekBar
+            android:id="@+id/vSeekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:max="200"
+            android:progress="60"
+            />
+
+        <Button
+            style="@style/Button"
+            android:text="WATAFAKA"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
