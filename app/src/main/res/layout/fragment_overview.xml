@@ -21,32 +21,41 @@
                     android:text="@string/today"
                     android:textAppearance="@style/ListHeader" />
 
+
+
                 <include layout="@layout/include_today" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/vGoalCard"
+            android:id="@+id/vYourGoals"
             style="@style/Layout.Card">
 
-            <LinearLayout
-
+            <android.support.constraint.ConstraintLayout
                 style="@style/Layout"
                 android:background="@drawable/ripple_background">
 
                 <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/vGoalsTitle"
+                    android:id="@+id/vYourGoalsTitle"
                     style="@style/TextView.CardTitle"
-                    android:text="@string/goals"
-                    android:textAppearance="@style/ListHeader" />
+                    android:text="@string/your_goals"
+                    android:textAppearance="@style/ListHeader"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <include
                     android:id="@+id/vGoals"
-                    layout="@layout/include_goals" />
+                    layout="@layout/include_goals"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
-
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

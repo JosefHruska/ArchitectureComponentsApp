@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="320dp">
+
     <TextView
         android:id="@+id/vTextDescription"
-        style="@style/Layout"
-        android:layout_height="0dp"
+        style="@style/TextView"
         android:layout_width="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/vAmountVerticalGuideline"
+        style="@style/Layout.Guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/vAmountLayout"
         style="@style/Layout.TextInput"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/vAmountVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/vTextDescription">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/vAmount"
@@ -29,60 +33,63 @@
             android:inputType="numberDecimal" />
 
     </android.support.design.widget.TextInputLayout>
-    
+
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/vUnitSpinner"
         style="@style/Layout"
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
-    
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/vAmountLayout"
+        app:layout_constraintLeft_toRightOf="@id/vAmountLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vAmountLayout" />
+
     <LinearLayout
         android:id="@+id/vColorBar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="100"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vAmountLayout">
 
         <FrameLayout
             android:id="@+id/vFirstPart"
             style="@style/Layout"
-            android:layout_weight="20"
             android:layout_height="32dp"
-            android:background="@color/red_negative"
-            />
+            android:layout_weight="20"
+            android:background="@color/red_negative" />
 
         <FrameLayout
             android:id="@+id/vSecondPart"
+            style="@style/Layout"
             android:layout_height="32dp"
             android:layout_weight="60"
-            style="@style/Layout"
-            android:background="@color/yellow"
-            />
+            android:background="@color/yellow" />
 
         <FrameLayout
             android:id="@+id/vThirdPart"
-            android:layout_height="32dp"
-            android:layout_weight="20"
             style="@style/Layout"
-            />
-
-        <SeekBar
-            android:id="@+id/vSeekbar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:max="200"
-            android:progress="60"
-            />
-
-        <Button
-            style="@style/Button"
-            android:text="WATAFAKA"/>
-
+            android:layout_height="32dp"
+            android:layout_weight="20" />
     </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/vSeekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="200"
+        android:progress="60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vAmountLayout" />
+
+    <Button
+        style="@style/Button"
+        android:text="WATAFAKA"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSeekbar" />
 
 
 </android.support.constraint.ConstraintLayout>

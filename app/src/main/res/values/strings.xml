@@ -23,6 +23,7 @@
     <string name="distance">Distance</string>
     <string name="today">Today</string>
     <string name="goals">Goals</string>
+    <string name="your_goals">Your goals</string>
 
     <!--Goals-->
     <string name="goal_metric_calories">![CDATA[Burn <b>%1$s</b> a <b>%2$s</b>]]</string>
@@ -31,6 +32,7 @@
     <string name="recurrence_day">a day</string>
     <string name="recurrence_week">a week</string>
     <string name="recurrence_month">a month</string>
+    <string name="add_goal">Add goal</string>
 
     <!-- Main screen: -->
     <string name="total_paid">Total spent</string>

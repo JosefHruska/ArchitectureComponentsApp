@@ -14,6 +14,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/gray_1</item>
         <item name="searchViewStyle">@style/Toolbar.SearchView</item>
+        <item name="drawerArrowStyle">@style/Toolbar.Arrow</item>
         <item name="autoCompleteTextViewStyle">@style/Toolbar.AutoCompleteTextView</item>
 
     </style>

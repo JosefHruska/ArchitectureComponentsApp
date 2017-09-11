@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.View
 import cz.pepa.runapp.R
 import cz.pepa.runapp.data.Tab
+import cz.pepa.runapp.data.User
 import cz.pepa.runapp.extensions.askForPermission
 import cz.pepa.runapp.extensions.isPermissionGranted
 import cz.pepa.runapp.logger.Log
@@ -17,6 +18,7 @@ import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseActivity
 import cz.pepa.runapp.ui.base.BaseViewModel
 import cz.pepa.runapp.ui.common.Ids
+import cz.pepa.runapp.utils.loadAvatar
 import io.stepuplabs.settleup.util.extensions.popupMenuOnClick
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_drawer_header.*
@@ -42,7 +44,6 @@ class MainActivity: BaseActivity() {
     private lateinit var vHeader: View
     private lateinit var mViewPagerAdapter: MainViewPagerAdapter
 
-
     override fun getViewModel(): BaseViewModel {
         return MainViewModel()
     }
@@ -65,6 +66,7 @@ class MainActivity: BaseActivity() {
         setupDrawer()
         setupViewPager()
         setupGroups()
+        setupUser()
         initGoogleFit()
         GoalLogic.loadGoals()
     }
@@ -75,8 +77,6 @@ class MainActivity: BaseActivity() {
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING)
         }
-
-
     }
 
     private fun initGoogleFit() {
@@ -121,10 +121,10 @@ class MainActivity: BaseActivity() {
             true
         }
         vDrawer.addDrawerListener(toggle)
-        vHeader.vPlans.setOnClickListener {
+//        vHeader.vPlans.setOnClickListener {
 //            startActivity<PlansActivity>()
-            vDrawer.closeDrawers()
-        }
+//            vDrawer.closeDrawers()
+//        }
         toggle.syncState()
     }
 
@@ -149,6 +149,18 @@ class MainActivity: BaseActivity() {
             it?.let { Tabs.setTabs(it) }
         }
         (mViewModel as MainViewModel).getTabs().observe(this, groupsObserver)
+    }
+
+    private fun setupUser() {
+        val userObserver = Observer<User> {
+            it?.let {
+                vHeader.vDrawerHeaderName.text = it.name
+                vHeader.vDrawerHeaderEmail.text = it.email
+                vHeader.vDrawerHeaderImage.loadAvatar(it) // User's avatar has no pointer.
+            }
+        }
+        (mViewModel as MainViewModel).getUser().observe(this, userObserver)
+
     }
 
     companion object {

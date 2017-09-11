@@ -37,6 +37,23 @@ object DatabaseWrite {
         }
     }
 
+    fun addGoal(goal: GoalData, goalCount: Int) {
+        insert("/goals/${Auth.getUserId()}/$goalCount", goal)
+    }
+
+    fun deleteGoal(goalOrder: Int) {
+        delete("/goals/${Auth.getUserId()}/$goalOrder")
+    }
+
+    private fun delete(path: String) {
+        Database.get().reference
+                .child(path)
+                .removeValue()
+                .addOnFailureListener { logError(it) }
+//        Offline.addChangeIfOffline()
+    }
+//
+
 
 
 //    // Transactions:
@@ -122,7 +139,7 @@ object DatabaseWrite {
 
     fun addCurrentUser(authProvider: String, photoUrl: String?, mInviteLinkHash: String?) {
         val user = User().apply { name = Auth.getUsername(); email = Auth.getEmail(); this.photoUrl = photoUrl; this.authProvider = authProvider; currentTabId = Tab.OVERVIEW; inviteLinkHash = mInviteLinkHash }
-        update("users/${Auth.getUserId()}/${todayBegin()}", user)
+        insert("goals/${Auth.getUserId()}/${todayBegin()}", user)
     }
 //
 //    fun addOwnerPermission(groupId: String) {
@@ -173,7 +190,7 @@ object DatabaseWrite {
 //    }
 //
 //    // Members:
-//
+
 //    fun addMember(groupId: String, member: Member): String {
 //        return insert("members/$groupId", member)
 //    }
@@ -217,15 +234,15 @@ object DatabaseWrite {
 //                .key
 //    }
 //
-//    private fun insert(path: String, data: Any): String {
-//        val newReference = Database.get().reference
-//                .child(path)
-//                .push()
-//        newReference.setValue(data)
-//                .addOnFailureListener { logError(it) }
+private fun insert(path: String, data: Any): String {
+    val newReference = Database.get().reference
+            .child(path)
+            .push()
+    newReference.setValue(data)
+            .addOnFailureListener { logError(it) }
 //        Offline.addChangeIfOffline()
-//        return newReference.key
-//    }
+    return newReference.key
+}
 //
     private fun update(path: String, data: DatabaseModel, databaseWriteCallback: (() -> Unit)? = null) {
         update(path, data.toMap(), databaseWriteCallback)

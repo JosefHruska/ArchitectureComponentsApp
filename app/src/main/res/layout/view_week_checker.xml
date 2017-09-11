@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/vDaysLayout"
+        style="@style/Layout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/vSunday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="S" />
+
+        <ImageView
+            android:id="@+id/vMonday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="M" />
+
+        <ImageView
+            android:id="@+id/vTuesday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="T" />
+
+        <ImageView
+            android:id="@+id/vWednesday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="W" />
+
+        <ImageView
+            android:id="@+id/vThursday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="T" />
+
+        <ImageView
+            android:id="@+id/vFriday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="F" />
+
+        <ImageView
+            android:id="@+id/vSaturday"
+            style="@style/TextView"
+            android:background="@drawable/circle_gray"
+            android:text="S" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vStreak"
+        android:layout_gravity="center" />
+</merge>

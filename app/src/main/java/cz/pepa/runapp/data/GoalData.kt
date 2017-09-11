@@ -10,8 +10,8 @@ import com.google.android.gms.fitness.data.Goal
 class GoalData() : DatabaseModel() {
 
     var name: String? = "undefined"
-    lateinit var goalType: GoalType
-    lateinit var recurrence: GoalRecurrence
+    var goalType: GoalType = GoalType.METRIC
+     var recurrence: GoalRecurrence = GoalRecurrence.DAILY
     var recurrencePeriod: Int? = null
     var startTime: Long = 0L
     var endTime: Long = 0L

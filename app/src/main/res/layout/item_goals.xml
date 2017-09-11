@@ -1,8 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cz.pepa.runapp.ui.common.ProgressLine
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="90dp">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vGoalLayout"
+    style="@style/Layout">
 
-</cz.pepa.runapp.ui.common.ProgressLine>
+    <TextView
+        android:id="@+id/vGoalTitle"
+        style="@style/TextView.Title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Some goal title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/vGoalIcon"
+        style="@style/Image.Avatar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_gray"
+        android:src="@drawable/ic_burn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vGoalTitle" />
+
+    <LinearLayout
+        android:id="@+id/vProgressContainer"
+        style="@style/Layout"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/vGoalTitle">
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/vProgressFirst"
+            style="@style/ColorProgress"
+            android:layout_marginTop="12dp"
+            app:rcMax="100"
+            app:rcProgress="50"
+            app:rcProgressColor="@color/colorPrimary"
+            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgressColor="@color/accent" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/vProgressSecond"
+            style="@style/ColorProgress"
+            android:layout_marginTop="12dp"
+            app:rcMax="100"
+            app:rcProgress="50"
+            app:rcProgressColor="@color/colorPrimary"
+            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgressColor="@color/accent" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/vProgressThird"
+            style="@style/ColorProgress"
+            android:layout_marginTop="12dp"
+            app:rcBackgroundPadding="4dp"
+            app:rcMax="100"
+            app:rcProgress="50"
+            app:rcProgressColor="@color/colorPrimary"
+            app:rcReverse="false"
+            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgressColor="@color/accent" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vSeparatorMiddleHorizontal"
+        style="@style/Separator"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vProgressContainer" />
+
+    <View
+        android:id="@+id/vSeparatorBottom"
+        style="@style/Separator"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSeparatorMiddleHorizontal" />
+
+    <View
+        android:id="@+id/vSeparatorMiddleVertical"
+        style="@style/Separator"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal"
+        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom" />
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vVerticalMiddleGuideline"
+        style="@style/Layout.Guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/vExpiration"
+        style="@style/TextView"
+        android:text="12:34:19 left"
+        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/vVerticalMiddleGuideline"
+        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal" />
+
+    <TextView
+        android:id="@+id/vReward"
+        style="@style/TextView"
+        android:text="Reward : 326 exp"
+        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom"
+        app:layout_constraintLeft_toLeftOf="@id/vVerticalMiddleGuideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal" />
+
+</android.support.constraint.ConstraintLayout>

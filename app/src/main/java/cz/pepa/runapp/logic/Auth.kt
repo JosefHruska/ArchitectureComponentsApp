@@ -46,9 +46,9 @@ object Auth {
                         .setLogo(R.drawable.ic_splash_app)
 //                        .setTheme(R.style.LoginTheme)
                         .setAvailableProviders(listOf(
-                                AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build(),
+                                AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
 //                                AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build(),
-                                AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
+//                                AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
                         .build(),
                 Ids.REQUEST_SIGN_IN)
     }

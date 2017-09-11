@@ -3,11 +3,6 @@
     style="@style/Layout"
     android:paddingBottom="12dp">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/vTitle"
-        style="@style/TextView.CardTitle"
-        android:textAppearance="@style/ListHeader" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/vGoalRecycler"
         style="@style/Layout.Recycler" />

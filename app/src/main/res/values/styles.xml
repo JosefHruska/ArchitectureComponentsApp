@@ -17,13 +17,21 @@
         <item name="android:editTextColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="titleTextColor">@color/white</item>
-        <item name="drawerArrowStyle">@style/Toolbar.Arrow</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
     </style>
 
     <style name="Layout.Toolbar.Grey">
         <!-- Grey icons -->
         <item name="colorControlNormal">@color/gray_4</item>
+    </style>
+
+    <style name="ColorProgress">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="rcRadius">24dp</item>
+        <item name="rcBackgroundPadding">4dp</item>
+        <item name="rcReverse">false</item>
+        <item name="rcBackgroundColor">@color/gray_2</item>
     </style>
 
     <style name="Layout.Cards">

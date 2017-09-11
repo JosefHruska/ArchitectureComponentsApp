@@ -145,6 +145,16 @@ fun lastMonth(): Long {
     return today.timeInMillis
 }
 
+fun todayPlus100Years(): Long {
+    val today = Calendar.getInstance()
+    today.set(Calendar.HOUR_OF_DAY, 0)
+    today.set(Calendar.MINUTE, 0)
+    today.set(Calendar.SECOND, 0)
+    today.set(Calendar.MILLISECOND, 0)
+    today.roll(Calendar.YEAR, 100)
+    return today.timeInMillis
+}
+
 /**
  * Returns current locale or UK English if we don't support this locale.
  */

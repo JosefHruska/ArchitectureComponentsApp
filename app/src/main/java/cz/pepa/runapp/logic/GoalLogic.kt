@@ -8,6 +8,7 @@ import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.data.GoalData
 import cz.pepa.runapp.data.TodayItem
 import cz.pepa.runapp.database.DatabaseRead
+import cz.pepa.runapp.database.DatabaseWrite
 import cz.pepa.runapp.database.combineLatest
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.stepuplabs.settleup.util.extensions.todayBegin
@@ -57,19 +58,13 @@ object GoalLogic {
 
     }
 
-//    fun formatGoals(goalsData: List<GoalData>) {
-//
-//        goalsData.forEach {
-//            val formattedGoal: Goal = Goal()
-//            when (it.goalType) {
-//                GoalData.GoalType.METRIC -> {
-//                    formateMetricGoal(it)
-//                }
-//            }
-//        }
-//
-//
-//    }
+    fun addNewGoal(goalData: GoalData) {
+        DatabaseWrite.addGoal(goalData, goals.value?.toNullable()?.size ?: throw RuntimeException("WUT"))
+    }
+
+    fun removeGoal(goalOrder: Int = 4) {
+        DatabaseWrite.deleteGoal(goalOrder)
+    }
 
     fun formatDurationGoal(goalData: GoalData, days: List<TodayItem>) {
         val goal = Goal()
