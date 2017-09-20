@@ -9,7 +9,7 @@
         style="@style/TextView.Title"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Some goal title"
+        android:text="Burn 1000 calories per day"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
 
@@ -32,52 +32,62 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/vGoalTitle">
 
-        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
             android:id="@+id/vProgressFirst"
             style="@style/ColorProgress"
             android:layout_marginTop="12dp"
             app:rcMax="100"
             app:rcProgress="50"
+            app:rcTextProgress="12564"
             app:rcProgressColor="@color/colorPrimary"
-            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgress="60"
             app:rcSecondaryProgressColor="@color/accent" />
 
-        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
             android:id="@+id/vProgressSecond"
             style="@style/ColorProgress"
             android:layout_marginTop="12dp"
             app:rcMax="100"
             app:rcProgress="50"
+            app:rcTextProgress="6253"
             app:rcProgressColor="@color/colorPrimary"
-            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgress="60"
             app:rcSecondaryProgressColor="@color/accent" />
 
-        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
             android:id="@+id/vProgressThird"
             style="@style/ColorProgress"
             android:layout_marginTop="12dp"
-            app:rcBackgroundPadding="4dp"
             app:rcMax="100"
             app:rcProgress="50"
+            app:rcTextProgress="5402"
             app:rcProgressColor="@color/colorPrimary"
             app:rcReverse="false"
-            app:rcSecondaryProgress="75"
+            app:rcSecondaryProgress="60"
             app:rcSecondaryProgressColor="@color/accent" />
 
     </LinearLayout>
 
+    <cz.pepa.runapp.ui.common.WeekChecker
+        android:id="@+id/vWeekChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/vGoalTitle"
+        app:layout_constraintTop_toBottomOf="@id/vProgressContainer"/>
+
     <View
         android:id="@+id/vSeparatorMiddleHorizontal"
         style="@style/Separator"
+        android:visibility="invisible"
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vProgressContainer" />
+        app:layout_constraintTop_toBottomOf="@id/vWeekChecker" />
 
     <View
         android:id="@+id/vSeparatorBottom"
         style="@style/Separator"
-        android:layout_height="2dp"
-
+        android:layout_height="1dp"
         android:layout_marginTop="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/vSeparatorMiddleHorizontal" />
@@ -87,12 +97,11 @@
         style="@style/Separator"
         android:layout_width="0.5dp"
         android:layout_height="0dp"
+        android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal"
         app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom" />
-
-
 
     <android.support.constraint.Guideline
         android:id="@+id/vVerticalMiddleGuideline"

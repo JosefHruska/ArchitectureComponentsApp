@@ -21,6 +21,10 @@ fun Long.formatDate(): String {
     return SimpleDateFormat.getDateInstance(SimpleDateFormat.MEDIUM /* Feb 21, 2017 */, supportedLocale()).format(Date(this)) // -> Feb 21, 2017
 }
 
+fun Long.formatTime(): String {
+    return SimpleDateFormat.getTimeInstance(SimpleDateFormat.MEDIUM /* Feb 21, 2017 */, supportedLocale()).format(Date(this)) // -> Feb 21, 2017
+}
+
 fun Date.toMonthAndYear(): String {
     // See formatting documentation https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
     return SimpleDateFormat("LLLL yyyy", supportedLocale()).format(this).toString().capitalize() // LLLL = standalone name (leden); MMMM = formatted name (ledna)

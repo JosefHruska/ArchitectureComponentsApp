@@ -31,6 +31,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
+import cz.pepa.runapp.data.Goal
+import cz.pepa.runapp.data.GoalId
 import cz.pepa.runapp.extensions.isLargerOrEqualApi
 import cz.pepa.runapp.ui.base.BaseActivity
 import org.jetbrains.anko.*
@@ -300,4 +302,15 @@ fun ViewGroup.inflate(@LayoutRes layoutRes: Int) {
 
 fun Context.inflate(@LayoutRes layoutRes: Int, rootViewGroup: ViewGroup? = null): View {
     return layoutInflater.inflate(layoutRes, rootViewGroup)
+}
+
+fun Goal.getImageResource(): Int {
+    return when (this.type) {
+        GoalId.CALORIES -> R.drawable.ic_burn
+        GoalId.ACTIVE_TIME -> R.drawable.ic_active_time
+        GoalId.STEPS -> R.drawable.ic_steps
+        GoalId.DISTANCE -> R.drawable.ic_distance
+        GoalId.ACTIVE_TIME_SPECIFIC -> R.drawable.ic_active_time
+        GoalId.WEIGHT -> R.drawable.ic_weight_kilogram
+    }
 }

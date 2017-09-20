@@ -8,49 +8,50 @@
 
         <ImageView
             android:id="@+id/vSunday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="S" />
+             />
 
         <ImageView
             android:id="@+id/vMonday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="M" />
+             />
 
         <ImageView
             android:id="@+id/vTuesday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="T" />
+             />
 
         <ImageView
             android:id="@+id/vWednesday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="W" />
+             />
 
         <ImageView
             android:id="@+id/vThursday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="T" />
+             />
 
         <ImageView
             android:id="@+id/vFriday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="F" />
+             />
 
         <ImageView
             android:id="@+id/vSaturday"
-            style="@style/TextView"
+            style="@style/Image.Days"
             android:background="@drawable/circle_gray"
-            android:text="S" />
+             />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/vStreak"
+        style="@style/TextView"
         android:layout_gravity="center" />
 </merge>

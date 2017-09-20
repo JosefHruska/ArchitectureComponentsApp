@@ -4,10 +4,7 @@ import android.arch.lifecycle.Observer
 import bd
 import com.gojuno.koptional.Optional
 import cz.pepa.runapp.R
-import cz.pepa.runapp.data.Goal
-import cz.pepa.runapp.data.GoalData
-import cz.pepa.runapp.data.GoalMetricObjective
-import cz.pepa.runapp.data.TodayItem
+import cz.pepa.runapp.data.*
 import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.base.BaseViewModel
@@ -48,7 +45,8 @@ class OverviewFragment: BaseFragment() {
     override fun initUi() {
         setupToday()
         setupGoals()
-        subscribeGoals()
+        subscribeDummyGoals()
+       // subscribeGoals()
         hideProgress()
     }
 
@@ -79,6 +77,10 @@ class OverviewFragment: BaseFragment() {
         mGoalsAdapter = RecyclerAdapter<Goal>(R.layout.item_goals)
         vGoals.vGoalRecycler.adapter = mGoalsAdapter
         mGoalsAdapter.notifyDataSetChanged()
+    }
+
+    fun subscribeDummyGoals() {
+        mGoalsAdapter.setData(DummyData.getDummyGoals(), GoalBinder())
     }
 
 

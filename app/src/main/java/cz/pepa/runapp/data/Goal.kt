@@ -1,5 +1,7 @@
 package cz.pepa.runapp.data
 
+import cz.pepa.runapp.ui.common.MatchedDay
+
 /**
  * TODO: Add description
  *
@@ -9,7 +11,20 @@ package cz.pepa.runapp.data
 class Goal() {
 
     var name: String = ""
+    var type: GoalId = GoalId.CALORIES
     var percentage: Double = 0.0
     var currentValue: Double = 0.0
     var targetValue: Double = 0.0
+    var averageValue: Double = 0.0
+    var matchedDays: List<MatchedDay> = emptyList()
+    var timeLeft: String = "null"
+}
+
+enum class GoalId {
+    CALORIES,
+    WEIGHT,
+    STEPS,
+    DISTANCE,
+    ACTIVE_TIME,
+    ACTIVE_TIME_SPECIFIC
 }

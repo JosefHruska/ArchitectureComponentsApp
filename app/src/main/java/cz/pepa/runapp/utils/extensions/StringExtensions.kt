@@ -2,6 +2,8 @@ package io.stepuplabs.settleup.util.extensions
 
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
+import cz.pepa.runapp.data.Goal
+import cz.pepa.runapp.data.GoalId
 
 /**
  * Utils related to string manipulation.
@@ -40,4 +42,10 @@ fun String.shortenName(): String {
 
 fun String.cropLongMemberName(): String {
     return this.take(R.integer.member_name_max_length.toInteger())
+}
+
+fun Long.formatTimeLeft(): String {
+    if (this <= 3600000L /* 3 600 000 = 24h */) {
+
+    }
 }

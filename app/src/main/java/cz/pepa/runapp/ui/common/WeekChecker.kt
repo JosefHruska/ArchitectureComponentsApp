@@ -2,6 +2,7 @@ package cz.pepa.runapp.ui.common
 
 import android.content.Context
 import android.util.AttributeSet
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import cz.pepa.runapp.R
@@ -19,30 +20,30 @@ import java.time.DayOfWeek
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class WeekChecker @JvmOverloads constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int = 0) : LinearLayout(context, attrs, defStyleAttr) {
+class WeekChecker @JvmOverloads constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int = 0) : FrameLayout(context, attrs, defStyleAttr) {
 
     init {
         inflate(R.layout.view_week_checker)
     }
 
-    private fun setStreak(count: Int) {
+    fun setStreak(count: Int) {
         vDaysLayout.hide()
         vStreak.show()
         vStreak.text = "You streak is $count days"
     }
 
-    private fun setMatchedDays(list : List<MatchedDay>) {
+    fun setMatchedDays(list : List<MatchedDay>) {
         vDaysLayout.show()
         vStreak.hide()
         list.forEach {
             when(it.day) {
                 Day.Sunday -> vSunday.setDayDrawable(it.isMatched, "S")
-                Day.Monday -> vSunday.setDayDrawable(it.isMatched, "M")
-                Day.Tuesday -> vSunday.setDayDrawable(it.isMatched, "T")
-                Day.Wednesday -> vSunday.setDayDrawable(it.isMatched, "W")
-                Day.Thursday -> vSunday.setDayDrawable(it.isMatched, "T")
-                Day.Friday -> vSunday.setDayDrawable(it.isMatched, "F")
-                Day.Saturday -> vSunday.setDayDrawable(it.isMatched, "S")
+                Day.Monday -> vMonday.setDayDrawable(it.isMatched, "M")
+                Day.Tuesday -> vTuesday.setDayDrawable(it.isMatched, "T")
+                Day.Wednesday -> vWednesday.setDayDrawable(it.isMatched, "W")
+                Day.Thursday -> vThursday.setDayDrawable(it.isMatched, "T")
+                Day.Friday -> vFriday.setDayDrawable(it.isMatched, "F")
+                Day.Saturday -> vSaturday.setDayDrawable(it.isMatched, "S")
             }
         }
     }
