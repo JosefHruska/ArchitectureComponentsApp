@@ -22,7 +22,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/vYourGoals"
+            android:id="@+id/vYourGoalsCard"
             style="@style/Layout.Card">
 
             <android.support.constraint.ConstraintLayout
@@ -39,8 +39,57 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/vAddYourGoal"
+                    style="@style/Image"
+                    android:layout_margin="12dp"
+                    app:srcCompat="@drawable/ic_add"
+                    android:background="@drawable/circle_gray"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <include
-                    android:id="@+id/vGoals"
+                    android:id="@+id/vYourGoals"
+                    layout="@layout/include_goals"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/vOtherGoalsCard"
+            style="@style/Layout.Card"
+            android:layout_marginTop="16dp">
+
+            <android.support.constraint.ConstraintLayout
+                style="@style/Layout"
+                android:background="@drawable/ripple_background">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/vOtherGoalsTitle"
+                    style="@style/TextView.CardTitle"
+                    android:text="@string/your_goals"
+                    android:textAppearance="@style/ListHeader"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/vAddOtherGoal"
+                    style="@style/Image"
+                    android:layout_margin="12dp"
+                    app:srcCompat="@drawable/ic_add"
+                    android:background="@drawable/circle_gray"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/vOtherGoals"
                     layout="@layout/include_goals"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"

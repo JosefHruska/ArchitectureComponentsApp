@@ -20,6 +20,7 @@ class Goal() {
     var matchedDays: List<MatchedDay> = emptyList()
     var timeLeft: String = "null"
     var reward: Int = 88
+    var createdById: String? = null
 }
 
 enum class GoalId {

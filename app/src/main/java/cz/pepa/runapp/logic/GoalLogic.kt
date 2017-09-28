@@ -48,7 +48,7 @@ object GoalLogic {
 //                        formatFrequencyGoal(it, days)
                     }
                     GoalData.GoalType.DURATION -> {
-                    //    formatDurationGoal(it, days)
+//                        formatDurationGoal(it, days)
                     }
                 }
             }

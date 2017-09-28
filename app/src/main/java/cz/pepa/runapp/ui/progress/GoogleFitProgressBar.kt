@@ -42,23 +42,11 @@ class GoogleFitProgressBar @JvmOverloads constructor(context: Context, attrs: At
     }
 
     fun moveProgressDescriptionToRight() {
-//        val constraints = ConstraintSet()
-//        constraints.clone(vProgressHolder)
-//        constraints.clear(R.id.vProgressDescriptionContainer)
-//        constraints.connect(R.id.vProgressDescriptionContainer, ConstraintSet.TOP, R.id.vProgressBar, ConstraintSet.TOP)
-//        constraints.connect(R.id.vProgressDescriptionContainer, ConstraintSet.BOTTOM, R.id.vProgressBar, ConstraintSet.BOTTOM)
-//        constraints.connect(R.id.vProgressDescriptionContainer, ConstraintSet.LEFT, R.id.vProgressBar, ConstraintSet.RIGHT)
-//        constraints.applyTo(vProgressHolder)
         vProgressDescriptionContainer.hide()
         vProgressDescriptionContainerS.show()
     }
 
     fun moveProgressDescriptionToProgress() {
-//        val constraints = ConstraintSet()
-//        constraints.clone(vProgressHolder)
-//        constraints.clear(R.id.vProgressDescriptionContainer, ConstraintSet.RIGHT)
-//        constraints.connect(R.id.vProgressDescriptionContainer, ConstraintSet.RIGHT, R.id.vProgressBar, ConstraintSet.RIGHT)
-//        constraints.applyTo(vProgressHolder)
         vProgressDescriptionContainer.show()
         vProgressDescriptionContainerS.hide()
     }

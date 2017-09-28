@@ -55,8 +55,8 @@ class WeekChecker @JvmOverloads constructor(context: Context, attrs: AttributeSe
         }
         if (isToday) {
             val lp = this.layoutParams
-            lp.height = 24.pxToDp()
-            lp.width = 24.pxToDp()
+            lp.height = 24.dpToPx()
+            lp.width = 24.dpToPx()
             this.layoutParams = lp
         }
     }

@@ -4,7 +4,19 @@
     android:id="@+id/vGoalLayout"
     style="@style/Layout">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
 
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24"/>
 
     <ImageView
         android:id="@+id/vGoalIcon"
@@ -19,37 +31,14 @@
     <TextView
         android:id="@+id/vGoalTitle"
         style="@style/TextView.Title"
-        android:layout_marginLeft="16dp"
         android:text="Burn 1000 calories per day"
-        app:layout_constraintLeft_toRightOf="@id/vGoalIcon"
+        app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"
         app:layout_constraintTop_toTopOf="@id/vGoalIcon" />
-
-    <!--<LinearLayout-->
-        <!--android:id="@+id/vProgressContainer"-->
-        <!--style="@style/Layout"-->
-        <!--android:layout_marginLeft="80dp"-->
-        <!--android:layout_marginRight="100dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:orientation="vertical"-->
-        <!--app:layout_constraintTop_toBottomOf="@id/vGoalTitle">-->
-    <android.support.constraint.Guideline
-        android:id="@+id/vGuidelineProgressRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75"/>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vGuidelineProgressLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.26"/>
 
     <com.example.pepa.fitprogressbar.GoogleFitProgressBar
         android:id="@+id/vFirstProgress"
         android:layout_width="0dp"
-        android:layout_height="20dp"
+        android:layout_height="16dp"
         android:layout_marginTop="6dp"
         app:layout_constraintRight_toRightOf="@id/vGuidelineProgressRight"
         app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"
@@ -84,8 +73,6 @@
         android:layout_marginTop="28dp"
         app:layout_constraintLeft_toLeftOf="@id/vGoalIcon"
         app:layout_constraintTop_toBottomOf="@id/vGoalIcon"/>
-
-
 
     <View
         android:id="@+id/vGuidelineWeekLeft"

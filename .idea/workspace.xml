@@ -15,126 +15,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f292b0-7958-40b9-8178-cd381c435252" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/RoundCornerProgressBar_2_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/adapters_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_android_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/anko_commons_0_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/anko_sdk15_0_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/annotations_13_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/baseLibrary_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_amulyakhare_textdrawable_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/common_1_0_0_alpha3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/constraint_layout_solver_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/core_1_0_0_alpha3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/customtabs_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/extensions_1_0_0_alpha3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_impl_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_auth_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_common_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_core_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_connection_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_iid_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_ui_auth_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/glide_3_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_annotation_api_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/koptional_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/kotlin_stdlib_1_1_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/library_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/pageradapter_0_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_auth_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_auth_base_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_location_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_11_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/progreswheelview_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/reactive_streams_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/runtime_1_0_0_alpha3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxandroid_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_appcompat_v7_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_appcompat_v7_kotlin_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_design_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_design_kotlin_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_kotlin_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_recyclerview_v7_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_recyclerview_v7_kotlin_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_support_v4_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_support_v4_kotlin_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxjava_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxkotlin_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v13_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/transition_26_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/BaseProgressBar.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_run_progress.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/google_fit_progress_bar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GivenGoalBinder.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/TodayItem.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/TodayItem.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/bg_create_group_button.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/bg_create_group_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_panel_indicator_active.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_panel_indicator_active.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bullet.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bullet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/circle_black.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_black.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_right.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_right.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_goal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_goal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_today.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_today.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_titled_value.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_titled_value.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_week_checker.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_week_checker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/fonts.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/fonts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/theme.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/theme.xml" />
     </list>
     <ignored path="RunApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -171,76 +63,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaseProgressBar.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/BaseProgressBar.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GoalBinder.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+            <state relative-caret-position="250">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleFitProgressBar.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt">
+      <file leaf-file-name="GivenGoalBinder.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GivenGoalBinder.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="50" selection-end-column="46" />
-              <folding>
-                <element signature="e#41#431#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UiExtensions.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3850">
-              <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
+            <state relative-caret-position="775">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrameLayout.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/widget/FrameLayout.class">
+      <file leaf-file-name="Member.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Member.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+            <state relative-caret-position="225">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_fit_progress_bar.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/google_fit_progress_bar.xml">
+      <file leaf-file-name="Avatars.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            <state relative-caret-position="367">
+              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
+      <file leaf-file-name="WeekChecker.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+            <state relative-caret-position="514">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -249,30 +116,64 @@
       <file leaf-file-name="OverviewFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+            <state relative-caret-position="964">
+              <caret line="87" column="64" selection-start-line="87" selection-start-column="64" selection-end-line="87" selection-end-column="64" />
+              <folding>
+                <element signature="e#2374#2399#0" expanded="true" />
+                <element signature="e#2693#2718#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Goal.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoalLogic.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt">
+      <file leaf-file-name="fragment_overview.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-              <folding />
+            <state relative-caret-position="25">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+              <folding>
+                <element signature="e#3127#3147#0" expanded="true" />
+              </folding>
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DummyData.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt">
+      <file leaf-file-name="include_goals.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="125">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_goals.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -2705,8 +2606,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_burn.xml" />
@@ -2728,34 +2627,36 @@
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/view_titled_value.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/theme.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/TitledValue.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/fonts.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/view_titled_value.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/TodayItem.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/include_today.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle_black.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/view_week_checker.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_run_progress.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/BaseProgressBar.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/google_fit_progress_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GivenGoalBinder.kt" />
       </list>
     </option>
   </component>
@@ -2808,6 +2709,178 @@
               <option name="myItemId" value="ArchitectureComponentsApp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runapp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runapp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runapp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runapp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="overview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runapp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArchitectureComponentsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -2826,7 +2899,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FitProgressBar" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="Dumm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;GoalLo&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt&#10;Over&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;Goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;UI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;Color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Fitnes&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt&#10;DateExte&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt&#10;wee&#9;null&#9;null&#10;Stri&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;Strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;fon&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/fonts.xml&#10;st&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;title&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/view_titled_value.xml&#10;item&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;DUm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;Str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalDat&#9;null&#9;null&#10;styles&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;ite&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Avata&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt&#10;St&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;GoalBi&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;item_go&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Main&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt&#10;acti&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/activity_main.xml&#10;theme&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/theme.xml&#10;sty&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;Overview&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;Data&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;Overv&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;AndroidMa&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/AndroidManifest.xml&#10;Fir&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/FirstActivity.kt&#10;str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalB&#9;null&#9;null&#10;Databas&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;WR&#9;null&#9;null&#10;Database&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseRead.kt&#10;DatabaseComb&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;DatabaseCombi&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;Combin&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;Ids&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/common/Ids.kt&#10;Member&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/group/MembersBinder.kt&#10;string&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/res/values/strings.xml&#10;Ove&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/OverviewFragment.kt&#10;MainVi&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt&#10;Gr&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt" />
+    <property name="SearchEverywhereHistoryKey" value="Goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Du&#9;null&#9;null&#10;Dumm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;GoalLo&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt&#10;Over&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;UI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;Color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Fitnes&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt&#10;DateExte&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt&#10;wee&#9;null&#9;null&#10;Stri&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;Strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;fon&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/fonts.xml&#10;st&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;title&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/view_titled_value.xml&#10;item&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;DUm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;Str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalDat&#9;null&#9;null&#10;styles&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;ite&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Avata&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt&#10;St&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;GoalBi&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;item_go&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Main&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt&#10;acti&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/activity_main.xml&#10;theme&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/theme.xml&#10;sty&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;Overview&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;Data&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;Overv&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;AndroidMa&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/AndroidManifest.xml&#10;Fir&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/FirstActivity.kt&#10;str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalB&#9;null&#9;null&#10;Databas&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;WR&#9;null&#9;null&#10;Database&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseRead.kt&#10;DatabaseComb&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;DatabaseCombi&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;Combin&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseCombine.kt&#10;Ids&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/common/Ids.kt&#10;Member&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/group/MembersBinder.kt&#10;string&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/res/values/strings.xml&#10;Ove&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/OverviewFragment.kt&#10;MainVi&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-stf_l09-7BKDU17628001602" />
     <property name="DEBUGGABLE_PROCESS" value="cz.pepa.runapp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2835,6 +2908,9 @@
     <property name="VectorAssetImportPath" value="C:\Users\pepah\Downloads" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pepah\RunApp\app\src\main\java\cz\pepa\runapp\ui\main\group" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="cz.pepa.runapp.ui.common" />
       <recent name="cz.pepa.runapp.ui.main.overview" />
@@ -2842,15 +2918,15 @@
       <recent name="cz.pepa.runapp" />
       <recent name="cz.pepa.runapp.ui" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="cz.pepa.runapp.ui.main.overview" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pepah\Documents\github\ArchitectureComponentsApp\app\src\main\res\drawable-hdpi" />
       <recent name="C:\Users\pepah\Documents\github\ArchitectureComponentsApp\app\src\main\java\cz\pepa\runapp\ui\progress" />
       <recent name="C:\Users\pepah\Documents\github\ArchitectureComponentsApp\app\src\main\res\layout" />
       <recent name="C:\Users\pepah\RunApp\app\src\main\java\cz\pepa\runapp\database" />
       <recent name="C:\Users\pepah\RunApp\app\src\main\res\layout" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pepah\RunApp\app\src\main\java\cz\pepa\runapp\ui\main\group" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3245,8 +3321,8 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976744" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12480085" sideWeight="0.40265253" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39564526" sideWeight="0.50769234" order="8" side_tool="false" content_ui="tabs" x="4895" y="799" width="865" height="569" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39564526" sideWeight="0.21352786" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39564526" sideWeight="0.78647214" order="8" side_tool="false" content_ui="tabs" x="4895" y="799" width="865" height="569" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27783668" sideWeight="0.5392573" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33073497" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
@@ -3400,7 +3476,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt</url>
-          <line>70</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="196" />
         </line-breakpoint>
@@ -3508,15 +3584,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt</url>
-          <line>74</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="375" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="378" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt</url>
@@ -3598,28 +3668,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/view_titled_value.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/theme.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="2502" column="12" selection-start-line="2502" selection-start-column="12" selection-end-line="2502" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/widget/LinearLayout.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
@@ -3752,24 +3800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_week_checker.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/cz/pepa/runapp/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -3807,13 +3837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="613">
@@ -3826,17 +3849,6 @@
         <state relative-caret-position="625">
           <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt">
@@ -3893,60 +3905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3958,27 +3920,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3850">
-          <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/BaseProgressBar.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
+          <folding>
+            <element signature="e#41#431#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3993,13 +3949,140 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="50" selection-end-column="46" />
+        <state relative-caret-position="1125">
+          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/DummyData.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_week_checker.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="976">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="185" column="8" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
           <folding>
-            <element signature="e#41#431#0" expanded="true" />
+            <element signature="e#3127#3147#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_goals.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="964">
+          <caret line="87" column="64" selection-start-line="87" selection-start-column="64" selection-end-line="87" selection-end-column="64" />
+          <folding>
+            <element signature="e#2374#2399#0" expanded="true" />
+            <element signature="e#2693#2718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/common/WeekChecker.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Member.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/GivenGoalBinder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -2,14 +2,12 @@ package cz.pepa.runapp.ui.main.overview
 
 import android.support.constraint.ConstraintLayout
 import android.view.View
-import cz.pepa.runapp.data.DummyData
 import cz.pepa.runapp.data.Goal
+import cz.pepa.runapp.data.Member
 import cz.pepa.runapp.ui.common.DataBinder
 import cz.pepa.runapp.utils.extensions.formatReward
-import io.stepuplabs.settleup.util.extensions.getImageResource
-import kotlinx.android.synthetic.main.fragment_base.view.*
+import cz.pepa.runapp.utils.loadAvatar
 import kotlinx.android.synthetic.main.item_goals.view.*
-import org.jetbrains.anko.imageResource
 
 /**
  * TODO: Add description
@@ -17,7 +15,7 @@ import org.jetbrains.anko.imageResource
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-open class GoalBinder : DataBinder<Goal>() {
+open class GivenGoalBinder() : GoalBinder() {
 
     override fun bind(data: Goal, view: View) {
         view as ConstraintLayout
@@ -34,7 +32,7 @@ open class GoalBinder : DataBinder<Goal>() {
 //        view.vGoalTitle.text = data.name
 //        view.vProgressSecond.progressText = data.averageValue.toString()
 
-        view.vGoalIcon.imageResource = data.getImageResource()
+//        view.vGoalIcon.loadAvatar(Member().apply { data.createdById })
         view.vReward.text = data.reward.formatReward()
 //
     }
