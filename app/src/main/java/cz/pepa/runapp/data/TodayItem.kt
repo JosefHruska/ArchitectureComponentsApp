@@ -12,4 +12,5 @@ class TodayItem() : DatabaseModel() {
     var steps: Int = 0
     var distance: Float = 0F
     var calories: Float = 0F
+    var activeTime: Float = 0F
 }

@@ -16,13 +16,6 @@
                 style="@style/Layout"
                 android:background="@drawable/ripple_background">
 
-                <android.support.v7.widget.AppCompatTextView
-                    style="@style/TextView.CardTitle"
-                    android:text="@string/today"
-                    android:textAppearance="@style/ListHeader" />
-
-
-
                 <include layout="@layout/include_today" />
 
             </LinearLayout>

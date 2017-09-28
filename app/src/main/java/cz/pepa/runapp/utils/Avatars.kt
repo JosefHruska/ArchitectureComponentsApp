@@ -100,8 +100,8 @@ private fun addMeIndicatorToImage(target: ImageView, circleBitmap: Drawable) {
 }
 
 private fun getTextAvatarDrawable(name: String, @ColorRes backgroundColor: Int): Drawable {
-    val letter = name.first().toUpperCase().toString()
-    return TextDrawable.builder().buildRound(letter, backgroundColor.toColor())
+    val letter = name.first().toString()
+    return TextDrawable.builder().beginConfig().bold().toUpperCase().endConfig().buildRound(letter, backgroundColor.toColor())
 }
 
 private fun setTextAvatar(target: ImageView, member: Member, addMeIndicator: Boolean = false, isSmallAvatar: Boolean = false) {

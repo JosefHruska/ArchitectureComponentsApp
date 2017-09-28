@@ -18,12 +18,14 @@
     <string name="anonymous">Anonymous</string>
     
     <!--Main-->
+    <string name="active">Active</string>
     <string name="steps">Steps</string>
     <string name="calories">Calories</string>
     <string name="distance">Distance</string>
     <string name="today">Today</string>
     <string name="goals">Goals</string>
     <string name="your_goals">Your goals</string>
+    <string name="reward">Reward</string>
 
     <!--Goals-->
     <string name="goal_metric_calories">![CDATA[Burn <b>%1$s</b> a <b>%2$s</b>]]</string>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Named colors from Zeplin: -->
-    <color name="accent">#d50000</color>
+    <!--<color name="accent">#d50000</color>-->
+    <color name="my_gray_1">#d8d8d8</color>
+    <color name="my_gray_2">#9b9b9b</color>
+
     <color name="gray_1">#e4e4e4</color>
     <color name="gray_2">#d8d8d8</color>
     <color name="gray_3">#bbbbbb</color>
@@ -19,8 +22,8 @@
     <color name="blue_paypal">#2196f3</color>
     <color name="premium">#eba500</color>
     <!-- Additional colors: -->
-    <color name="primary">#202020</color>
-    <color name="primary_dark">#000000</color>
+    <color name="primary">#ff5722</color>
+    <color name="primary_light">#ff8a50</color>
     <color name="black">#000000</color>
     <!-- Opaque colors. Use this table to calculate: http://stackoverflow.com/a/25170174/560358 -->
     <color name="transparent">#00FFFFFF</color>

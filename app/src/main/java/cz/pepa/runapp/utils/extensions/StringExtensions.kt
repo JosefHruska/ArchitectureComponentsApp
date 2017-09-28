@@ -1,5 +1,10 @@
 package io.stepuplabs.settleup.util.extensions
 
+import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
 import cz.pepa.runapp.data.Goal
@@ -44,8 +49,25 @@ fun String.cropLongMemberName(): String {
     return this.take(R.integer.member_name_max_length.toInteger())
 }
 
-fun Long.formatTimeLeft(): String {
-    if (this <= 3600000L /* 3 600 000 = 24h */) {
 
-    }
+fun String.toBold(): String {
+    return "<b>$this</b>"
 }
+
+fun String.setColor(color: Int) = SpannableString(this).setSpan(ForegroundColorSpan(color), 0, this.length - 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+fun Spanned.setColor(color: Int) = SpannableString(this).setSpan(ForegroundColorSpan(color), 0, this.length - 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+fun String.getColoredString(color: String) = "<font color=" + color + ">$this</font>"
+
+fun String.formatHtml(): Spanned {
+    return Html.fromHtml(this)
+}
+
+
+
+//fun Long.formatTimeLeft(): String {
+//    if (this <= 3600000L /* 3 600 000 = 24h */) {
+//
+//    }
+//}

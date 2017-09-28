@@ -14,7 +14,7 @@
             android:id="@+id/vToolbar"
             style="@style/Layout.Toolbar"
             android:layout_width="0dp"
-            android:background="@color/accent"
+            android:background="@color/primary"
             app:layout_collapseMode="pin"
             app:layout_collapseParallaxMultiplier="1"
             app:layout_constraintLeft_toLeftOf="parent"

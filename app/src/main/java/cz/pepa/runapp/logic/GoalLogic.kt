@@ -1,6 +1,7 @@
 package cz.pepa.runapp.logic
 
 import android.arch.lifecycle.MutableLiveData
+import android.text.Spanned
 import com.gojuno.koptional.Optional
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
@@ -11,6 +12,8 @@ import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.DatabaseWrite
 import cz.pepa.runapp.database.combineLatest
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.stepuplabs.settleup.util.extensions.formatHtml
+import io.stepuplabs.settleup.util.extensions.toBold
 import io.stepuplabs.settleup.util.extensions.todayBegin
 import ld
 import java.util.concurrent.TimeUnit
@@ -92,11 +95,11 @@ object GoalLogic {
                 goalTitlePeriod = app().getString(R.string.recurrence_month)
             }
         }
-        val goalName = when (goalData.metricObjective?.goalTypeName) {
-            "com.google.step_count.delta" -> app().getString(R.string.goal_metric_steps, targetValue.toString(), goalTitlePeriod)
-            "com.google.distance.delta" -> app().getString(R.string.goal_metric_distance, targetValue.toString(), goalTitlePeriod)
-            "com.google.calories.expended" -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod)
-            else -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod) // It may not happen
+        val goalName: Spanned = when (goalData.metricObjective?.goalTypeName) {
+            "com.google.step_count.delta" -> app().getString(R.string.goal_metric_steps, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            "com.google.distance.delta" -> app().getString(R.string.goal_metric_distance, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            "com.google.calories.expended" -> app().getString(R.string.goal_metric_calories, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            else -> app().getString(R.string.goal_metric_calories, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml() // It may not happen
         }
         goal.name = goalName
         goal.percentage = progressPercentage
@@ -130,11 +133,11 @@ object GoalLogic {
                 goalTitlePeriod = app().getString(R.string.recurrence_month)
             }
         }
-        val goalName = when (goalData.metricObjective?.goalTypeName) {
-            "com.google.step_count.delta" -> app().getString(R.string.goal_metric_steps, targetValue.toString(), goalTitlePeriod)
-            "com.google.distance.delta" -> app().getString(R.string.goal_metric_distance, targetValue.toString(), goalTitlePeriod)
-            "com.google.calories.expended" -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod)
-            else -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod) // It may not happen
+        val goalName: Spanned = when (goalData.metricObjective?.goalTypeName) {
+            "com.google.step_count.delta" -> app().getString(R.string.goal_metric_steps, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            "com.google.distance.delta" -> app().getString(R.string.goal_metric_distance, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            "com.google.calories.expended" -> app().getString(R.string.goal_metric_calories, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()
+            else -> app().getString(R.string.goal_metric_calories, targetValue.toString().toBold(), goalTitlePeriod.toBold()).formatHtml()// It may not happen
         }
         goal.name = goalName
         goal.percentage = progressPercentage

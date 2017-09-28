@@ -1,5 +1,9 @@
 package cz.pepa.runapp.utils.extensions
 
+import android.text.Spanned
+import cz.pepa.runapp.R
+import cz.pepa.runapp.app
+import io.stepuplabs.settleup.util.extensions.*
 import java.text.DecimalFormat
 
 /**
@@ -14,23 +18,29 @@ object FittnesHelper {
     const val MILE = 0.62
 }
 
-fun Float.formatCalories(calorireUnit: Calories = Calories.KCAL): String {
-    val calories: String = if (calorireUnit == Calories.KJ) {
-        this.toKJ().toInt().toString() + " kJ"
+fun Float.formatCalories(calorireUnit: Calories = Calories.KCAL): Spanned {
+    val calories: Spanned = if (calorireUnit == Calories.KJ) {
+        (this.toKJ().toInt().toString().toBold() + " kJ").formatHtml()
     } else {
-        this.toInt().toString() + " kcal"
+        (this.toInt().toString().toBold() + " kcal").formatHtml()
     }
     return calories
 }
 
-fun Float.formatDistance(distanceUnit: Distance = Distance.KM): String {
+fun Float.formatDistance(distanceUnit: Distance = Distance.KM): Spanned {
     val kilometers = this / 1000
-    val distance: String = if (distanceUnit == Distance.MILES) {
-        kilometers.toMiles().roundDistance() + " mi"
+    return if (distanceUnit == Distance.MILES) {
+        (kilometers.toMiles().roundDistance().toBold() + " mi").formatHtml()
     } else {
-        kilometers.roundDistance() + " KM"
+        (kilometers.roundDistance().toBold() + " Km").formatHtml()
     }
-    return distance
+}
+
+fun Int.formatSteps() = toString().toBold().formatHtml()
+
+fun Int.formatReward(): Spanned {
+    return (app().getString(R.string.reward) + " $this Exp".getColoredString(R.color.primary.toColorHex()).toBold()).formatHtml() // TODO: Not really working
+
 }
 
 private fun Float.roundDistance(): String {
@@ -45,7 +55,6 @@ private fun Float.toKJ(): Float {
 private fun Float.toMiles(): Float {
     return (this * FittnesHelper.MILE).toFloat()
 }
-
 
 enum class Calories {
     KCAL,

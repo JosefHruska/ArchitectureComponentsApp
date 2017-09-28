@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    tools:parentTag="LinearLayout">
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/vTitle"
         style="@style/TextView"
-        android:textColor="@color/accent"
-        android:textAppearance="@style/ListSecondary"
-        tools:text="Value"
-        />
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/primary"
+        android:textAppearance="@style/text12"
+        tools:text="Value" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/vValue"
         style="@style/TextView"
-        android:textAppearance="@style/ListPrimary"
-        tools:text = "4200"
-        />
+        android:textColor="@color/my_gray_2"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/text12"
+        tools:text = "4200" />
 
-</LinearLayout>
+</merge>

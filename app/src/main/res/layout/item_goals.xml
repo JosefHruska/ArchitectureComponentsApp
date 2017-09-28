@@ -4,104 +4,97 @@
     android:id="@+id/vGoalLayout"
     style="@style/Layout">
 
-    <TextView
-        android:id="@+id/vGoalTitle"
-        style="@style/TextView.Title"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Burn 1000 calories per day"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+
 
     <ImageView
         android:id="@+id/vGoalIcon"
         style="@style/Image.Avatar"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/circle_gray"
         android:src="@drawable/ic_burn"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vGoalTitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/vProgressContainer"
-        style="@style/Layout"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="8dp"
+    <TextView
+        android:id="@+id/vGoalTitle"
+        style="@style/TextView.Title"
+        android:layout_marginLeft="16dp"
+        android:text="Burn 1000 calories per day"
+        app:layout_constraintLeft_toRightOf="@id/vGoalIcon"
+        app:layout_constraintTop_toTopOf="@id/vGoalIcon" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/vProgressContainer"-->
+        <!--style="@style/Layout"-->
+        <!--android:layout_marginLeft="80dp"-->
+        <!--android:layout_marginRight="100dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:orientation="vertical"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/vGoalTitle">-->
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/vGoalTitle">
+        app:layout_constraintGuide_percent="0.75"/>
 
-        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
-            android:id="@+id/vProgressFirst"
-            style="@style/ColorProgress"
-            android:layout_marginTop="12dp"
-            app:rcMax="100"
-            app:rcProgress="50"
-            app:rcTextProgress="12564"
-            app:rcProgressColor="@color/colorPrimary"
-            app:rcSecondaryProgress="60"
-            app:rcSecondaryProgressColor="@color/accent" />
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26"/>
 
-        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
-            android:id="@+id/vProgressSecond"
-            style="@style/ColorProgress"
-            android:layout_marginTop="12dp"
-            app:rcMax="100"
-            app:rcProgress="50"
-            app:rcTextProgress="6253"
-            app:rcProgressColor="@color/colorPrimary"
-            app:rcSecondaryProgress="60"
-            app:rcSecondaryProgressColor="@color/accent" />
+    <com.example.pepa.fitprogressbar.GoogleFitProgressBar
+        android:id="@+id/vFirstProgress"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintRight_toRightOf="@id/vGuidelineProgressRight"
+        app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"
+        app:layout_constraintTop_toBottomOf="@id/vGoalTitle"
+        app:progressPercentage="20"
+        app:cornerRadius="70"
+        app:progressPadding="0dp"
+        app:progressIconDimensions="16dp"
+        app:progressBackgroundColor="@color/black_24opacity"
+        app:progressColorRes="@color/primary"/>
 
-        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
-            android:id="@+id/vProgressThird"
-            style="@style/ColorProgress"
-            android:layout_marginTop="12dp"
-            app:rcMax="100"
-            app:rcProgress="50"
-            app:rcTextProgress="5402"
-            app:rcProgressColor="@color/colorPrimary"
-            app:rcReverse="false"
-            app:rcSecondaryProgress="60"
-            app:rcSecondaryProgressColor="@color/accent" />
+    <!--<com.example.pepa.fitprogressbar.GoogleFitProgressBar-->
+        <!--android:id="@+id/vFirstProgress"-->
+        <!--android:layout_width="180dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/vGoalTitle"-->
+        <!--app:progressPercentage="20"-->
+        <!--app:cornerRadius="70"-->
+        <!--app:progressPadding="0dp"-->
+        <!--app:progressIconDimensions="16dp"-->
+        <!--app:progressBackgroundColor="@color/black_24opacity"-->
+        <!--app:progressColorRes="@color/primary"/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <cz.pepa.runapp.ui.common.WeekChecker
         android:id="@+id/vWeekChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintLeft_toLeftOf="@id/vGoalTitle"
-        app:layout_constraintTop_toBottomOf="@id/vProgressContainer"/>
+        android:layout_marginTop="28dp"
+        app:layout_constraintLeft_toLeftOf="@id/vGoalIcon"
+        app:layout_constraintTop_toBottomOf="@id/vGoalIcon"/>
+
+
 
     <View
-        android:id="@+id/vSeparatorMiddleHorizontal"
+        android:id="@+id/vGuidelineWeekLeft"
         style="@style/Separator"
-        android:visibility="invisible"
+        android:orientation="horizontal"
         android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/vWeekChecker"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vWeekChecker" />
-
-    <View
-        android:id="@+id/vSeparatorBottom"
-        style="@style/Separator"
-        android:layout_height="1dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vSeparatorMiddleHorizontal" />
-
-    <View
-        android:id="@+id/vSeparatorMiddleVertical"
-        style="@style/Separator"
-        android:layout_width="0.5dp"
-        android:layout_height="0dp"
-        android:visibility="invisible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal"
-        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom" />
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/vVerticalMiddleGuideline"
@@ -110,21 +103,11 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/vExpiration"
-        style="@style/TextView"
-        android:text="12:34:19 left"
-        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/vVerticalMiddleGuideline"
-        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal" />
-
-    <TextView
         android:id="@+id/vReward"
         style="@style/TextView"
-        android:text="Reward : 326 exp"
-        app:layout_constraintBottom_toBottomOf="@id/vSeparatorBottom"
-        app:layout_constraintLeft_toLeftOf="@id/vVerticalMiddleGuideline"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/vWeekChecker"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/vSeparatorMiddleHorizontal" />
+        app:layout_constraintTop_toTopOf="@id/vWeekChecker" />
 
 </android.support.constraint.ConstraintLayout>

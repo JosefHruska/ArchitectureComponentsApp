@@ -3,51 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
-    
-    <ImageView
-        android:id="@+id/vTodayProgress"
-        style="@style/Image.Avatar"
-        app:srcCompat="@drawable/avatar_multiple"
+    android:layout_height="90dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vTodayTitle"
+        style="@style/TextView.CardTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/today"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_goneMarginLeft="16dp"/>
-    
-    <android.support.constraint.Guideline
-        android:id="@+id/vGuideline"
-        style="@style/Layout.Guideline"
-        android:orientation="horizontal"
+        android:textAppearance="@style/ListHeader" />
+
+    <cz.pepa.runapp.ui.common.TitledValue
+        android:id="@+id/vActive"
+        style="@style/TextView.TitledValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/vDistance"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintGuide_percent="0.5"/>
+        app:layout_constraintTop_toBottomOf="@id/vTodayTitle"
+        app:name="@string/active"
+        app:value="36" />
+
+    <cz.pepa.runapp.ui.common.TitledValue
+        android:id="@+id/vDistance"
+        style="@style/TextView.TitledValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/vSteps"
+        app:layout_constraintLeft_toRightOf="@id/vActive"
+        app:layout_constraintTop_toTopOf="@id/vActive"
+        app:name="@string/distance" />
 
     <cz.pepa.runapp.ui.common.TitledValue
         android:id="@+id/vSteps"
-        style="@style/TextView"
-        android:layout_marginLeft="48dp"
-        app:layout_constraintBottom_toBottomOf="@id/vGuideline"
-        app:layout_constraintLeft_toRightOf="@id/vTodayProgress"
-        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.TitledValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/vCalories"
+        app:layout_constraintLeft_toRightOf="@id/vDistance"
+        app:layout_constraintTop_toTopOf="@id/vActive"
         app:name="@string/steps"
         app:value="@string/steps"/>
 
     <cz.pepa.runapp.ui.common.TitledValue
-        android:id="@+id/vDistance"
-        style="@style/TextView"
-        android:layout_marginLeft="48dp"
-        app:layout_constraintBottom_toBottomOf="@id/vGuideline"
-        app:layout_constraintLeft_toRightOf="@id/vSteps"
-        app:layout_constraintTop_toTopOf="parent"
-        app:name="@string/distance" />
-
-    <cz.pepa.runapp.ui.common.TitledValue
         android:id="@+id/vCalories"
-        style="@style/TextView"
-        android:layout_marginLeft="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/vTodayProgress"
-        app:layout_constraintTop_toTopOf="@id/vGuideline"
+        style="@style/TextView.TitledValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/vSteps"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vActive"
         app:name="@string/calories" />
     
 </android.support.constraint.ConstraintLayout>

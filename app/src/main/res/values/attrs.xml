@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="BaseProgressBar">
+        <attr name="progressPercentage" format="integer" />
+        <attr name="progressPadding" format="dimension" />
+        <attr name="cornerRadius" format="integer" />
+        <attr name="progressIconDimensions" format="dimension"/>
+        <attr name="progressColorRes" format="reference" />
+        <attr name="progressBackgroundColor" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="TitleListButtonCard">
         <attr name="showMoreButton" format="boolean" />
         <attr name="titleText" format="string" />
@@ -36,4 +46,6 @@
         <attr name="name" format="string" />
         <attr name="value" format="string"/>
     </declare-styleable>
+
+
 </resources>

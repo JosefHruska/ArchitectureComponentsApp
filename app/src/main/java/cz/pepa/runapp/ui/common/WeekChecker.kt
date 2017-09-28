@@ -7,9 +7,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import cz.pepa.runapp.R
 import cz.pepa.runapp.utils.setTextAvatar
-import io.stepuplabs.settleup.util.extensions.hide
-import io.stepuplabs.settleup.util.extensions.inflate
-import io.stepuplabs.settleup.util.extensions.show
+import io.stepuplabs.settleup.util.extensions.*
 import kotlinx.android.synthetic.main.view_week_checker.view.*
 import org.jetbrains.anko.childrenSequence
 import java.time.DayOfWeek
@@ -35,24 +33,31 @@ class WeekChecker @JvmOverloads constructor(context: Context, attrs: AttributeSe
     fun setMatchedDays(list : List<MatchedDay>) {
         vDaysLayout.show()
         vStreak.hide()
+        currentDay()
         list.forEach {
             when(it.day) {
-                Day.Sunday -> vSunday.setDayDrawable(it.isMatched, "S")
-                Day.Monday -> vMonday.setDayDrawable(it.isMatched, "M")
-                Day.Tuesday -> vTuesday.setDayDrawable(it.isMatched, "T")
-                Day.Wednesday -> vWednesday.setDayDrawable(it.isMatched, "W")
-                Day.Thursday -> vThursday.setDayDrawable(it.isMatched, "T")
-                Day.Friday -> vFriday.setDayDrawable(it.isMatched, "F")
-                Day.Saturday -> vSaturday.setDayDrawable(it.isMatched, "S")
+                Day.Sunday -> vSunday.setDayDrawable(it.isMatched, "S", currentDay() == 1)
+                Day.Monday -> vMonday.setDayDrawable(it.isMatched, "M", currentDay() == 2)
+                Day.Tuesday -> vTuesday.setDayDrawable(it.isMatched, "T", currentDay() == 3)
+                Day.Wednesday -> vWednesday.setDayDrawable(it.isMatched, "W", currentDay() == 4)
+                Day.Thursday -> vThursday.setDayDrawable(it.isMatched, "T", currentDay() == 5)
+                Day.Friday -> vFriday.setDayDrawable(it.isMatched, "F", currentDay() == 6)
+                Day.Saturday -> vSaturday.setDayDrawable(it.isMatched, "S", currentDay() == 7)
             }
         }
     }
 
-    private fun ImageView.setDayDrawable(isMatched: Boolean, daySymbol: String ) {
+    private fun ImageView.setDayDrawable(isMatched: Boolean, daySymbol: String, isToday: Boolean) {
         if (isMatched) {
-            this.setTextAvatar(daySymbol, R.color.green_positive)
+            this.setTextAvatar(daySymbol, R.color.primary)
         } else {
             this.setTextAvatar(daySymbol)
+        }
+        if (isToday) {
+            val lp = this.layoutParams
+            lp.height = 24.pxToDp()
+            lp.width = 24.pxToDp()
+            this.layoutParams = lp
         }
     }
 }

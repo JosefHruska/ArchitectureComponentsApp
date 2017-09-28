@@ -187,6 +187,8 @@ fun Int.dpToPx(): Int {
     return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), app().displayMetrics).toInt()
 }
 
+fun Int.pxToDp() = (this / app().resources.displayMetrics.density).toInt()
+
 /**
  * Converts color resource to int color.
  */
@@ -314,3 +316,5 @@ fun Goal.getImageResource(): Int {
         GoalId.WEIGHT -> R.drawable.ic_weight_kilogram
     }
 }
+
+fun Int.toColorHex() = String.format("#%06X", 0xFFFFFF and this.toColor())

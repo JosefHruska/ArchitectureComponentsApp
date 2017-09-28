@@ -9,44 +9,36 @@
         <ImageView
             android:id="@+id/vSunday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vMonday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vTuesday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vWednesday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vThursday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vFriday"
             style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
              />
 
         <ImageView
             android:id="@+id/vSaturday"
-            style="@style/Image.Days"
-            android:background="@drawable/circle_gray"
-             />
+            style="@style/Image.Days" />
 
     </LinearLayout>
 

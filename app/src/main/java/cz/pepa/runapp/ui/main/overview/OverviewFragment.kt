@@ -13,6 +13,7 @@ import cz.pepa.runapp.ui.main.goal.AddGoalActivity
 import cz.pepa.runapp.ui.main.group.GroupViewModel
 import cz.pepa.runapp.utils.extensions.formatCalories
 import cz.pepa.runapp.utils.extensions.formatDistance
+import cz.pepa.runapp.utils.extensions.formatSteps
 import io.stepuplabs.settleup.util.extensions.isNullOrNone
 import io.stepuplabs.settleup.util.extensions.toSome
 import io.stepuplabs.settleup.util.extensions.todayBegin
@@ -53,7 +54,8 @@ class OverviewFragment: BaseFragment() {
     fun setupToday() {
         val todayObserver = Observer<TodayItem> {
             it?.let {
-            vSteps.value = it.steps.toString()
+            vActive.value = "35 min"
+            vSteps.value = it.steps.formatSteps()
             vCalories.value = it.calories.formatCalories()
             vDistance.value = it.distance.formatDistance()
             }

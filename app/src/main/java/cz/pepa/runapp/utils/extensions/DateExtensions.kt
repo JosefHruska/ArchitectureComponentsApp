@@ -110,6 +110,11 @@ fun currentTime(): Long {
     return Calendar.getInstance().timeInMillis
 }
 
+fun currentDay(): Int {
+    val calendar =  Calendar.getInstance()
+    return calendar.get(Calendar.DAY_OF_WEEK)
+}
+
 fun todayEnd(): Long {
     val today = Calendar.getInstance()
     today.set(Calendar.HOUR_OF_DAY, 23)

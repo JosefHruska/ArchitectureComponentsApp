@@ -200,6 +200,7 @@
         <item name="android:layout_marginRight">4dp</item>
         <item name="android:layout_width">16dp</item>
         <item name="android:layout_height">16dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
     </style>
 
     <style name="Image.AvatarMember" parent="Image.Avatar">
@@ -254,6 +255,10 @@
     <style name="TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.TitledValue">
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="TextView.NameEllipsized">

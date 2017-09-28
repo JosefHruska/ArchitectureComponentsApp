@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- My fonts -->
+
+    <style name="text12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="text12Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <!-- Fonts from Zeplin: -->
 
     <style name="CalcAmount">
@@ -70,14 +84,6 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="ListAmountAccentBig">
-        <item name="android:gravity">end</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/accent</item>
-    </style>
-
     <style name="ListPrimaryBig">
         <item name="android:textSize">20sp</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -125,7 +131,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/accent</item>
+        <item name="android:textColor">@color/primary</item>
     </style>
 
     <style name="ListAmountPositive">
@@ -274,7 +280,7 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:letterSpacing" tools:targetApi="lollipop">0.04</item>
-        <item name="android:textColor">@color/accent</item>
+        <item name="android:textColor">@color/primary</item>
     </style>
 
     <style name="ListHelplinkRight">
@@ -342,7 +348,7 @@
         <item name="android:textSize">13sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/accent</item>
+        <item name="android:textColor">@color/primary</item>
     </style>
 
     <style name="ListHeaderDisabled">
@@ -385,7 +391,7 @@
         <item name="android:textSize">11sp</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/accent</item>
+        <item name="android:textColor">@color/primary</item>
     </style>
 
     <!-- Additional fonts: -->
@@ -472,13 +478,6 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="BasicPlanText">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/accent</item>
-        <item name="android:lineSpacingExtra">19sp</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textStyle">normal</item>
-    </style>
 
     <style name="PlanHint">
         <item name="android:textSize">13sp</item>
