@@ -25,17 +25,13 @@ open class GoalBinder : DataBinder<Goal>() {
 
         view.vFirstProgress.calculateAndSetProgress(data.currentValue.toFloat(), data.targetValue.toFloat())
         view.vFirstProgress.setProgressText(data.currentValue.toString())
-//        view.vProgressFirst.secondaryProgress = data.currentValue.toFloat()
-//        view.vProgressFirst.max = data.targetValue.toFloat()
-//        view.vProgressFirst.progressText = data.currentValue.toString()
 
-//        view.vProgressSecond.progress = data.averageValue.toFloat()
-//        view.vProgressSecond.max = data.targetValue.toFloat()
-//        view.vGoalTitle.text = data.name
-//        view.vProgressSecond.progressText = data.averageValue.toString()
+        view.vSecondProgress.calculateAndSetProgress(data.averageValue.toFloat(), data.targetValue.toFloat())
+        view.vSecondProgress.setProgressText(data.averageValue.toString())
 
+        view.vGoalTitle.text = data.name
         view.vGoalIcon.imageResource = data.getImageResource()
         view.vReward.text = data.reward.formatReward()
-//
+
     }
 }

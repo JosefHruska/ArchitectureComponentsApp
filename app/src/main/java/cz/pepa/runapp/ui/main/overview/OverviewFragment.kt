@@ -71,16 +71,16 @@ class OverviewFragment: BaseFragment() {
 
     fun setupGoals() {
         vYourGoals.vGoalRecycler.isNestedScrollingEnabled = false
-        vYourGoals.vYourGoalsTitle.text = getString(R.string.goals)
+        vYourGoalsCard.vYourGoalsTitle.text = getString(R.string.goals)
         mYourGoalsAdapter = RecyclerAdapter<Goal>(R.layout.item_goals)
         vYourGoals.vGoalRecycler.adapter = mYourGoalsAdapter
         mYourGoalsAdapter.notifyDataSetChanged()
 
         vOtherGoals.vGoalRecycler.isNestedScrollingEnabled = false
-        vOtherGoals.vOtherGoalsTitle.text = getString(R.string.goals)
-        mYourGoalsAdapter = RecyclerAdapter<Goal>(R.layout.item_goals)
+        vOtherGoalsCard.vOtherGoalsTitle.text = getString(R.string.goals)
+        mOtherGoalsAdapter = RecyclerAdapter<Goal>(R.layout.item_goals)
         vOtherGoals.vGoalRecycler.adapter = mOtherGoalsAdapter
-        mYourGoalsAdapter.notifyDataSetChanged()
+        mOtherGoalsAdapter.notifyDataSetChanged()
     }
 
     fun subscribeDummyGoals() {

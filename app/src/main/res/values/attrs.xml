@@ -10,6 +10,11 @@
         <attr name="progressBackgroundColor" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="GoogleFitProgressBar">
+        <attr name="progressTextAppearance" format="reference" />
+        <attr name="progressIconRes" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="TitleListButtonCard">
         <attr name="showMoreButton" format="boolean" />
         <attr name="titleText" format="string" />

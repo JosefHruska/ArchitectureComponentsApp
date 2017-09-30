@@ -1,5 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- My layouts -->
+    <style name="FitProgressBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="progressPercentage">20</item>
+        <item name="cornerRadius">70</item>
+        <item name="progressIconDimensions">12dp</item>
+        <item name="progressPadding">0dp</item>
+    </style>
+
     <!-- Common layouts: -->
     <style name="Layout">
         <item name="android:layout_width">match_parent</item>

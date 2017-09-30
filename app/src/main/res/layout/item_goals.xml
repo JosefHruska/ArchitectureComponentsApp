@@ -32,47 +32,59 @@
         android:id="@+id/vGoalTitle"
         style="@style/TextView.Title"
         android:text="Burn 1000 calories per day"
+        android:textAppearance="@style/text16"
         app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"
         app:layout_constraintTop_toTopOf="@id/vGoalIcon" />
 
-    <com.example.pepa.fitprogressbar.GoogleFitProgressBar
-        android:id="@+id/vFirstProgress"
-        android:layout_width="0dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintRight_toRightOf="@id/vGuidelineProgressRight"
-        app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"
+    <TextView
+        android:id="@+id/vNow"
+        style="@style/TextView"
+        android:text="NOW"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/primary"
         app:layout_constraintTop_toBottomOf="@id/vGoalTitle"
-        app:progressPercentage="20"
-        app:cornerRadius="70"
-        app:progressPadding="0dp"
-        app:progressIconDimensions="16dp"
+        app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"/>
+
+    <TextView
+        android:id="@+id/vAverage"
+        style="@style/TextView"
+        android:textColor="@color/primary_light"
+        android:text="AVG"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/vNow"
+        app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"/>
+
+    <cz.pepa.runapp.ui.progress.GoogleFitProgressBar
+        android:id="@+id/vFirstProgress"
+        style="@style/FitProgressBar"
+        app:layout_constraintRight_toRightOf="@id/vGuidelineProgressRight"
+        app:layout_constraintLeft_toRightOf="@id/vNow"
+        app:layout_constraintTop_toTopOf="@id/vNow"
+        app:layout_constraintBottom_toBottomOf="@id/vNow"
+        android:layout_marginStart="4dp"
         app:progressBackgroundColor="@color/black_24opacity"
-        app:progressColorRes="@color/primary"/>
+        app:layout_constraintVertical_bias="0.6"
+        app:progressColorRes="@color/primary"
+        app:progressTextAppearance="@style/text10"/>
 
-    <!--<com.example.pepa.fitprogressbar.GoogleFitProgressBar-->
-        <!--android:id="@+id/vFirstProgress"-->
-        <!--android:layout_width="180dp"-->
-        <!--android:layout_height="20dp"-->
-        <!--android:layout_marginTop="6dp"-->
-        <!--app:layout_constraintLeft_toLeftOf="@id/vGuidelineProgressLeft"-->
-        <!--app:layout_constraintTop_toBottomOf="@id/vGoalTitle"-->
-        <!--app:progressPercentage="20"-->
-        <!--app:cornerRadius="70"-->
-        <!--app:progressPadding="0dp"-->
-        <!--app:progressIconDimensions="16dp"-->
-        <!--app:progressBackgroundColor="@color/black_24opacity"-->
-        <!--app:progressColorRes="@color/primary"/>-->
-
-    <!--</LinearLayout>-->
+    <cz.pepa.runapp.ui.progress.GoogleFitProgressBar
+        android:id="@+id/vSecondProgress"
+        style="@style/FitProgressBar"
+        app:layout_constraintRight_toRightOf="@id/vGuidelineProgressRight"
+        app:layout_constraintLeft_toLeftOf="@id/vFirstProgress"
+        app:layout_constraintTop_toTopOf="@id/vAverage"
+        app:layout_constraintBottom_toBottomOf="@id/vAverage"
+        app:progressBackgroundColor="@color/black_24opacity"
+        app:progressColorRes="@color/primary_light"
+        app:progressTextAppearance="@style/text10"/>
 
     <cz.pepa.runapp.ui.common.WeekChecker
         android:id="@+id/vWeekChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="@id/vGoalIcon"
-        app:layout_constraintTop_toBottomOf="@id/vGoalIcon"/>
+        app:layout_constraintTop_toBottomOf="@id/vSecondProgress"/>
 
     <View
         android:id="@+id/vGuidelineWeekLeft"

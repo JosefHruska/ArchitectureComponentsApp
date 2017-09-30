@@ -1,4 +1,4 @@
-package com.example.pepa.fitprogressbar
+package cz.pepa.runapp.ui.progress
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
