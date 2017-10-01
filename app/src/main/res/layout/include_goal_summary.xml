@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/vSummaryText"
+        style="@style/TextView"
+        android:textAppearance="@style/text16"
+        android:text="I will take 9500 steps per day"
+        android:layout_gravity="center"
+        android:padding="24dp" />
+
+    <include layout="@layout/include_separator"/>
+
+    <TextView
+        android:id="@+id/vRating"
+        style="@style/TextView"
+        android:textAppearance="@style/text14"
+        android:layout_gravity="center"
+        android:text="This seems like a good challenge"
+        android:padding="16dp" />
+
+</LinearLayout>

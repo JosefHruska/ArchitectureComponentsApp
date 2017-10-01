@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.1.4-2'
-    ext.support_version = '26.0.2'
+    ext.support_version = '26.1.0'
     ext.firebase_version = '11.0.1'
     ext.rxBindingVersion = '2.0.0'
 

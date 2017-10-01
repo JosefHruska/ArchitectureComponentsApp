@@ -64,10 +64,18 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/vTargetValue"
+                    style="@style/Layout.Card">
+
+                    <include layout="@layout/include_target_value" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:id="@+id/vSummary"
                     style="@style/Layout.Card">
 
-                    <include layout="@layout/include_summary" />
+                    <include layout="@layout/include_goal_summary" />
 
                 </android.support.v7.widget.CardView>
 
@@ -77,9 +85,13 @@
         <TextView
             android:id="@+id/vSaveGoal"
             style="@style/Button.Finish"
+
             android:gravity="center"
             android:background="@drawable/ripple_background"
             android:text="@string/add_goal"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:fitsSystemWindows="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
 

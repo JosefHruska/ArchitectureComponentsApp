@@ -21,7 +21,11 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.MotionEventCompat
 import android.support.v7.widget.PopupMenu
 import android.text.Editable
+import android.text.SpannableString
+import android.text.Spanned
 import android.text.TextWatcher
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.*
@@ -261,6 +265,19 @@ fun EditText.setOnKeyboardDoneClicked(onDoneClicked: () -> Unit) {
         }
         false
     }
+}
+
+fun TextView.setOnClickListener(text: Spanned, clickablePartIndexStart: Int, clickablePartIndexEnd: Int, onTextClicked: () -> Unit) {
+    val ss = SpannableString(text)
+    val clickableSpan = object : ClickableSpan() {
+        override fun onClick(textView: View) {
+            onTextClicked()
+        }
+    }
+    ss.setSpan(clickableSpan, clickablePartIndexStart, clickablePartIndexEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+    this.text = ss
+    this.movementMethod = LinkMovementMethod.getInstance()
+    this.highlightColor = Color.TRANSPARENT
 }
 
 fun View.setCustomAttributes(attributes: AttributeSet?, @StyleableRes styleableRes: IntArray, handleCustomAttributes: (TypedArray) -> Unit) {

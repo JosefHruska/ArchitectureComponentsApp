@@ -31,6 +31,9 @@
     <string name="goal_metric_calories">![CDATA[Burn <b>%1$s</b> a <b>%2$s</b>]]</string>
     <string name="goal_metric_steps">![CDATA[Take <b>%1$s</b> steps a <b>%2$s</b>]]</string>
     <string name="goal_metric_distance">![CDATA[Move <b>%1$s</b> a <b>%2$s</b>]]</string>
+    <string name="add_goal_metric_calories">![CDATA[I will burn <b>%1$s</b> a <b>%2$s</b>]]</string>
+    <string name="add_goal_metric_steps">![CDATA[I will take <b>%1$s</b> steps a <b>%2$s</b>]]</string>
+    <string name="add_goal_metric_distance">![CDATA[I will move <b>%1$s</b> a <b>%2$s</b>]]</string>
     <string name="recurrence_day">a day</string>
     <string name="recurrence_week">a week</string>
     <string name="recurrence_month">a month</string>
@@ -42,6 +45,7 @@
     <string name="overall">Overall</string>
     <string name="type">Type</string>
     <string name="target">Target</string>
+    <string name="new_goal">New goal</string>
 
     <!-- Main screen: -->
     <string name="total_paid">Total spent</string>

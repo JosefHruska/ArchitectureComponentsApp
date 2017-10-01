@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
+import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +23,7 @@ import org.jetbrains.anko.inputMethodManager
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-abstract class BaseFragment(): LifecycleFragment() {
+abstract class BaseFragment(): Fragment() {
 
     lateinit protected  var mViewModel: BaseViewModel
 

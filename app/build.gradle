@@ -49,7 +49,7 @@ android {
 
 dependencies {
     // Support libraries
-    compile 'com.android.support:customtabs:26.0.2'
+    compile 'com.android.support:customtabs:26.1.0'
     compile "com.android.support:appcompat-v7:$support_version"
     compile "com.android.support:support-v13:$support_version"
     compile "com.android.support:design:$support_version"
@@ -72,8 +72,8 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'org.jetbrains.anko:anko-sdk15:0.10.1'
     // Architectural components
-    compile 'android.arch.lifecycle:runtime:1.0.0-alpha3'
-    compile 'android.arch.lifecycle:extensions:1.0.0-alpha3'
+    compile 'android.arch.lifecycle:runtime:1.+'
+    compile 'android.arch.lifecycle:extensions:1.+'
     // ViewPager Adapter
     compile 'eu.inloop:pageradapter:0.1.0'
     // Firebase

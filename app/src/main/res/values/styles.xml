@@ -141,6 +141,7 @@
         <item name="android:layout_marginLeft">24dp</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginRight">24dp</item>
+        <item name="android:textCursorDrawable">@null</item>
         <item name="hintTextAppearance">@style/InputFieldHintSmall</item>
         <item name="hintAnimationEnabled">false</item>
     </style>
@@ -239,6 +240,7 @@
     <style name="EditText.WhiteUnderline">
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/edit_text_thin_underline</item>
+        <!--<item name="android:textCursorDrawable">@null</item>-->
         <item name="android:textCursorDrawable">@drawable/edit_text_white_cursor</item>
     </style>
 

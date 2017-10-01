@@ -4,6 +4,7 @@ import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.ViewModelProviders
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logger.LogView
 import cz.pepa.runapp.logger.LogWrapper
@@ -17,7 +18,7 @@ import ld
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-abstract class BaseActivity: LifecycleActivity() {
+abstract class BaseActivity: AppCompatActivity(), BaseController {
 
     protected lateinit var mViewModel: BaseViewModel
 

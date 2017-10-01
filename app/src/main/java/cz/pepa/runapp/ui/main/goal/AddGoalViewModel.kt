@@ -41,8 +41,8 @@ class AddGoalViewModel : BaseViewModel() {
         mGoal.type = Type.ACTIVE
     }
 
-    fun valueChanged(unit: FitnessUnit) {
-        mGoal.target.unit = unit
+    fun targetValueChanged(newText: String) {
+        mGoal.target.value = newText.toFloat()
     }
 
     fun unitChanged(unit: FitnessUnit) {
@@ -52,6 +52,8 @@ class AddGoalViewModel : BaseViewModel() {
     fun reoccurenceChanged(reoccurence: FitnessUnit) {
         mGoal.reoccurence = reoccurence
     }
+
+
 
 }
 
