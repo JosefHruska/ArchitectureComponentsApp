@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/vCoordinator"
+        android:id="@+id/vContent"
         style="@style/Layout.Coordinator"
         tools:context=".ui.main.MainActivity">
 
@@ -39,20 +39,37 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/vGoalTypeCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/Layout.Card">
 
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/vGoalTypeTitle"
+                        style="@style/TextView.CardTitle"
+                        android:text="@string/type"
+                        android:textAppearance="@style/ListHeader"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
+                    <include layout="@layout/include_goal_type_card" />
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/vGoalUnits"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/vAverageCard"
+                    style="@style/Layout.Card">
+
+                    <include layout="@layout/include_today" />
 
                 </android.support.v7.widget.CardView>
 
+                <android.support.v7.widget.CardView
+                    android:id="@+id/vSummary"
+                    style="@style/Layout.Card">
+
+                    <include layout="@layout/include_summary" />
+
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
         </ScrollView>
@@ -62,7 +79,9 @@
             style="@style/Button.Finish"
             android:gravity="center"
             android:background="@drawable/ripple_background"
-            android:text="@string/add_goal" />
+            android:text="@string/add_goal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 </android.support.design.widget.CoordinatorLayout>

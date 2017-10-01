@@ -38,7 +38,7 @@ abstract class BaseActivity: LifecycleActivity() {
 
 
     private fun setupViewModel() {
-        mViewModel = ViewModelProviders.of(this).get(getViewModel()::class.java)
+        mViewModel = ViewModelProviders.of(this).get((getViewModel())::class.java)
         mViewModel.onStart()
     }
 
