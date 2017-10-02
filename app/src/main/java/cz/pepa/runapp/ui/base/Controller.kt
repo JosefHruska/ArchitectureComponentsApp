@@ -6,7 +6,4 @@ package cz.pepa.runapp.ui.base
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-
-interface BaseController : Controller {
-
-}
+interface Controller {}

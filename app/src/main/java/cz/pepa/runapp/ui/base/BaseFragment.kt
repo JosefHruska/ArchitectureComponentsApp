@@ -3,6 +3,7 @@ package cz.pepa.runapp.ui.base
 import android.arch.lifecycle.LifecycleFragment
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.annotation.IdRes
 import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
@@ -23,13 +24,13 @@ import org.jetbrains.anko.inputMethodManager
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-abstract class BaseFragment(): Fragment() {
+abstract class BaseFragment<VM: BaseViewModel<C>, C: BaseController>(): Fragment(), BaseController {
 
-    lateinit protected  var mViewModel: BaseViewModel
+    lateinit protected  var mViewModel: VM
 
     abstract fun getContentResId(): Int
 
-    abstract fun getViewModel(): BaseViewModel
+    abstract fun getViewModel(): VM
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val layout: View = inflater.inflate(R.layout.fragment_base, container, false)
@@ -78,7 +79,7 @@ abstract class BaseFragment(): Fragment() {
         }
     }
 
-    fun replaceFragment(activity: FragmentActivity, @LayoutRes layoutToReplace: Int, replacingFragment: Fragment) {
+    fun replaceFragment(activity: FragmentActivity, @IdRes layoutToReplace: Int, replacingFragment: Fragment) {
         activity.supportFragmentManager.beginTransaction().replace(layoutToReplace, replacingFragment, tag).commit()
     }
 

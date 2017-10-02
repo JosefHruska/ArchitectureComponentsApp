@@ -1,12 +1,14 @@
 package cz.pepa.runapp.ui.main.group
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModel
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import cz.pepa.runapp.R
 import cz.pepa.runapp.data.DummyFittnes
 import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.base.BaseViewModel
+import cz.pepa.runapp.ui.base.Controller
 import cz.pepa.runapp.ui.common.RecyclerAdapter
 import kotlinx.android.synthetic.main.fragment_tab.*
 import kotlinx.android.synthetic.main.include_members_card.view.*
@@ -17,7 +19,7 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class GroupTabFragment: BaseFragment() {
+ open class GroupTabFragment<VM: GroupViewModel<C>, C: GroupTabController>(): BaseFragment<VM, C>(), GroupTabController {
 
     private var mGroupDataListener: ((GroupTabData) -> Unit)? = null
     private var mGroupColor = 0
@@ -27,8 +29,8 @@ class GroupTabFragment: BaseFragment() {
         return R.layout.fragment_tab
     }
 
-    override fun getViewModel(): BaseViewModel {
-        return GroupViewModel()
+    override fun getViewModel(): VM {
+        return GroupViewModel() as VM
     }
 
     override fun initUi() {
@@ -66,11 +68,11 @@ class GroupTabFragment: BaseFragment() {
             }
         }
 
-        (mViewModel as GroupViewModel).mMembers.observe(this,  membersObserver)
+        (mViewModel).mMembers.observe(this,  membersObserver)
 
     }
 
-    fun groupInstance(groupId: String): Fragment {
+    fun groupInstance(groupId: String): BaseFragment {
         val args = Bundle()
         args.putString("GROUP_ID", groupId)
         arguments = args

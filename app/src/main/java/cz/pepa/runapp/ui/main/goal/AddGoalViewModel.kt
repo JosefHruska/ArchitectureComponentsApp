@@ -12,7 +12,7 @@ import io.stepuplabs.settleup.util.extensions.todayPlus100Years
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class AddGoalViewModel : BaseViewModel() {
+class AddGoalViewModel : BaseViewModel<AddGoalController>() {
 
     val mGoal = NewGoal()
 
@@ -43,6 +43,7 @@ class AddGoalViewModel : BaseViewModel() {
 
     fun targetValueChanged(newText: String) {
         mGoal.target.value = newText.toFloat()
+        
     }
 
     fun unitChanged(unit: FitnessUnit) {

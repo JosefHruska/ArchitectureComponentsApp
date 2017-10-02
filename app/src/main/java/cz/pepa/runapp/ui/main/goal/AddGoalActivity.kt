@@ -20,9 +20,9 @@ import kotlinx.android.synthetic.main.include_today.view.*
  */
 
 
-class AddGoalActivity: BaseActivity() {
+class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddGoalController {
 
-    override fun getViewModel(): BaseViewModel {
+    override fun getViewModel(): AddGoalViewModel {
         return AddGoalViewModel()
     }
 

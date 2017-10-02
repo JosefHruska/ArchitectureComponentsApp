@@ -3,8 +3,11 @@ package cz.pepa.runapp.ui.main
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.ViewGroup
+import cz.pepa.runapp.ui.base.BaseController
 import cz.pepa.runapp.ui.base.BaseFragment
+import cz.pepa.runapp.ui.main.group.GroupTabController
 import cz.pepa.runapp.ui.main.group.GroupTabFragment
+import cz.pepa.runapp.ui.main.group.GroupViewModel
 import cz.pepa.runapp.ui.main.overview.OverviewFragment
 import eu.inloop.pager.UpdatableFragmentPagerAdapter
 
@@ -15,7 +18,7 @@ import eu.inloop.pager.UpdatableFragmentPagerAdapter
  */
 
 
-class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged: (BaseFragment) -> Unit) : UpdatableFragmentPagerAdapter(fragmentManager) {
+class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged: (Fragment) -> Unit) : UpdatableFragmentPagerAdapter(fragmentManager) {
 
     var currentFragment: Any? = null
 
@@ -24,10 +27,9 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
     }
 
     override fun setPrimaryItem(container: ViewGroup?, position: Int, fragment: Any?) {
+        fragment as Fragment
         if (currentFragment != fragment) {
-            if (fragment is GroupTabFragment) {
-                fragmentChanged(fragment)
-            }
+            fragmentChanged(fragment)
             currentFragment = fragment
         }
         super.setPrimaryItem(container, position, fragment)
@@ -38,16 +40,17 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
         if (tab.isOverview()) {
             return OverviewFragment()
         } else {
-            return GroupTabFragment().groupInstance(tab.id)
+            return GroupTabFragment().groupInstance(tab.id) as
         }
     }
 
     override fun getItemPosition(item: Any?): Int {
+        item as Fragment
         // Makes notifyDataSetChanged actually working
         if (item is OverviewFragment) {
             return 0
         } else {
-            val groupId = (item as GroupTabFragment).arguments.getString("GROUP_ID")
+            val groupId = (item).arguments.getString("GROUP_ID")
             return Tabs.getPositionOfId(groupId)
         }
     }

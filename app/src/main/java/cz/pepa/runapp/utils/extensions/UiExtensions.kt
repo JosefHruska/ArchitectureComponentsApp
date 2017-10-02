@@ -58,13 +58,13 @@ fun View.snackbar(message: CharSequence, duration: Int = Snackbar.LENGTH_INDEFIN
     }
     snackbar.show()
 }
-
-fun BaseActivity.showConfirmationDialog(@StringRes messageRes: Int, @StringRes titleRes: Int, @StringRes positiveButtonRes: Int? = null, @StringRes negativeButtonRes: Int? = null, positiveClicked: (() -> (Unit))? = null, negativeClicked: (() -> (Unit))? = null) {
-    alert(messageRes.toText(), titleRes.toText()) {
-        positiveButtonRes?.let { positiveButton(it.toText()) { positiveClicked?.invoke() } }
-        negativeButtonRes?.let { negativeButton(it.toText()) { negativeClicked?.invoke() } }
-    }.show()
-}
+//
+//fun BaseActivity.showConfirmationDialog(@StringRes messageRes: Int, @StringRes titleRes: Int, @StringRes positiveButtonRes: Int? = null, @StringRes negativeButtonRes: Int? = null, positiveClicked: (() -> (Unit))? = null, negativeClicked: (() -> (Unit))? = null) {
+//    alert(messageRes.toText(), titleRes.toText()) {
+//        positiveButtonRes?.let { positiveButton(it.toText()) { positiveClicked?.invoke() } }
+//        negativeButtonRes?.let { negativeButton(it.toText()) { negativeClicked?.invoke() } }
+//    }.show()
+//}
 
 //fun View.ownerOnlySnackBar(ownerName: String) {
 //    this.snackbar(R.string.owner_only_warning.toText(ownerName), Snackbar.LENGTH_LONG)

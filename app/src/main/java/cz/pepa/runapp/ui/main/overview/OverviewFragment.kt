@@ -9,6 +9,7 @@ import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.base.BaseViewModel
 import cz.pepa.runapp.ui.common.RecyclerAdapter
 import cz.pepa.runapp.ui.main.goal.AddGoalActivity
+import cz.pepa.runapp.ui.main.group.GroupTabFragment
 import cz.pepa.runapp.ui.main.group.GroupViewModel
 import cz.pepa.runapp.utils.extensions.formatCalories
 import cz.pepa.runapp.utils.extensions.formatDistance
@@ -28,7 +29,7 @@ import org.jetbrains.anko.startActivity
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class OverviewFragment: BaseFragment() {
+class OverviewFragment: GroupTabFragment<OverviewViewModel, OverviewController>(), OverviewController {
 
     lateinit var mYourGoalsAdapter: RecyclerAdapter<Goal>
     lateinit var mOtherGoalsAdapter: RecyclerAdapter<Goal>
@@ -37,8 +38,8 @@ class OverviewFragment: BaseFragment() {
         return R.layout.fragment_overview
     }
 
-    override fun getViewModel(): BaseViewModel {
-        return GroupViewModel()
+    override fun getViewModel(): OverviewViewModel {
+        return OverviewViewModel()
     }
 
     override fun initUi() {
@@ -58,7 +59,7 @@ class OverviewFragment: BaseFragment() {
             vSecond.value = it.distance.formatDistance()
             }
         }
-        (mViewModel as GroupViewModel).mToday.observe(this, todayObserver)
+        mViewModel.mToday.observe(this, todayObserver)
     }
 
     fun subscribeGoals() {

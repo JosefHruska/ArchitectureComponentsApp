@@ -1,6 +1,5 @@
 package cz.pepa.runapp.ui.base
 
-import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.ViewModelProviders
 import android.graphics.Color
 import android.os.Bundle
@@ -18,19 +17,26 @@ import ld
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-abstract class BaseActivity: AppCompatActivity(), BaseController {
+abstract class BaseActivity<VM: BaseViewModel<C>, C: BaseController>: AppCompatActivity(), BaseController {
 
-    protected lateinit var mViewModel: BaseViewModel
+    protected lateinit var mViewModel: VM
 
-    abstract fun getViewModel(): BaseViewModel
+    abstract fun getViewModel(): VM
 
     abstract fun getLayoutRes(): Int
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViewModel()
         setContentView(getLayoutRes())
 //        initializeLogging()
         initUi()
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+
     }
 
     open fun initUi() {
@@ -40,6 +46,7 @@ abstract class BaseActivity: AppCompatActivity(), BaseController {
 
     private fun setupViewModel() {
         mViewModel = ViewModelProviders.of(this).get((getViewModel())::class.java)
+        mViewModel.onViewModelReady(this as C)
         mViewModel.onStart()
     }
 

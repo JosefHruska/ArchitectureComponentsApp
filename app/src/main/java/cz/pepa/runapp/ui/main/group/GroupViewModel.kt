@@ -1,6 +1,8 @@
 package cz.pepa.runapp.ui.main.group
 
 import android.arch.lifecycle.MutableLiveData
+import android.os.Bundle
+import android.support.v4.content.Loader
 import cz.pepa.runapp.data.DummyFittnes
 import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.data.TodayItem
@@ -16,7 +18,7 @@ import logError
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class GroupViewModel: BaseViewModel() {
+open class GroupViewModel<C: GroupTabController>: BaseViewModel<C>() {
 
     val mMembers = MutableLiveData<List<DummyFittnes>>()
     val mToday = MutableLiveData<TodayItem>()

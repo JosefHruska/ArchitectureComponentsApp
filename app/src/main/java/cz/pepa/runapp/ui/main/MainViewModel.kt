@@ -14,7 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class MainViewModel: BaseViewModel() {
+class MainViewModel: BaseViewModel<MainController>() {
 
     private val mGroups = MutableLiveData<List<Group>>()
     private val mTabs = MutableLiveData<MutableList<Tab>>()

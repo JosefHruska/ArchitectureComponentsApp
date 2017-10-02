@@ -31,7 +31,7 @@ import org.jetbrains.anko.*
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-class MainActivity: BaseActivity() {
+class MainActivity: BaseActivity<MainViewModel, MainController>(), MainController {
 
     /**
      * Track whether an authorization activity is stacking over the current activity, i.e. when
@@ -44,7 +44,7 @@ class MainActivity: BaseActivity() {
     private lateinit var vHeader: View
     private lateinit var mViewPagerAdapter: MainViewPagerAdapter
 
-    override fun getViewModel(): BaseViewModel {
+    override fun getViewModel(): MainViewModel {
         return MainViewModel()
     }
 
