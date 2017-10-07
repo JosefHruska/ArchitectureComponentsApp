@@ -40,7 +40,7 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
         if (tab.isOverview()) {
             return OverviewFragment()
         } else {
-            return GroupTabFragment().groupInstance(tab.id) as
+            return GroupTabFragment<GroupViewModel<GroupTabController>, GroupTabController>().groupInstance(tab.id)
         }
     }
 

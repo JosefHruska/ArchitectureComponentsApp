@@ -8,6 +8,8 @@ import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.logger.LogView
 import cz.pepa.runapp.logger.LogWrapper
 import cz.pepa.runapp.logger.MessageOnlyLogFilter
+import cz.pepa.runapp.ui.main.MainController
+import cz.pepa.runapp.ui.main.MainViewModel
 import kotlinx.android.synthetic.main.activity_test_fit.*
 import ld
 
@@ -45,7 +47,7 @@ abstract class BaseActivity<VM: BaseViewModel<C>, C: BaseController>: AppCompatA
 
 
     private fun setupViewModel() {
-        mViewModel = ViewModelProviders.of(this).get((getViewModel())::class.java)
+        mViewModel = ViewModelProviders.of(this, ViewModelFactory()).get((getViewModel()::class.java))
         mViewModel.onViewModelReady(this as C)
         mViewModel.onStart()
     }

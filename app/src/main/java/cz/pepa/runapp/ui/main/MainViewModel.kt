@@ -1,6 +1,8 @@
 package cz.pepa.runapp.ui.main
 
 import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModel
+import android.arch.lifecycle.ViewModelProvider
 import com.gojuno.koptional.Optional
 import cz.pepa.runapp.data.*
 import cz.pepa.runapp.database.DatabaseRead
@@ -46,5 +48,14 @@ class MainViewModel: BaseViewModel<MainController>() {
     fun getUser() : MutableLiveData<User> {
         return mUser
     }
+
+//    class Factory: ViewModelFactory<MainViewModel>() {
+//
+//        override fun create(): MainViewModel {
+//            return MainViewModel()
+//        }
+//    }
+
+
 
 }

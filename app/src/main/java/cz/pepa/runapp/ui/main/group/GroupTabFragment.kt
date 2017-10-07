@@ -1,14 +1,10 @@
 package cz.pepa.runapp.ui.main.group
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModel
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import cz.pepa.runapp.R
 import cz.pepa.runapp.data.DummyFittnes
 import cz.pepa.runapp.ui.base.BaseFragment
-import cz.pepa.runapp.ui.base.BaseViewModel
-import cz.pepa.runapp.ui.base.Controller
 import cz.pepa.runapp.ui.common.RecyclerAdapter
 import kotlinx.android.synthetic.main.fragment_tab.*
 import kotlinx.android.synthetic.main.include_members_card.view.*
@@ -30,7 +26,7 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
     }
 
     override fun getViewModel(): VM {
-        return GroupViewModel() as VM
+        return GroupViewModel<GroupTabController>() as VM
     }
 
     override fun initUi() {
@@ -72,7 +68,7 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
 
     }
 
-    fun groupInstance(groupId: String): BaseFragment {
+    fun groupInstance(groupId: String): BaseFragment<VM, C> {
         val args = Bundle()
         args.putString("GROUP_ID", groupId)
         arguments = args

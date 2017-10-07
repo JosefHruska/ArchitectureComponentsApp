@@ -35,7 +35,7 @@ abstract class BaseFragment<VM: BaseViewModel<C>, C: BaseController>(): Fragment
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val layout: View = inflater.inflate(R.layout.fragment_base, container, false)
         inflater.inflate(getContentResId(), layout.findViewById<FrameLayout>(R.id.vContent), true)
-        mViewModel = ViewModelProviders.of(this).get(getViewModel()::class.java)
+        mViewModel = ViewModelProviders.of(this, ViewModelFactory()).get(getViewModel()::class.java)
         mViewModel.onStart()
         return layout
     }

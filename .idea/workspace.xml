@@ -15,30 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f292b0-7958-40b9-8178-cd381c435252" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/Controller.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalController.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabController.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewController.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewViewModel.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseController.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseController.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalViewModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalViewModel.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" afterPath="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
     </list>
     <ignored path="RunApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,13 +85,9 @@
           <file leaf-file-name="OverviewFragment.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="59">
-                  <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#41#1052#0" expanded="true" />
-                    <element signature="e#2567#2592#0" expanded="true" />
-                    <element signature="e#2976#3001#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="25">
+                  <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -114,7 +95,7 @@
           <file leaf-file-name="OverviewViewModel.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewViewModel.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
+                <state relative-caret-position="250">
                   <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
                   <folding>
                     <element signature="e#41#135#0" expanded="true" />
@@ -126,7 +107,7 @@
           <file leaf-file-name="OverviewController.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewController.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
+                <state relative-caret-position="250">
                   <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
                   <folding>
                     <element signature="e#41#140#0" expanded="true" />
@@ -149,6 +130,7 @@
                     <element signature="e#5732#5733#0" expanded="false" />
                     <element signature="e#5803#5804#0" expanded="false" />
                     <element signature="e#5857#5858#0" expanded="false" />
+                    <element signature="e#6727#6745#0" expanded="false" />
                     <element signature="e#12677#12678#0" expanded="false" />
                     <element signature="e#12715#12716#0" expanded="false" />
                     <element signature="e#12988#12989#0" expanded="false" />
@@ -247,8 +229,8 @@
                     <element signature="e#70996#70997#0" expanded="false" />
                     <element signature="e#71900#71901#0" expanded="false" />
                     <element signature="e#71928#71929#0" expanded="false" />
-                    <element signature="e#88960#88961#0" expanded="false" />
-                    <element signature="e#89029#89030#0" expanded="false" />
+                    <element signature="e#88883#89044#0" expanded="false" />
+                    <element signature="e#89043#89044#0" expanded="false" />
                     <element signature="e#95020#95021#0" expanded="false" />
                     <element signature="e#95074#95075#0" expanded="false" />
                     <element signature="e#107456#107457#0" expanded="false" />
@@ -266,21 +248,21 @@
           </file>
           <file leaf-file-name="include_today.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_today.xml">
-              <provider editor-type-id="android-designer2">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1275">
                   <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="625">
+                <state relative-caret-position="850">
                   <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
                   <folding />
                 </state>
@@ -289,27 +271,27 @@
           </file>
           <file leaf-file-name="fragment_overview.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml">
-              <provider editor-type-id="android-designer2">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="975">
                   <caret line="39" column="64" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="39" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="item_goals.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml">
-              <provider editor-type-id="android-designer2">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="850">
                   <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="android-designer2">
+                <state />
               </provider>
             </entry>
           </file>
@@ -320,11 +302,9 @@
           <file leaf-file-name="BaseViewModel.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#32#148#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="500">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -332,32 +312,38 @@
           <file leaf-file-name="BaseActivity.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-                  <folding>
-                    <element signature="e#32#411#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="166">
+                  <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MainController.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt">
+          <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#32#131#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="184">
+                  <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Controller.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/Controller.kt">
+          <file leaf-file-name="ViewModelProviders.java" pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/extensions/1.0.0-beta2/ad50785276e5d2e822fd4c6fc6683d5bef57b3e9/extensions-1.0.0-beta2-sources.jar!/android/arch/lifecycle/ViewModelProviders.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+                <state relative-caret-position="397">
+                  <caret line="85" column="36" lean-forward="false" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ViewModelProvider.java" pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/extensions/1.0.0-beta2/ad50785276e5d2e822fd4c6fc6683d5bef57b3e9/extensions-1.0.0-beta2-sources.jar!/android/arch/lifecycle/ViewModelProvider.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1447">
+                  <caret line="114" column="35" lean-forward="false" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
@@ -366,61 +352,48 @@
           <file leaf-file-name="MainViewPagerAdapter.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="809">
-                  <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+                <state relative-caret-position="700">
+                  <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BaseController.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseController.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupTabFragment.kt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="GroupTabFragment.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-366">
-                  <caret line="21" column="82" lean-forward="true" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
-                  <folding>
-                    <element signature="e#2583#2610#0" expanded="true" />
-                    <element signature="e#2593#2609#1" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupViewModel.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+                <state relative-caret-position="91">
+                  <caret line="48" column="93" lean-forward="false" selection-start-line="48" selection-start-column="93" selection-end-line="48" selection-end-column="93" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BaseFragment.kt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="BaseFragment.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+                <state relative-caret-position="409">
+                  <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UiExtensions.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
+          <file leaf-file-name="MainViewModel.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5587">
-                  <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="66" selection-end-column="3" />
+                <state relative-caret-position="991">
+                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GroupTabController.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabController.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="250">
+                  <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -2334,7 +2307,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseController.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabController.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewModel.kt" />
@@ -2342,13 +2314,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewController.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt" />
       </list>
     </option>
   </component>
@@ -2376,8 +2349,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2385,285 +2357,12 @@
               <option name="myItemId" value="ArchitectureComponentsApp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="overview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="group" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArchitectureComponentsApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2674,7 +2373,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FitProgressBar" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="add&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt&#10;Base&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt&#10;BaseFra&#9;null&#9;null&#10;StringExte&#9;null&#9;null&#10;Strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;UiE&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;ColorEx&#9;null&#9;null&#10;F&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/FitnessUnit.kt&#10;Ad&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt&#10;string&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Over&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;GoalBI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;sty&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;Goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Du&#9;null&#9;null&#10;Dumm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;GoalLo&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt&#10;UI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;Color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Fitnes&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt&#10;DateExte&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt&#10;wee&#9;null&#9;null&#10;Stri&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;fon&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/fonts.xml&#10;st&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;title&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/view_titled_value.xml&#10;item&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;DUm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;Str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalDat&#9;null&#9;null&#10;styles&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;ite&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Avata&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt&#10;St&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;GoalBi&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;item_go&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Main&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt&#10;acti&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/activity_main.xml&#10;theme&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/theme.xml&#10;Overview&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;Data&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;Overv&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;AndroidMa&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/AndroidManifest.xml&#10;Fir&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/FirstActivity.kt&#10;str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalB&#9;null&#9;null&#10;Databas&#9;FILE&#9;file://C:/Users/pepah/RunApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt" />
+    <property name="SearchEverywhereHistoryKey" value="MainV&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt&#10;BaseV&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt&#10;add&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt&#10;Base&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt&#10;BaseFra&#9;null&#9;null&#10;StringExte&#9;null&#9;null&#10;Strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;UiE&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;ColorEx&#9;null&#9;null&#10;F&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/FitnessUnit.kt&#10;Ad&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/goal/AddGoalActivity.kt&#10;string&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Over&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;GoalBI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;sty&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;Goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;goal&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Du&#9;null&#9;null&#10;Dumm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;GoalLo&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/logic/GoalLogic.kt&#10;UI&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt&#10;Color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;strin&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;Fitnes&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/FitnessExtension.kt&#10;DateExte&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/DateExtensions.kt&#10;wee&#9;null&#9;null&#10;Stri&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt&#10;fon&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/fonts.xml&#10;st&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;title&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/view_titled_value.xml&#10;item&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;color&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/colors.xml&#10;DUm&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/data/DummyData.kt&#10;Str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml&#10;GoalDat&#9;null&#9;null&#10;styles&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;ite&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Avata&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/utils/Avatars.kt&#10;St&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/styles.xml&#10;GoalBi&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/GoalBinder.kt&#10;item_go&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/item_goals.xml&#10;Main&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt&#10;acti&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/layout/activity_main.xml&#10;theme&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/theme.xml&#10;Overview&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;Data&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/database/DatabaseWrite.kt&#10;Overv&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt&#10;AndroidMa&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/AndroidManifest.xml&#10;Fir&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/java/cz/pepa/runapp/FirstActivity.kt&#10;str&#9;FILE&#9;file://C:/Users/pepah/Documents/github/ArchitectureComponentsApp/app/src/main/res/values/strings.xml" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-stf_l09-7BKDU17628001602" />
     <property name="DEBUGGABLE_PROCESS" value="cz.pepa.runapp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2805,7 +2504,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506897086082" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507415929103" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2852,7 +2552,8 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1506897086082" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507415929103" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3033,7 +2734,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507415929106" />
+      </method>
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
@@ -3094,7 +2798,7 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297929" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292618" sideWeight="0.49708223" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16091344" sideWeight="0.36074272" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16091344" sideWeight="0.36074272" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976744" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3103,13 +2807,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2777483" sideWeight="0.5392573" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33073497" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292618" sideWeight="0.49626866" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297929" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297929" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292618" sideWeight="0.50291777" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10026525" sideWeight="0.4787234" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21348912" sideWeight="0.44986737" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2872679" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3128,6 +2831,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21348912" sideWeight="0.44986737" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3257,35 +2961,16 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_today.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/progress/GoogleFitProgressBar.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/include_goal_types.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_overview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="39" column="64" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="39" selection-end-column="64" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/Goal.kt">
@@ -3303,14 +2988,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_goals.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/FitnessUnit.kt" />
@@ -3325,13 +3010,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_goal_type_card.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/ColorExtensions.kt">
@@ -3363,13 +3048,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_separator.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/StringExtensions.kt">
@@ -3395,14 +3080,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/app/Activity.class">
@@ -3413,33 +3098,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_target_value.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_goal_summary.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/include_goal_summary.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_goal.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_goal.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="896">
           <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/data/NewGoal.kt">
@@ -3467,7 +3152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3475,7 +3159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="175" column="23" lean-forward="false" selection-start-line="175" selection-start-column="23" selection-end-line="175" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3483,7 +3166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="91" column="40" lean-forward="false" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3491,7 +3173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3499,7 +3180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-334">
           <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3507,37 +3187,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1025">
           <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="119" column="12" lean-forward="false" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
+        <state relative-caret-position="850">
           <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
           <folding />
         </state>
@@ -3547,9 +3202,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
           <caret line="95" column="22" lean-forward="false" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/Controller.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#4201#0" expanded="false" />
-            <element signature="e#4126#4159#0" expanded="false" />
+            <element signature="e#32#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="66" selection-end-column="3" />
+          <folding>
+            <marker date="1506897000142" expanded="true" signature="2687:2688" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="e#41#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#41#135#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3562,116 +3269,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#32#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/Controller.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupViewModel.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#32#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#32#411#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/utils/extensions/UiExtensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5587">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="66" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#41#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#41#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-          <folding>
-            <element signature="e#41#1052#0" expanded="true" />
-            <element signature="e#2567#2592#0" expanded="true" />
-            <element signature="e#2976#3001#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewPagerAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="700">
+          <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/overview/OverviewFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        <state relative-caret-position="25">
+          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/group/GroupTabFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="21" column="82" lean-forward="true" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
-          <folding>
-            <element signature="e#2583#2610#0" expanded="true" />
-            <element signature="e#2593#2609#1" expanded="false" />
-          </folding>
+        <state relative-caret-position="91">
+          <caret line="48" column="93" lean-forward="false" selection-start-line="48" selection-start-column="93" selection-end-line="48" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="991">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/main/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/extensions/1.0.0-beta2/ad50785276e5d2e822fd4c6fc6683d5bef57b3e9/extensions-1.0.0-beta2-sources.jar!/android/arch/lifecycle/ViewModelProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1447">
+          <caret line="114" column="35" lean-forward="false" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/extensions/1.0.0-beta2/ad50785276e5d2e822fd4c6fc6683d5bef57b3e9/extensions-1.0.0-beta2-sources.jar!/android/arch/lifecycle/ViewModelProviders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="85" column="36" lean-forward="false" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cz/pepa/runapp/ui/base/BaseFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,8 @@
 package cz.pepa.runapp.ui.base
 
 import android.arch.lifecycle.AndroidViewModel
+import android.arch.lifecycle.ViewModel
+import android.arch.lifecycle.ViewModelProvider
 import android.support.v4.app.LoaderManager
 import cz.pepa.runapp.app
 
@@ -19,5 +21,15 @@ abstract class BaseViewModel<C: BaseController> : AndroidViewModel(app()) {
     }
 
     abstract fun onStart()
+
+
+
+}
+
+class ViewModelFactory: ViewModelProvider.Factory {
+
+    override fun <T : ViewModel?> create(modelClass: Class<T>?): T {
+        return modelClass!!.newInstance()
+    }
 
 }
