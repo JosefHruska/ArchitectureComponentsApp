@@ -10,9 +10,9 @@ import cz.pepa.runapp.ui.main.goal.Target
 
 class NewGoal() {
 
-    var type: Type? = null
+    var type: Type = Type.DISTANCE
     var target: Target = Target(0F, FitnessUnit.KCAL )
-    var reoccurence: FitnessUnit = FitnessUnit.DAY
+    var recurrence: Recurrence = Recurrence.DAILY
 }
 
 enum class Type {
@@ -31,4 +31,19 @@ enum class FitnessUnit {
     DAY,
     WEEK,
     MONTH
+}
+
+enum class Recurrence {
+    DAILY,
+    WEEKLY,
+    MONTHLY,
+    YEARLY,
+    OVERALL
+}
+
+enum class Rating {
+    GOOD,
+    DIFFICULT,
+    EASY,
+    INSANE
 }

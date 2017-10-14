@@ -64,6 +64,7 @@ fun String.formatHtml(): Spanned {
     return Html.fromHtml(this)
 }
 
+
 //fun String.formatGoalRating
 
 

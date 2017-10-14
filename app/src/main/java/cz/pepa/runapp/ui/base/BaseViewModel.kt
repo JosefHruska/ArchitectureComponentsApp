@@ -22,7 +22,7 @@ abstract class BaseViewModel<C: BaseController> : AndroidViewModel(app()) {
 
     abstract fun onStart()
 
-
+    protected fun getController() = checkNotNull(mController, {"Controller is not available"})
 
 }
 

@@ -64,18 +64,18 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/vTargetValue"
-                    style="@style/Layout.Card">
-
-                    <include layout="@layout/include_target_value" />
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
                     android:id="@+id/vSummary"
                     style="@style/Layout.Card">
 
                     <include layout="@layout/include_goal_summary" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/vTargetValue"
+                    style="@style/Layout.Card">
+
+                    <include layout="@layout/include_target_value" />
 
                 </android.support.v7.widget.CardView>
 

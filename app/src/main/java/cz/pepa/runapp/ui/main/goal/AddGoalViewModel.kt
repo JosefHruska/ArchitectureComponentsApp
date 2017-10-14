@@ -1,8 +1,10 @@
 package cz.pepa.runapp.ui.main.goal
 
+import cz.pepa.runapp.R
 import cz.pepa.runapp.data.*
 import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseViewModel
+import io.stepuplabs.settleup.util.extensions.formatHtml
 import io.stepuplabs.settleup.util.extensions.todayBegin
 import io.stepuplabs.settleup.util.extensions.todayPlus100Years
 
@@ -15,43 +17,71 @@ import io.stepuplabs.settleup.util.extensions.todayPlus100Years
 class AddGoalViewModel : BaseViewModel<AddGoalController>() {
 
     val mGoal = NewGoal()
+    lateinit var mAverageResults: MutableMap<Type, List<Float>>
 
 
     override fun onStart() {
+        loadAverageData()
+        updateContent()
     }
 
     fun saveGoal() {
         GoalLogic.addNewGoal(GoalData().apply { name = "First added goal"; goalType = GoalData.GoalType.METRIC; recurrence = GoalData.GoalRecurrence.DAILY; recurrencePeriod = 1; startTime = todayBegin(); endTime = todayPlus100Years(); GoalMetricObjective().apply { goalTypeName = "BOOBIES"; value = 69.0 } })
+    }
 
+    private fun loadAverageData() {
+        mAverageResults = DummyData.getAverageResults()
     }
 
     fun caloriesTypeClicked() {
-        mGoal.type = Type.CALORIES
+        goalTypeChanged(Type.CALORIES)
     }
 
     fun distanceTypeClicked() {
-        mGoal.type = Type.DISTANCE
+        goalTypeChanged(Type.DISTANCE)
     }
 
     fun stepsTypeClicked() {
-        mGoal.type = Type.STEPS
+        goalTypeChanged(Type.STEPS)
     }
 
     fun activeTypeClicked() {
-        mGoal.type = Type.ACTIVE
+        goalTypeChanged(Type.ACTIVE)
     }
 
     fun targetValueChanged(newText: String) {
         mGoal.target.value = newText.toFloat()
-        
+        updateContent()
     }
 
     fun unitChanged(unit: FitnessUnit) {
         mGoal.target.unit = unit
+        updateContent()
     }
 
-    fun reoccurenceChanged(reoccurence: FitnessUnit) {
-        mGoal.reoccurence = reoccurence
+    fun recurrenceChanged(itemId: Int) {
+        val recurrence = when (itemId) {
+            R.id.weekly -> Recurrence.WEEKLY
+            R.id.daily -> Recurrence.DAILY
+            R.id.monthly -> Recurrence.MONTHLY
+            else -> {
+                Recurrence.DAILY
+            }
+        }
+        mGoal.recurrence = recurrence
+        updateContent()
+    }
+
+    private fun goalTypeChanged(goalType: Type) {
+        mGoal.type = goalType
+        updateContent()
+    }
+
+    private fun updateContent() {
+        getController().setSelectedType(mGoal.type)
+        mAverageResults.get(mGoal.type)?.let { getController().setAverageValues(it) }
+        getController().setupSummaryText(GoalLogic.formatSummaryGoalText(mGoal.type, mGoal.target.value, mGoal.recurrence))
+        getController().setGoalRating(calculateGoalRating())
     }
 
 

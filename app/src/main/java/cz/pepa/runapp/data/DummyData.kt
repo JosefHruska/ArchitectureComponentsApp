@@ -3,6 +3,7 @@ package cz.pepa.runapp.data
 import cz.pepa.runapp.ui.common.Day
 import cz.pepa.runapp.ui.common.MatchedDay
 import io.stepuplabs.settleup.util.extensions.formatHtml
+import java.time.Month
 
 /**
  * TODO: Add description
@@ -29,6 +30,20 @@ object DummyData {
         goals.addAll(listOf(firstGoal, secondGoal, thirdGoal, fourthGoal))
 //        goals.addAll(listOf(thirdGoal, fourthGoal))
         return goals
+    }
+
+    fun getAverageResults(): MutableMap<Type, List<Float>> {
+        val average = mutableMapOf<Type, List<Float>>()
+        val activeResults = listOf(45f, 38f, 34f, 32f)
+        val stepsResults = listOf(6945f, 7052f, 7012f, 9622f)
+        val caloriesResult = listOf(1602f, 1703f, 2100f, 2006f)
+        val distanceResult = listOf(6200f, 7504f, 6054f, 7453f)
+        average.put(Type.ACTIVE, activeResults)
+        average.put(Type.STEPS, stepsResults)
+        average.put(Type.CALORIES, caloriesResult)
+        average.put(Type.DISTANCE, distanceResult)
+
+        return average
     }
 
     fun getMatchedDays(): List<MatchedDay> {

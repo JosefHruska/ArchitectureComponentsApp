@@ -6,8 +6,7 @@
     <TextView
         android:id="@+id/vSummaryText"
         style="@style/TextView"
-        android:textAppearance="@style/text16"
-        android:text="I will take 9500 steps per day"
+        android:textAppearance="@style/text20"
         android:layout_gravity="center"
         android:padding="24dp" />
 

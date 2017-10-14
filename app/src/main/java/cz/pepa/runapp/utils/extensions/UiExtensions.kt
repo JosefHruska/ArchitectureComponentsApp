@@ -8,6 +8,7 @@ import android.content.res.Configuration
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
@@ -20,12 +21,10 @@ import android.support.v4.app.NotificationCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.MotionEventCompat
 import android.support.v7.widget.PopupMenu
-import android.text.Editable
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.TextWatcher
+import android.text.*
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
+import android.text.style.StyleSpan
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.*
@@ -38,6 +37,7 @@ import cz.pepa.runapp.app
 import cz.pepa.runapp.data.Goal
 import cz.pepa.runapp.data.GoalId
 import cz.pepa.runapp.extensions.isLargerOrEqualApi
+import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseActivity
 import org.jetbrains.anko.*
 
@@ -267,14 +267,35 @@ fun EditText.setOnKeyboardDoneClicked(onDoneClicked: () -> Unit) {
     }
 }
 
-fun TextView.setOnClickListener(text: Spanned, clickablePartIndexStart: Int, clickablePartIndexEnd: Int, onTextClicked: () -> Unit) {
+fun TextView.setOnClickListener(text: String, clickablePartIndexStart: Int, clickablePartIndexEnd: Int, onTextClicked: () -> Unit) {
+    val ss = SpannableString(text)
+    val clickableSpan = object : ClickableSpan() {
+        override fun onClick(textView: View) {
+            onTextClicked()
+        }
+
+        override fun updateDrawState(ds: TextPaint?) {
+            ds?.linkColor = R.color.primary.toColor()
+            ds?.setColor(ds?.linkColor)
+            ds?.isUnderlineText = false
+
+        }
+    }
+    ss.setSpan(clickableSpan, clickablePartIndexStart, clickablePartIndexEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+    this.text = ss
+    this.movementMethod = LinkMovementMethod.getInstance()
+}
+
+fun TextView.setOnClickListener(text: Spanned, clickablePart: String, onTextClicked: () -> Unit) {
     val ss = SpannableString(text)
     val clickableSpan = object : ClickableSpan() {
         override fun onClick(textView: View) {
             onTextClicked()
         }
     }
-    ss.setSpan(clickableSpan, clickablePartIndexStart, clickablePartIndexEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+    val rangeStart = text.indexOf(clickablePart)
+    val rangeEnd = rangeStart + clickablePart.length
+    ss.setSpan(clickableSpan, rangeStart, rangeEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
     this.text = ss
     this.movementMethod = LinkMovementMethod.getInstance()
     this.highlightColor = Color.TRANSPARENT

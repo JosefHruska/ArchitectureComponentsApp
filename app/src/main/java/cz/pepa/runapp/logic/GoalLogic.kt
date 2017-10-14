@@ -5,9 +5,7 @@ import android.text.Spanned
 import com.gojuno.koptional.Optional
 import cz.pepa.runapp.R
 import cz.pepa.runapp.app
-import cz.pepa.runapp.data.Goal
-import cz.pepa.runapp.data.GoalData
-import cz.pepa.runapp.data.TodayItem
+import cz.pepa.runapp.data.*
 import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.DatabaseWrite
 import cz.pepa.runapp.database.combineLatest
@@ -194,6 +192,43 @@ object GoalLogic {
         val percentageProgess: Double = overallValue / (targetValue / 100)
         return percentageProgess
     }
+
+    fun formatSummaryGoalText(type: Type, value: Float, recurrence: Recurrence): String {
+        val value = value.toString()
+        val recurrenceText =
+                when (recurrence) {
+                    Recurrence.DAILY -> app().getString(R.string.recurrence_day)
+                    Recurrence.WEEKLY -> app().getString(R.string.recurrence_week)
+                    Recurrence.MONTHLY -> app().getString(R.string.recurrence_month)
+                    else -> {"ERROR"}
+                }
+        return when (type) {
+            Type.STEPS -> app().getString(R.string.add_goal_metric_steps, value, recurrenceText)
+            Type.ACTIVE -> app().getString(R.string.add_goal_metric_active, value, recurrenceText)
+            Type.CALORIES -> app().getString(R.string.add_goal_metric_calories, value, recurrenceText)
+            Type.DISTANCE -> app().getString(R.string.add_goal_metric_distance, value, recurrenceText)
+        }
+    }
+
+    fun formatGoalRating(goalRating: Rating): String {
+        return when (goalRating) {
+            Rating.EASY -> app().getString(R.string.rating_easy)
+            Rating.GOOD -> app().getString(R.string.rating_good)
+            Rating.DIFFICULT -> app().getString(R.string.rating_difficult)
+            Rating.INSANE -> app().getString(R.string.rating_insane)
+        }
+    }
+
+    fun calculateGoalRating(averageValues: List<Float>, newValue: Float): Rating {
+        val monthlyAverage = averageValues[2]
+       return when {
+            monthlyAverage > newValue -> Rating.EASY
+            (monthlyAverage * 1.1) <= newValue -> Rating.GOOD
+            (monthlyAverage * 2) <= newValue -> Rating.DIFFICULT
+            else -> Rating.INSANE
+        }
+    }
+
 }
 
 

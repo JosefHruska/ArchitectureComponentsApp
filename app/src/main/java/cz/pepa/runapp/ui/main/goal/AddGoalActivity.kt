@@ -1,11 +1,11 @@
 package cz.pepa.runapp.ui.main.goal
 
-import android.text.Spanned
+import android.text.SpannedString
 import cz.pepa.runapp.R
-import cz.pepa.runapp.R.id.vNameLayout
+import cz.pepa.runapp.data.Type
+import cz.pepa.runapp.extensions.setBackgroundDrawableColor
 import cz.pepa.runapp.extensions.setColor
 import cz.pepa.runapp.ui.base.BaseActivity
-import cz.pepa.runapp.ui.base.BaseViewModel
 import io.stepuplabs.settleup.util.extensions.*
 import kotlinx.android.synthetic.main.activity_add_goal.*
 import kotlinx.android.synthetic.main.include_goal_summary.*
@@ -32,6 +32,8 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
 
     override fun initUi() {
         setupAverageCard()
+        setupGoalTargetValue()
+        setupGoalType()
         vToolbar.title = R.string.new_goal.toText()
         vToolbar.setNavigationIcon(R.drawable.ic_close)
         vSaveGoal.setOnClickListener{
@@ -41,6 +43,46 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         vName.setColor(R.color.primary_light.toColor())
         vSaveGoal.setBackgroundColorWithRipple(R.color.primary.toColor())
 
+    }
+
+    override fun setSelectedType(selectedType: Type) {
+        when (selectedType) {
+            Type.ACTIVE -> {
+                vActive.setBackgroundDrawableColor(R.color.primary.toColor())
+
+                vDistance.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vSteps.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vCalories.setBackgroundDrawableColor(R.color.gray_3.toColor())
+            }
+            Type.DISTANCE -> {
+                vDistance.setBackgroundDrawableColor(R.color.primary.toColor())
+
+                vCalories.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vActive.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vSteps.setBackgroundDrawableColor(R.color.gray_3.toColor())
+            }
+            Type.CALORIES -> {
+                vCalories.setBackgroundDrawableColor(R.color.primary.toColor())
+
+                vSteps.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vActive.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vDistance.setBackgroundDrawableColor(R.color.gray_3.toColor())
+            }
+            Type.STEPS -> {
+                vSteps.setBackgroundDrawableColor(R.color.primary.toColor())
+
+                vDistance.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vCalories.setBackgroundDrawableColor(R.color.gray_3.toColor())
+                vActive.setBackgroundDrawableColor(R.color.gray_3.toColor())
+            }
+        }
+    }
+
+    override fun setAverageValues(values: List<Float>) {
+        vAverageCard.vFirst.value = values[0].toString()
+        vAverageCard.vSecond.value = values[1].toString()
+        vAverageCard.vThird.value = values[2].toString()
+        vAverageCard.vFourth.value = values[3].toString()
     }
 
     private fun getModel() = mViewModel as AddGoalViewModel
@@ -72,7 +114,7 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         vName.monitorTextChangedByHuman { getModel().targetValueChanged(it) }
     }
 
-    private fun setupSummaryText(text: Spanned, indexStart: Int, indexEnd: Int, onClick: ()-> (Unit)) {
-        vSummaryText.setOnClickListener(text, indexStart, indexEnd, onClick)
+    override fun setupSummaryText(text: String) {
+        vSummaryText.setOnClickListener(text, text.indexOf(" a "), text.length, {vSummaryText.popupMenuOnClick(R.menu.recurrence, {getModel().recurrenceChanged(it)})})
     }
 }
