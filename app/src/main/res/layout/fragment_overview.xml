@@ -42,7 +42,11 @@
                 <android.support.v7.widget.AppCompatImageView
                     android:id="@+id/vAddYourGoal"
                     style="@style/Image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="24dp"
                     android:layout_margin="12dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/ic_add"
                     android:background="@drawable/circle_gray"
                     app:layout_constraintRight_toRightOf="parent"

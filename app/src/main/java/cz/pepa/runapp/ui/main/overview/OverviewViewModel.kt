@@ -10,7 +10,6 @@ import cz.pepa.runapp.ui.main.group.GroupViewModel
  */
 
 class OverviewViewModel : GroupViewModel<OverviewController>() {
-    override fun onStart() {
 
-    }
+
 }

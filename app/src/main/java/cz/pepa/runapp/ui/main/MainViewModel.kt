@@ -22,7 +22,7 @@ class MainViewModel: BaseViewModel<MainController>() {
     private val mTabs = MutableLiveData<MutableList<Tab>>()
     private val mUser = MutableLiveData<User>()
 
-    override fun onStart() {
+    override fun onViewAttached() {
         loadGroups()
         loadUser()
     }

@@ -29,29 +29,24 @@ abstract class BaseActivity<VM: BaseViewModel<C>, C: BaseController>: AppCompatA
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setupViewModel()
         setContentView(getLayoutRes())
+        setupViewModel()
 //        initializeLogging()
         initUi()
     }
 
     override fun onStart() {
         super.onStart()
-
-
     }
 
     open fun initUi() {
         // setup UI components here
     }
 
-
     private fun setupViewModel() {
         mViewModel = ViewModelProviders.of(this, ViewModelFactory()).get((getViewModel()::class.java))
         mViewModel.onViewModelReady(this as C)
-        mViewModel.onStart()
     }
-
 
     /**
      * Initialize a custom log class that outputs both to in-app targets and logcat.

@@ -5,7 +5,6 @@ import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
-import android.support.v4.content.res.ResourcesCompat
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,6 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import cz.pepa.runapp.R
 import kotlinx.android.synthetic.main.google_fit_progress_bar.view.*
-import ld
 
 /**
  * Created by pepa on 23/09/2017.
@@ -29,7 +27,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
     protected var progressPadding = 0
     protected var progressIconHeight = 0
 
-    protected var progressBackgroundColor = 0
+    protected var progressBgColor = 0
 
     protected lateinit var progressBar: LinearLayout
     protected lateinit var progressBackground: LinearLayout
@@ -90,7 +88,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
         cornerRadius = attributes.getInt(R.styleable.BaseProgressBar_cornerRadius, 30)
         progressPadding = attributes.getDimension(R.styleable.BaseProgressBar_progressPadding, 16F).toInt()
         progressColorRes = attributes.getResourceId(R.styleable.BaseProgressBar_progressColorRes,R.color.colorAccent)
-        progressBackgroundColor = attributes.getResourceId(R.styleable.BaseProgressBar_progressBackgroundColor,  R.color.black_24opacity)
+        progressBgColor = attributes.getResourceId(R.styleable.BaseProgressBar_progressBgColor,  R.color.black_24opacity)
         progressIconHeight = attributes.getDimension(R.styleable.BaseProgressBar_progressIconDimensions, 16F).toInt()
         progressPercentage = attributes.getFloat(R.styleable.BaseProgressBar_progressPercentage, 50f)
 
@@ -130,7 +128,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
 
     // Draw progress background
     private fun drawBackgroundProgress() {
-        val backgroundDrawable = createGradientDrawable(context.resources.getColor(progressBackgroundColor))
+        val backgroundDrawable = createGradientDrawable(context.resources.getColor(progressBgColor))
         val newRadius = cornerRadius - progressPadding / 2
         backgroundDrawable.cornerRadii = floatArrayOf(newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat(), newRadius.toFloat())
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -192,7 +190,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
         ss.cornerRadius = this.cornerRadius
         ss.progressPadding = this.progressPadding
 
-        ss.progressBackgroundColor = this.progressBackgroundColor
+        ss.progressBackgroundColor = this.progressBgColor
         ss.progressColorRes = this.progressColorRes
 
         ss.progressPercentage = this.progressPercentage
@@ -212,7 +210,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
         cornerRadius = state.cornerRadius
         progressPadding = state.progressPadding
 
-        progressBackgroundColor = state.progressBackgroundColor
+        progressBgColor = state.progressBackgroundColor
         progressColorRes = state.progressColorRes
     }
 

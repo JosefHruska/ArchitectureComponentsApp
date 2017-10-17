@@ -39,7 +39,8 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/vGoalTypeCard"
-                    style="@style/Layout.Card">
+                    style="@style/Layout.Card"
+                    android:layout_marginTop="8dp">
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/vGoalTypeTitle"
@@ -73,7 +74,8 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/vTargetValue"
-                    style="@style/Layout.Card">
+                    style="@style/Layout.Card"
+                    android:layout_marginBottom="64dp">
 
                     <include layout="@layout/include_target_value" />
 
@@ -85,7 +87,6 @@
         <TextView
             android:id="@+id/vSaveGoal"
             style="@style/Button.Finish"
-
             android:gravity="center"
             android:background="@drawable/ripple_background"
             android:text="@string/add_goal"

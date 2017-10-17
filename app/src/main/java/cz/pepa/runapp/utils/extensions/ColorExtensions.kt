@@ -23,7 +23,7 @@ import io.stepuplabs.settleup.util.extensions.toColor
  * @author David Vávra (david@stepuplabs.io)
  */
 fun View.setBackgroundDrawableColor(color: Int) {
-    this.background.setColorFilter(color, PorterDuff.Mode.SRC_IN)
+    this.background?.setColorFilter(color, PorterDuff.Mode.SRC_IN)
 }
 
 fun TextView.setTextColorRes(@ColorRes colorRes: Int) {

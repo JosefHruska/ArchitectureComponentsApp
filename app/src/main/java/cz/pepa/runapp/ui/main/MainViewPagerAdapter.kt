@@ -27,12 +27,14 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
     }
 
     override fun setPrimaryItem(container: ViewGroup?, position: Int, fragment: Any?) {
-        fragment as Fragment
-        if (currentFragment != fragment) {
-            fragmentChanged(fragment)
-            currentFragment = fragment
+        if (fragment is Fragment) {
+            fragment as Fragment
+            if (currentFragment != fragment) {
+                fragmentChanged(fragment)
+                currentFragment = fragment
+            }
+            super.setPrimaryItem(container, position, fragment)
         }
-        super.setPrimaryItem(container, position, fragment)
     }
 
     override fun getItem(position: Int): Fragment {

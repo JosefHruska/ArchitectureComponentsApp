@@ -157,6 +157,7 @@
     <orderEntry type="library" name="support-fragment-26.1.0" level="project" />
     <orderEntry type="library" name="rxbinding-appcompat-v7-2.0.0" level="project" />
     <orderEntry type="library" name="anko-commons-0.10.1" level="project" />
+    <orderEntry type="library" name="ArcSeekBar-0.31" level="project" />
     <orderEntry type="library" name="common-1.0.2" level="project" />
     <orderEntry type="library" name="firebase-ui-auth-2.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="javawriter-2.1.1" level="project" />

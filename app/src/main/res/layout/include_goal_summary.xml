@@ -10,14 +10,8 @@
         android:layout_gravity="center"
         android:padding="24dp" />
 
-    <include layout="@layout/include_separator"/>
+    <!--<include layout="@layout/include_separator"/>-->
 
-    <TextView
-        android:id="@+id/vRating"
-        style="@style/TextView"
-        android:textAppearance="@style/text14"
-        android:layout_gravity="center"
-        android:text="This seems like a good challenge"
-        android:padding="16dp" />
+
 
 </LinearLayout>

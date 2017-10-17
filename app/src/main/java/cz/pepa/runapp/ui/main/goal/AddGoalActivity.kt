@@ -1,10 +1,9 @@
 package cz.pepa.runapp.ui.main.goal
 
-import android.text.SpannedString
+import com.marcinmoskala.arcseekbar.ProgressListener
 import cz.pepa.runapp.R
 import cz.pepa.runapp.data.Type
 import cz.pepa.runapp.extensions.setBackgroundDrawableColor
-import cz.pepa.runapp.extensions.setColor
 import cz.pepa.runapp.ui.base.BaseActivity
 import io.stepuplabs.settleup.util.extensions.*
 import kotlinx.android.synthetic.main.activity_add_goal.*
@@ -13,8 +12,9 @@ import kotlinx.android.synthetic.main.include_goal_type_card.*
 import kotlinx.android.synthetic.main.include_target_value.*
 import kotlinx.android.synthetic.main.include_today.view.*
 
+
 /**
- * // TODO: Add description
+ * Allows to add new personal goal
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -32,7 +32,6 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
 
     override fun initUi() {
         setupAverageCard()
-        setupGoalTargetValue()
         setupGoalType()
         vToolbar.title = R.string.new_goal.toText()
         vToolbar.setNavigationIcon(R.drawable.ic_close)
@@ -40,9 +39,8 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
             getModel().saveGoal()
             finish()
         }
-        vName.setColor(R.color.primary_light.toColor())
+        getModel()
         vSaveGoal.setBackgroundColorWithRipple(R.color.primary.toColor())
-
     }
 
     override fun setSelectedType(selectedType: Type) {
@@ -56,7 +54,6 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
             }
             Type.DISTANCE -> {
                 vDistance.setBackgroundDrawableColor(R.color.primary.toColor())
-
                 vCalories.setBackgroundDrawableColor(R.color.gray_3.toColor())
                 vActive.setBackgroundDrawableColor(R.color.gray_3.toColor())
                 vSteps.setBackgroundDrawableColor(R.color.gray_3.toColor())
@@ -78,6 +75,15 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         }
     }
 
+    override fun setGoalRating(rating: String) {
+        vRating.text = rating
+    }
+
+    override fun seTargetValueSelectorPercentage(percentage: Int) {
+        vTargetValueSelector.progress = percentage
+        vTargetValueSelector.onProgressChangedListener = ProgressListener { getModel().targetValueChanged(it) }
+    }
+
     override fun setAverageValues(values: List<Float>) {
         vAverageCard.vFirst.value = values[0].toString()
         vAverageCard.vSecond.value = values[1].toString()
@@ -85,7 +91,11 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         vAverageCard.vFourth.value = values[3].toString()
     }
 
-    private fun getModel() = mViewModel as AddGoalViewModel
+    override fun resetTargetValueSelector() {
+        vTargetValueSelector.progress = 50 // Default value is 50%
+    }
+
+    private fun getModel() = mViewModel
 
     private fun setupAverageCard() {
         vAverageCard.vTitle.text = R.string.average.toText()
@@ -108,10 +118,6 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         vDistance.setOnClickListener { getModel().distanceTypeClicked() }
         vCalories.setOnClickListener { getModel().caloriesTypeClicked()}
         vSteps.setOnClickListener {getModel().stepsTypeClicked() }
-    }
-
-    private fun setupGoalTargetValue() {
-        vName.monitorTextChangedByHuman { getModel().targetValueChanged(it) }
     }
 
     override fun setupSummaryText(text: String) {

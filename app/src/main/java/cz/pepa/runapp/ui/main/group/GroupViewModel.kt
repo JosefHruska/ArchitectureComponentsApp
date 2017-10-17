@@ -24,11 +24,9 @@ open class GroupViewModel<C: GroupTabController>: BaseViewModel<C>() {
     val mToday = MutableLiveData<TodayItem>()
     val mGoal = MutableLiveData<List<Goal>>()
 
-
-    override fun onStart() {
+    override fun onViewAttached() {
         loadDummyFitness()
         loadToday()
-
     }
 
     fun loadToday() {

@@ -219,18 +219,28 @@ object GoalLogic {
         }
     }
 
-    fun calculateGoalRating(averageValues: List<Float>, newValue: Float): Rating {
-        val monthlyAverage = averageValues[2]
-       return when {
-            monthlyAverage > newValue -> Rating.EASY
-            (monthlyAverage * 1.1) <= newValue -> Rating.GOOD
-            (monthlyAverage * 2) <= newValue -> Rating.DIFFICULT
-            else -> Rating.INSANE
-        }
+    fun calculateTargetValueFromPercentage(averageValues: List<Float>?, targetSelectorPercentage: Int): Float {
+        val monthlyAverage = averageValues!!.get(2) // TODO Fix later
+        val minimumGoalValue = 0.7 * monthlyAverage
+        val maximumGoalValue = 2 * monthlyAverage
+        val targetValueSpectrum = maximumGoalValue - minimumGoalValue
+        val targetValue = (targetValueSpectrum * (0.01 * targetSelectorPercentage)) + minimumGoalValue
+        return targetValue.toFloat()
     }
 
+    fun calculateGoalRating(averageValues: List<Float>?, targetValue: Float): Rating {
+        val monthlyAverage = averageValues!!.get(2) // TODO Fix later
+        return if (targetValue <= monthlyAverage) {
+            Rating.EASY
+        } else if (monthlyAverage < targetValue && monthlyAverage * 1.5 >= targetValue) {
+            Rating.GOOD
+        } else if (monthlyAverage * 1.5 < targetValue && monthlyAverage * 1.8 >= targetValue) {
+            Rating.DIFFICULT
+        } else {
+            Rating.INSANE
+        }
+    }
 }
-
 
 enum class GoalSubject {
     CALORIES,

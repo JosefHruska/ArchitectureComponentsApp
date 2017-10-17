@@ -18,4 +18,8 @@ interface AddGoalController: BaseController {
     fun setupSummaryText(text: String)
 
     fun setGoalRating(rating: String)
+
+    fun resetTargetValueSelector()
+
+    fun seTargetValueSelectorPercentage(percentage: Int)
 }

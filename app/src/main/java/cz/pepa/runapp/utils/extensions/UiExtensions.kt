@@ -278,7 +278,6 @@ fun TextView.setOnClickListener(text: String, clickablePartIndexStart: Int, clic
             ds?.linkColor = R.color.primary.toColor()
             ds?.setColor(ds?.linkColor)
             ds?.isUnderlineText = false
-
         }
     }
     ss.setSpan(clickableSpan, clickablePartIndexStart, clickablePartIndexEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)

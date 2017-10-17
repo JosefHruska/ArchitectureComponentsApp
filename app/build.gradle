@@ -90,6 +90,8 @@ dependencies {
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     // Horizontal progress bars
     compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    // Curved Slider
+    compile 'com.github.marcinmoskala:ArcSeekBar:0.31'
     // Do picture stuff
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
