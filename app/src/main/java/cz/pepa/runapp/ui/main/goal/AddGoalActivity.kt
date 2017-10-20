@@ -1,9 +1,17 @@
 package cz.pepa.runapp.ui.main.goal
 
+import android.view.MenuItem
 import com.marcinmoskala.arcseekbar.ProgressListener
 import cz.pepa.runapp.R
+import cz.pepa.runapp.api.Retrofit.createGoogleFitAPI
+import cz.pepa.runapp.api.Retrofit.createStackoverflowAPI
+import cz.pepa.runapp.api.model.Answer
+import cz.pepa.runapp.api.model.DataSource
+import cz.pepa.runapp.api.model.ListWrapper
+import cz.pepa.runapp.api.model.Question
 import cz.pepa.runapp.data.Type
 import cz.pepa.runapp.extensions.setBackgroundDrawableColor
+import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.ui.base.BaseActivity
 import io.stepuplabs.settleup.util.extensions.*
 import kotlinx.android.synthetic.main.activity_add_goal.*
@@ -11,6 +19,9 @@ import kotlinx.android.synthetic.main.include_goal_summary.*
 import kotlinx.android.synthetic.main.include_goal_type_card.*
 import kotlinx.android.synthetic.main.include_target_value.*
 import kotlinx.android.synthetic.main.include_today.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 /**
@@ -30,17 +41,47 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
         return R.layout.activity_add_goal
     }
 
+    override fun showCloseButton() = true
+
+    val answersCallback = object : Callback<ListWrapper<DataSource>> {
+        override fun onResponse(call: Call<ListWrapper<DataSource>>, response: Response<ListWrapper<DataSource>>) {
+            if (response.isSuccessful()) {
+
+                //                    val data = ArrayList()
+//                    data.addAll(response.body().items)
+                // recyclerView.setAdapter(RecyclerViewAdapter(data))
+            } else {
+//                    Log.d("QuestionsCallback", "Code: " + response.code() + " Message: " + response.message())
+            }
+        }
+
+        override fun onFailure(call: Call<ListWrapper<DataSource>>, t: Throwable) {
+            t.printStackTrace()
+        }
+    }
+
     override fun initUi() {
         setupAverageCard()
         setupGoalType()
-        vToolbar.title = R.string.new_goal.toText()
-        vToolbar.setNavigationIcon(R.drawable.ic_close)
+        title = R.string.new_goal.toText()
         vSaveGoal.setOnClickListener{
             getModel().saveGoal()
             finish()
         }
-        getModel()
+        createGoogleFitAPI().getMyDataSources().enqueue(answersCallback)
         vSaveGoal.setBackgroundColorWithRipple(R.color.primary.toColor())
+
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return false
     }
 
     override fun setSelectedType(selectedType: Type) {

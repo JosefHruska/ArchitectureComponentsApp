@@ -92,6 +92,12 @@ dependencies {
     compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
     // Curved Slider
     compile 'com.github.marcinmoskala:ArcSeekBar:0.31'
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // Gson
+    compile 'com.google.code.gson:gson:2.8.1'
     // Do picture stuff
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')

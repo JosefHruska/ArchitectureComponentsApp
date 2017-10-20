@@ -5,6 +5,7 @@ import cz.pepa.runapp.data.*
 import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.logic.GoalLogic.calculateGoalRating
 import cz.pepa.runapp.ui.base.BaseViewModel
+import io.stepuplabs.settleup.util.extensions.removeDecimalValue
 import io.stepuplabs.settleup.util.extensions.todayBegin
 import io.stepuplabs.settleup.util.extensions.todayPlus100Years
 
@@ -91,7 +92,7 @@ class AddGoalViewModel : BaseViewModel<AddGoalController>() {
         getController().seTargetValueSelectorPercentage(mCurrentPerecentage)
         getController().setSelectedType(mGoal.type)
         mAverageResults[mGoal.type]?.let { getController().setAverageValues(it) }
-        getController().setupSummaryText(GoalLogic.formatSummaryGoalText(mGoal.type, mGoal.target.value, mGoal.recurrence))
+        getController().setupSummaryText(GoalLogic.formatSummaryGoalText(mGoal.type, mGoal.target.value.removeDecimalValue(), mGoal.recurrence))
         getController().setGoalRating(calculateGoalRating(mAverageResults[mGoal.type], mGoal.target.value).toString())
     }
 }

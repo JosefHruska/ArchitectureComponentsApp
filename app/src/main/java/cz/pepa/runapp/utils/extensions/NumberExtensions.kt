@@ -37,6 +37,13 @@ fun BigDecimal.formatAmount(): String {
     }
 }
 
+fun Float.removeDecimalValue(): Float {
+    val formatter = DecimalFormat("#")
+    formatter.maximumFractionDigits = 0
+    val integerValue = formatter.format(this)
+    return integerValue.toFloat()
+}
+
 fun BigDecimal.divideAmountWithFormattedScale(divider: Long): BigDecimal {
     return this.divide(divider.bd(), getDivisionScale(), java.math.RoundingMode.HALF_UP)
 }
