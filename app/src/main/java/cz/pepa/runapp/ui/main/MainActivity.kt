@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.View
+import cz.pepa.runapp.DebugHelper
 import cz.pepa.runapp.R
+import cz.pepa.runapp.api.GoogleFitReader.initGoogleFit
 import cz.pepa.runapp.data.Tab
 import cz.pepa.runapp.data.User
 import cz.pepa.runapp.extensions.askForPermission
@@ -55,9 +57,7 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == Ids.PERMISSION_FINE_LOCATION) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Fit.buildFitnessClient(this)
-            } else {
-
+                initGoogleFit(this)
             }
         }
     }
@@ -67,8 +67,7 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
         setupViewPager()
         setupGroups()
         setupUser()
-        initGoogleFit()
-        GoalLogic.loadGoals()
+        DebugHelper.start(this)
     }
 
 
@@ -79,13 +78,7 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
         }
     }
 
-    private fun initGoogleFit() {
-        if (!isPermissionGranted(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
-            askForPermission(android.Manifest.permission.ACCESS_FINE_LOCATION, Ids.PERMISSION_FINE_LOCATION)
-        } else {
-            Fit.buildFitnessClient(this)
-        }
-    }
+
 
     private fun setupDrawer() {
         vHeader = vNavigationDrawer.getHeaderView(0)

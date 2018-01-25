@@ -5,12 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.firebase.database.Exclude
 
 /**
- * TODO: Add description
- *
- * @author Josef Hruška (josef@stepuplabs.io)
- */
-
-/**
  * Abstract class for every database model. Handles database keys.
  *
  * @author Filip Prochazka (filip@stepuplabs.io), David Vávra (david@stepuplabs.io)

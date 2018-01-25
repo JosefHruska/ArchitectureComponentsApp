@@ -6,22 +6,17 @@ import cz.pepa.runapp.logic.Auth
 import io.stepuplabs.settleup.util.extensions.todayBegin
 import logError
 
-
 /**
-// * Main class for writing to Firebase Database.
-// *
-// * @author David Vávra (david@stepuplabs.io)
-// */
+ * Main class for writing to Firebase Database.
+ *
+ * @author Josef Hruska (josef@stepuplabs.io)
+ */
 object DatabaseWrite {
-//
-//    const val DEFAULT_SERVER_TASK_TIMEOUT = 20 // seconds
-//    const val MIGRATE_LATEST_TIMEOUT = 50 // seconds
-//    const val CONNECT_FIREBASE_TIMEOUT = 30 // seconds
-//
+
     fun updateToday(todayItem: TodayItem) {
         val today = TodayItem().apply { this.steps = todayItem.steps; this.distance = todayItem.distance; this.calories = todayItem.calories; this.dayStart = todayBegin()  }
         update("/days/${Auth.getUserId()}/${todayBegin()}", today )
-}
+    }
 
     fun updateMissingDays(todayItems: Map<Long, TodayItem>, lastSyncedDay: Long) {
         todayItems.forEach {
@@ -30,6 +25,13 @@ object DatabaseWrite {
             })
         }
     }
+
+    fun updateAllDays(todayItems: Map<Long, TodayItem>) {
+        todayItems.forEach {
+            update("/days/${Auth.getUserId()}/${it.key}", it.value)
+        }
+    }
+
 
     fun updateGoals(goals: List<GoalData>) {
         goals.forEachIndexed { index, goalData ->

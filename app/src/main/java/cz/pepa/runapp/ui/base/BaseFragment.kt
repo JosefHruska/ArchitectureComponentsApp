@@ -81,8 +81,4 @@ abstract class BaseFragment<VM: BaseViewModel<C>, C: BaseController>(): Fragment
     fun replaceFragment(activity: FragmentActivity, @IdRes layoutToReplace: Int, replacingFragment: Fragment) {
         activity.supportFragmentManager.beginTransaction().replace(layoutToReplace, replacingFragment, tag).commit()
     }
-
-
-
-
 }

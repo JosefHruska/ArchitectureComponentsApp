@@ -48,7 +48,7 @@ abstract class BaseViewModel<C: BaseController> : AndroidViewModel(app()) {
 
 class ViewModelFactory: ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>?): T {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return modelClass!!.newInstance()
     }
 }

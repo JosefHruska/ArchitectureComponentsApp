@@ -3,15 +3,10 @@ package cz.pepa.runapp.ui.main.goal
 import android.view.MenuItem
 import com.marcinmoskala.arcseekbar.ProgressListener
 import cz.pepa.runapp.R
-import cz.pepa.runapp.api.Retrofit.createGoogleFitAPI
-import cz.pepa.runapp.api.Retrofit.createStackoverflowAPI
-import cz.pepa.runapp.api.model.Answer
 import cz.pepa.runapp.api.model.DataSource
 import cz.pepa.runapp.api.model.ListWrapper
-import cz.pepa.runapp.api.model.Question
 import cz.pepa.runapp.data.Type
 import cz.pepa.runapp.extensions.setBackgroundDrawableColor
-import cz.pepa.runapp.logger.Log
 import cz.pepa.runapp.ui.base.BaseActivity
 import io.stepuplabs.settleup.util.extensions.*
 import kotlinx.android.synthetic.main.activity_add_goal.*
@@ -68,7 +63,6 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
             getModel().saveGoal()
             finish()
         }
-        createGoogleFitAPI().getMyDataSources().enqueue(answersCallback)
         vSaveGoal.setBackgroundColorWithRipple(R.color.primary.toColor())
 
 
