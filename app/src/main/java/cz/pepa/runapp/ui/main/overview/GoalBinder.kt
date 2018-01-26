@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.item_goals.view.*
 import org.jetbrains.anko.imageResource
 
 /**
- * TODO: Add description
+ * Base binder for goals
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -32,6 +32,5 @@ open class GoalBinder : DataBinder<Goal>() {
         view.vGoalTitle.text = data.name
         view.vGoalIcon.imageResource = data.getImageResource()
         view.vReward.text = data.reward.formatReward()
-
     }
 }

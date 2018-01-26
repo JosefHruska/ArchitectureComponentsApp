@@ -7,8 +7,9 @@ import com.google.firebase.database.Exclude
 /**
  * Abstract class for every database model. Handles database keys.
  *
- * @author Filip Prochazka (filip@stepuplabs.io), David Vávra (david@stepuplabs.io)
+ * Josef Hruška (josef@stepuplabs.io)
  */
+
 abstract class DatabaseModel {
 
     @Exclude

@@ -3,14 +3,11 @@ package cz.pepa.runapp.ui.main.overview
 import android.support.constraint.ConstraintLayout
 import android.view.View
 import cz.pepa.runapp.data.Goal
-import cz.pepa.runapp.data.Member
-import cz.pepa.runapp.ui.common.DataBinder
 import cz.pepa.runapp.utils.extensions.formatReward
-import cz.pepa.runapp.utils.loadAvatar
 import kotlinx.android.synthetic.main.item_goals.view.*
 
 /**
- * TODO: Add description
+ * Binder for given goals
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -34,6 +31,5 @@ open class GivenGoalBinder() : GoalBinder() {
 
 //        view.vGoalIcon.loadAvatar(Member().apply { data.createdById })
         view.vReward.text = data.reward.formatReward()
-//
     }
 }

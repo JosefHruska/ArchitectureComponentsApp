@@ -9,7 +9,7 @@ import android.view.ViewGroup
 /**
  * [RecyclerView] adapter for list of items.
  *
- * @author Filip Prochazka (filip@stepuplabs.io), David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 open class RecyclerAdapter<T>(@LayoutRes val itemLayoutRes: Int) : RecyclerView.Adapter<RecyclerAdapter.DataViewHolder>() {

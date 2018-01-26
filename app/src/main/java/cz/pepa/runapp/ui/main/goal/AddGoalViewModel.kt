@@ -10,7 +10,7 @@ import io.stepuplabs.settleup.util.extensions.todayBegin
 import io.stepuplabs.settleup.util.extensions.todayPlus100Years
 
 /**
- * // TODO: Add description
+ * View model for [AddGoalActivity]
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

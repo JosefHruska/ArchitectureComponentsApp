@@ -39,7 +39,6 @@ class App : Application() {
         }
     }
 
-
     fun isInitialized(): Boolean {
         return mIsInitialized
     }

@@ -3,8 +3,6 @@ package cz.pepa.runapp.ui.main.goal
 import android.view.MenuItem
 import com.marcinmoskala.arcseekbar.ProgressListener
 import cz.pepa.runapp.R
-import cz.pepa.runapp.api.model.DataSource
-import cz.pepa.runapp.api.model.ListWrapper
 import cz.pepa.runapp.data.Type
 import cz.pepa.runapp.extensions.setBackgroundDrawableColor
 import cz.pepa.runapp.ui.base.BaseActivity
@@ -14,17 +12,12 @@ import kotlinx.android.synthetic.main.include_goal_summary.*
 import kotlinx.android.synthetic.main.include_goal_type_card.*
 import kotlinx.android.synthetic.main.include_target_value.*
 import kotlinx.android.synthetic.main.include_today.view.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-
 
 /**
  * Allows to add new personal goal
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
-
 
 class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddGoalController {
 
@@ -37,23 +30,6 @@ class AddGoalActivity: BaseActivity<AddGoalViewModel, AddGoalController>(), AddG
     }
 
     override fun showCloseButton() = true
-
-    val answersCallback = object : Callback<ListWrapper<DataSource>> {
-        override fun onResponse(call: Call<ListWrapper<DataSource>>, response: Response<ListWrapper<DataSource>>) {
-            if (response.isSuccessful()) {
-
-                //                    val data = ArrayList()
-//                    data.addAll(response.body().items)
-                // recyclerView.setAdapter(RecyclerViewAdapter(data))
-            } else {
-//                    Log.d("QuestionsCallback", "Code: " + response.code() + " Message: " + response.message())
-            }
-        }
-
-        override fun onFailure(call: Call<ListWrapper<DataSource>>, t: Throwable) {
-            t.printStackTrace()
-        }
-    }
 
     override fun initUi() {
         setupAverageCard()

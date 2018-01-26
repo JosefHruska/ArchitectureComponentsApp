@@ -14,7 +14,9 @@ import cz.pepa.runapp.R
 import kotlinx.android.synthetic.main.google_fit_progress_bar.view.*
 
 /**
- * Created by pepa on 23/09/2017.
+ * Base class for progress bar view
+ *
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context, attrs, defStyleAttr) {

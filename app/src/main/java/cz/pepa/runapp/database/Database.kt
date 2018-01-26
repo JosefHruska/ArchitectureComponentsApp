@@ -8,7 +8,7 @@ import isDatabaseConnected
 /**
  * Main access point to Firebase Realtime Database. Handles initialization.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 object Database {
 

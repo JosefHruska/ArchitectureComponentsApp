@@ -3,9 +3,9 @@ package cz.pepa.runapp.data
 import com.google.firebase.database.IgnoreExtraProperties
 
 /**
- * Model for one user.
-
- * @author David Vávra (david@stepuplabs.io)
+ * Model representing User.
+ *
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 @IgnoreExtraProperties
 class User : DatabaseModel() {

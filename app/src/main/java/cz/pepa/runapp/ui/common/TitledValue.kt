@@ -9,7 +9,7 @@ import io.stepuplabs.settleup.util.extensions.setCustomAttributes
 import kotlinx.android.synthetic.main.view_titled_value.view.*
 
 /**
- * TODO: Add description
+ * View representing values and titles in "Today" card
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

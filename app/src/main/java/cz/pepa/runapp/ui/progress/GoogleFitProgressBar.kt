@@ -13,9 +13,10 @@ import kotlinx.android.synthetic.main.google_fit_progress_bar.view.*
 import org.jetbrains.anko.imageResource
 
 /**
- * Simple progress bar which is inspired by Google Fit progress bar.
+ * Progress bar which looks like progress used in Google Fit app.
+ *
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
-
 
 class GoogleFitProgressBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : BaseProgressBar(context, attrs, defStyleAttr) {
 

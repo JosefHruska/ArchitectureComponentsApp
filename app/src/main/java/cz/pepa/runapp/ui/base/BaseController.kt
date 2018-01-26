@@ -1,11 +1,10 @@
 package cz.pepa.runapp.ui.base
 
 /**
- * // TODO: Add description
+ * Base controller interface
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
-
 
 interface BaseController : Controller {
 

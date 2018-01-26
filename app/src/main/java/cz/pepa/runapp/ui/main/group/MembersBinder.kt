@@ -1,18 +1,18 @@
 package cz.pepa.runapp.ui.main.group
 
 import android.view.View
-import cz.pepa.runapp.data.DummyFittnes
+import cz.pepa.runapp.data.DummyFitness
 import cz.pepa.runapp.ui.common.DataBinder
 import kotlinx.android.synthetic.main.item_member.view.*
 
 /**
- * TODO: Add description
+ * Binder for members screen
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
-class MembersBinder : DataBinder<DummyFittnes>() {
+class MembersBinder : DataBinder<DummyFitness>() {
 
-    override fun bind(data: DummyFittnes, view: View) {
+    override fun bind(data: DummyFitness, view: View) {
         view.vName.text = data.name
     }
 }

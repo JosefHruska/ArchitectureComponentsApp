@@ -7,7 +7,7 @@ import java.util.*
 /**
  * Math-related utils.
 
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun BigDecimal.isNegative(): Boolean {

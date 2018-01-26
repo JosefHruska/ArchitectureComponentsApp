@@ -13,7 +13,7 @@ import com.app.progreswheelview.R
 import java.text.DecimalFormat
 
 /**
- * TODO: Add description
+ * View representing progress line for goals
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -89,10 +89,6 @@ class ProgressLine @JvmOverloads constructor(context: Context, attrs: AttributeS
 
         // Update TextPaint and text measurements from attributes
         invalidate()
-    }
-
-    private fun calculateBarScale() {
-        mScale = if (mPercentage > 100) 1F else mPercentage * 0.01f
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -214,5 +210,10 @@ class ProgressLine @JvmOverloads constructor(context: Context, attrs: AttributeS
     fun setProgressColor(color: Int) {
         mProgressLinePaint.color = color
         invalidate()
+    }
+
+
+    private fun calculateBarScale() {
+        mScale = if (mPercentage > 100) 1F else mPercentage * 0.01f
     }
 }

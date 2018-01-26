@@ -3,8 +3,6 @@ package cz.pepa.runapp.ui.main
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.ViewGroup
-import cz.pepa.runapp.ui.base.BaseController
-import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.main.group.GroupTabController
 import cz.pepa.runapp.ui.main.group.GroupTabFragment
 import cz.pepa.runapp.ui.main.group.GroupViewModel
@@ -12,11 +10,10 @@ import cz.pepa.runapp.ui.main.overview.OverviewFragment
 import eu.inloop.pager.UpdatableFragmentPagerAdapter
 
 /**
- * TODO: Add description
+ * Adapter handling view pager on main screen.
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
-
 
 class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged: (Fragment) -> Unit) : UpdatableFragmentPagerAdapter(fragmentManager) {
 
@@ -28,7 +25,6 @@ class MainViewPagerAdapter(fragmentManager: FragmentManager, val fragmentChanged
 
     override fun setPrimaryItem(container: ViewGroup?, position: Int, fragment: Any?) {
         if (fragment is Fragment) {
-            fragment as Fragment
             if (currentFragment != fragment) {
                 fragmentChanged(fragment)
                 currentFragment = fragment

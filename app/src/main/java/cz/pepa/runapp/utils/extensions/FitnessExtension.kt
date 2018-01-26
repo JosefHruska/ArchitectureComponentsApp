@@ -7,19 +7,19 @@ import io.stepuplabs.settleup.util.extensions.*
 import java.text.DecimalFormat
 
 /**
- * TODO: Add description
+ * Helper object containing some util functions related to Fitness logic
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-object FittnesHelper {
+object FitnessHelper {
 
     const val KJ = 4.184
     const val MILE = 0.62
 }
 
-fun Float.formatCalories(calorireUnit: Calories = Calories.KCAL): Spanned {
-    val calories: Spanned = if (calorireUnit == Calories.KJ) {
+fun Float.formatCalories(calorieUnit: Calories = Calories.KCAL): Spanned {
+    val calories: Spanned = if (calorieUnit == Calories.KJ) {
         (this.toKJ().toInt().toString().toBold() + " kJ").formatHtml()
     } else {
         (this.toInt().toString().toBold() + " kcal").formatHtml()
@@ -38,10 +38,8 @@ fun Float.formatDistance(distanceUnit: Distance = Distance.KM): Spanned {
 
 fun Int.formatSteps() = toString().toBold().formatHtml()
 
-fun Int.formatReward(): Spanned {
-    return (app().getString(R.string.reward) + " $this Exp".getColoredString(R.color.primary.toColorHex()).toBold()).formatHtml() // TODO: Not really working
-
-}
+fun Int.formatReward(): Spanned =
+        (app().getString(R.string.reward) + " $this Exp".getColoredString(R.color.primary.toColorHex()).toBold()).formatHtml() // TODO: Not really working
 
 private fun Float.roundDistance(): String {
     val formatter = DecimalFormat("#.##")
@@ -49,11 +47,11 @@ private fun Float.roundDistance(): String {
 }
 
 private fun Float.toKJ(): Float {
-    return (this * FittnesHelper.KJ).toFloat()
+    return (this * FitnessHelper.KJ).toFloat()
 }
 
 private fun Float.toMiles(): Float {
-    return (this * FittnesHelper.MILE).toFloat()
+    return (this * FitnessHelper.MILE).toFloat()
 }
 
 enum class Calories {
@@ -64,5 +62,4 @@ enum class Calories {
 enum class Distance {
     KM,
     MILES
-
 }

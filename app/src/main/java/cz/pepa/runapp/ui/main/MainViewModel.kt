@@ -11,7 +11,7 @@ import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 
 /**
- * TODO: Add description
+ * View model for [MainActivity]
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

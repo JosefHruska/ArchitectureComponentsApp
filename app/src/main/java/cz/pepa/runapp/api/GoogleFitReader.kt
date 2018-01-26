@@ -19,7 +19,6 @@ import cz.pepa.runapp.database.DatabaseRead
 import cz.pepa.runapp.database.DatabaseWrite
 import cz.pepa.runapp.extensions.askForPermission
 import cz.pepa.runapp.extensions.isPermissionGranted
-import cz.pepa.runapp.logic.Fit
 import cz.pepa.runapp.ui.common.Ids
 import io.reactivex.schedulers.Schedulers
 import io.stepuplabs.settleup.util.extensions.*
@@ -106,7 +105,7 @@ object GoogleFitReader {
                     syncMissingDays(it.toSome().lastSync)
                 }
             } else {
-                syncMissingDays(lastMonth()) /* userInfo/user.id  is not created yet - probably*/
+                syncMissingDays(lastMonth()) /* userInfo/user.id  is not created yet */
             }
         }
     }
@@ -151,14 +150,8 @@ object GoogleFitReader {
                         it.dataPoints.forEach {
                             lw("data type : ${it.dataType}")
                             lw("data value : ${it.getValue(it.dataType.fields[0])}")
-//                            when (it.dataType.fields[0].name) {
-//                                "steps" -> today.steps = it.getValue(it.dataType.fields[0]).asInt()
-//                                "distance" -> today.distance = it.getValue(it.dataType.fields[0]).asFloat()
-                                  "calories" -> today.distance = it.getValue(it.dataType.fields[0]).asFloat()
-//                            }
                         }
                     }
-//                    stepsAndDistanceLoaded = true
                 }
                 uiThread {
                     val res = result
@@ -193,7 +186,6 @@ object GoogleFitReader {
                 }
 
                 lw("Created today item with ${today.steps} steps, ${today.calories} calories and ${today.distance} distance")
-                val x = caloriesTodaySum
                 uiThread {
                     caloriesTodaySum?.let {
                         DatabaseWrite.updateToday(today)
@@ -276,11 +268,9 @@ object GoogleFitReader {
                 .aggregate(DataType.TYPE_CALORIES_EXPENDED, DataType.AGGREGATE_CALORIES_EXPENDED)
                 .bucketByTime(1, TimeUnit.DAYS)
                 .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
-                .build();
-
+                .build()
 
         return readRequest
-
     }
 
     fun detailedCaloriesData(): DataReadRequest {
@@ -296,7 +286,7 @@ object GoogleFitReader {
                 .build()
     }
 
-    fun getDaysData(from: Long, to: Long): DataReadRequest {
+    private fun getDaysData(from: Long, to: Long): DataReadRequest {
         val endTime = to
         val startTime = from
 
@@ -318,9 +308,7 @@ object GoogleFitReader {
                 .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
                 .build();
 
-
         return readRequest
-
     }
 
     fun getGoal() {
@@ -384,7 +372,6 @@ object GoogleFitReader {
                             .addDataType(DataType.TYPE_CALORIES_EXPENDED)
                             .build()).setResultCallback {
                 val stepGoals = it.goals
-
             }
         }
     }

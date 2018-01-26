@@ -12,23 +12,19 @@ import cz.pepa.runapp.R
 import cz.pepa.runapp.api.GoogleFitReader.initGoogleFit
 import cz.pepa.runapp.data.Tab
 import cz.pepa.runapp.data.User
-import cz.pepa.runapp.extensions.askForPermission
-import cz.pepa.runapp.extensions.isPermissionGranted
-import cz.pepa.runapp.logger.Log
-import cz.pepa.runapp.logic.Fit
-import cz.pepa.runapp.logic.GoalLogic
 import cz.pepa.runapp.ui.base.BaseActivity
-import cz.pepa.runapp.ui.base.BaseViewModel
 import cz.pepa.runapp.ui.common.Ids
 import cz.pepa.runapp.utils.loadAvatar
 import io.stepuplabs.settleup.util.extensions.popupMenuOnClick
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_drawer_header.*
 import kotlinx.android.synthetic.main.include_drawer_header.view.*
-import org.jetbrains.anko.*
+import org.jetbrains.anko.clearTop
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.singleTop
 
 /**
- * TODO: Add description
+ * Main activity
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -70,15 +66,12 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
         DebugHelper.start(this)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING)
         }
     }
-
-
 
     private fun setupDrawer() {
         vHeader = vNavigationDrawer.getHeaderView(0)
@@ -88,7 +81,6 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
                 if (!vDrawerPopup.hasOnClickListeners()) {
                     vDrawerPopup.popupMenuOnClick(R.menu.drawer_sign_out, {
                         vDrawer.closeDrawers()
-//                        signOut()
                     })
                 }
             }
@@ -114,10 +106,6 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
             true
         }
         vDrawer.addDrawerListener(toggle)
-//        vHeader.vPlans.setOnClickListener {
-//            startActivity<PlansActivity>()
-//            vDrawer.closeDrawers()
-//        }
         toggle.syncState()
     }
 
@@ -128,9 +116,7 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
                 mViewPagerAdapter.notifyDataSetChanged()
             }
 
-            override fun topChanged(position: Int) {
-                Log.e("FUCK", "YEAH")
-            }
+            override fun topChanged(position: Int) {}
         })
         mViewPagerAdapter = MainViewPagerAdapter(supportFragmentManager) {}
         vViewPager.adapter = mViewPagerAdapter
@@ -161,10 +147,6 @@ class MainActivity: BaseActivity<MainViewModel, MainController>(), MainControlle
             val intent = activity.intentFor<MainActivity>().clearTop().singleTop()
             intent.putExtra("SHOW_MIGRATION_SUCCESS", showMigrationSuccessDialog)
             activity.startActivity(intent)
-        }
-
-        fun startAndCloseOtherActivities(activity: Activity) {
-            activity.startActivity(activity.intentFor<MainActivity>().newTask().clearTask()) // This will call finish() on all other running activities.
         }
     }
 }

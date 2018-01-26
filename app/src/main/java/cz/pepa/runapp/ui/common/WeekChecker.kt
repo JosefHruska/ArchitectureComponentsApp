@@ -13,7 +13,7 @@ import org.jetbrains.anko.childrenSequence
 import java.time.DayOfWeek
 
 /**
- * // TODO: Add description
+ * View representing current day and goal state for all day in weeks
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

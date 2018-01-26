@@ -8,7 +8,7 @@ import java.util.*
 /**
  * Extensions for working with dates.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 val SUPPORTED_LANGUAGES = listOf("en", "cs") // Don't forget to also update resConfigs in Gradle when you are editing this.

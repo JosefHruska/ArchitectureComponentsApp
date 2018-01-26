@@ -16,7 +16,7 @@ import logError
 /**
  * Functions handling authentication.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 object Auth {
 
@@ -44,11 +44,8 @@ object Auth {
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setLogo(R.drawable.ic_splash_app)
-//                        .setTheme(R.style.LoginTheme)
                         .setAvailableProviders(listOf(
                                 AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
-//                                AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build(),
-//                                AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
                         .build(),
                 Ids.REQUEST_SIGN_IN)
     }
@@ -63,7 +60,6 @@ object Auth {
                     else -> Ids.PROVIDER_EMAIL
                 }
                 getProfilePicture(authProvider) {
-//                    PushRegistration.register()
                     Database.sync()
                     DatabaseWrite.addCurrentUser(authProvider, it, mInviteLinkHash)
                     successCallback()
@@ -75,7 +71,6 @@ object Auth {
     }
 
     fun signOut(activity: FragmentActivity, successCallback: () -> Unit) {
-//        PushRegistration.unregister()
         AuthUI.getInstance()
                 .signOut(activity)
                 .addOnCompleteListener({

@@ -6,7 +6,7 @@ import com.gojuno.koptional.Optional
 /**
  * Various utils related to nullable stuff.
  *
- * @author Josef Hruška (josef@stepuplabs.io), David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun <T: Any> Optional<T>.isNullOrNone(): Boolean {

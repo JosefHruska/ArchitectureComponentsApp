@@ -6,14 +6,12 @@ import com.google.firebase.database.DataSnapshot
 import cz.pepa.runapp.data.DatabaseModel
 import io.reactivex.Flowable
 
+/**
+ * Converts Observables from Database and parses data.
+ *
+ * @author Josef Hruška (josef@stepuplabs.io)
+ */
 
-//
-///**
-// * Converts Observables from Database and parses data.
-// *
-// * @author David Vávra (david@stepuplabs.io)
-// */
-//
 fun <T : DatabaseModel> Flowable<Optional<DataSnapshot>>.toObjectObservable(type: Class<T>): Flowable<Optional<T>> {
     return this.map {
         if (it is None) {
@@ -38,16 +36,7 @@ fun <T : DatabaseModel> Flowable<Optional<DataSnapshot>>.toListObservable(type: 
         }.toOptional()
     }
 }
-//
-//fun Observable<DataSnapshot?>.toCountObservable(): Observable<Int?> {
-//    return this.map {
-//        if (it == null) {
-//            return@map 0
-//        }
-//        it.childrenCount.toInt()
-//    }
-//}
-//
+
 
 fun <T : Any> Flowable<Optional<DataSnapshot>>.toPrimitiveObservable(type: Class<T>): Flowable<Optional<T>> {
     return this.map {
@@ -59,28 +48,3 @@ fun <T : Any> Flowable<Optional<DataSnapshot>>.toPrimitiveObservable(type: Class
         primitive.toOptional()
     }
 }
-//
-//@Suppress("UNCHECKED_CAST")
-//fun <T> Observable<DataSnapshot?>.toMapObservable(): Observable<Map<String, T>?> {
-//    return this.map {
-//        var result = mapOf<String, T>()
-//        if (it != null && it.value != null) {
-//            result = it.value as Map<String, T>
-//        }
-//        result
-//    }
-//}
-//
-//fun Observable<DataSnapshot?>.toChangesObservable(groupId: String): Observable<List<Change>> {
-//    return this.map {
-//        if (it == null) {
-//            return@map null
-//        }
-//        it.children.map {
-//            val data = checkNotNull(it.getValue(Change::class.java), {"Non existing db path"})
-//            data.setId(it.key)
-//            data.groupId = groupId
-//            data
-//        }
-//    }
-//}

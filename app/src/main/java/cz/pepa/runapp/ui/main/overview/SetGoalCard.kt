@@ -10,17 +10,15 @@ import io.stepuplabs.settleup.util.extensions.inflate
 import kotlinx.android.synthetic.main.view_set_goal_card.view.*
 
 /**
- * // TODO: Add description
+ * View representing card which allows to set new goal
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 class SetGoalCard @JvmOverloads constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int = 0) : LinearLayout(context, attrs, defStyleAttr) {
 
-
     init {
         inflate(R.layout.view_set_goal_card)
-//        setAttributes(attrs)
     }
 
     private fun setItems(@ArrayRes itemsArrayRes: Int = R.array.spinner_set_goal_card) {

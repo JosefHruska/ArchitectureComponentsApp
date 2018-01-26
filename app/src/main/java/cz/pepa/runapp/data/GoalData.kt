@@ -3,7 +3,7 @@ package cz.pepa.runapp.data
 import com.google.android.gms.fitness.data.Goal
 
 /**
- * TODO: Add description
+ * Model representing goal in database
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -11,7 +11,7 @@ class GoalData() : DatabaseModel() {
 
     var name: String? = "undefined"
     var goalType: GoalType = GoalType.METRIC
-     var recurrence: GoalRecurrence = GoalRecurrence.DAILY
+    var recurrence: GoalRecurrence = GoalRecurrence.DAILY
     var recurrencePeriod: Int? = null
     var startTime: Long = 0L
     var endTime: Long = 0L

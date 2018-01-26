@@ -17,7 +17,7 @@ import org.jetbrains.anko.uiThread
 /**
  * Various utils related to Android system.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun isLargerOrEqualApi(apiLevel: Int): Boolean {

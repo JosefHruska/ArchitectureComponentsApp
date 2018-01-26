@@ -4,7 +4,7 @@ import android.support.v4.app.FragmentActivity
 import cz.pepa.runapp.api.GoogleFitReader
 
 /**
- * // TODO: Add description
+ * Object used for debugging purposes
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

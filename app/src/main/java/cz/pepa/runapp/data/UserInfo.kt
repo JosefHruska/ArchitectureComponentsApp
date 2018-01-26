@@ -1,7 +1,7 @@
 package cz.pepa.runapp.data
 
 /**
- * TODO: Add description
+ * Model representing info about user
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

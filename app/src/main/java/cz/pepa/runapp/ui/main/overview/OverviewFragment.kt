@@ -24,7 +24,7 @@ import ld
 import org.jetbrains.anko.startActivity
 
 /**
- * TODO: Add description
+ * Fragment for Overview tab
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -68,11 +68,10 @@ class OverviewFragment: GroupTabFragment<OverviewViewModel, OverviewController>(
                 mYourGoalsAdapter.setData(it.toSome(), GoalBinder())
             }
         }
-        ld("GOALS are :${GoalLogic.goals.value}")
         GoalLogic.goals.observe(this, goalObserver)
     }
 
-    fun setupGoals() {
+    private fun setupGoals() {
         vYourGoals.vGoalRecycler.isNestedScrollingEnabled = false
         vYourGoalsCard.vYourGoalsTitle.text = getString(R.string.goals)
         mYourGoalsAdapter = RecyclerAdapter<Goal>(R.layout.item_goals)
@@ -88,11 +87,8 @@ class OverviewFragment: GroupTabFragment<OverviewViewModel, OverviewController>(
         vAddOtherGoal.setOnClickListener { activity.startActivity<AddGoalActivity>() }
     }
 
-    fun subscribeDummyGoals() {
+    private fun subscribeDummyGoals() {
         mYourGoalsAdapter.setData(DummyData.getDummyGoals(), GoalBinder())
         mOtherGoalsAdapter.setData(DummyData.getDummyGoals(), GoalBinder())
     }
-
-
-
 }

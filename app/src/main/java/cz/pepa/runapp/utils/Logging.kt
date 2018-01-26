@@ -5,7 +5,7 @@ import android.util.Log
 /**
  * Simple logging wrapper.
 
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 fun ld(logText: String) {
     Log.d("settle-up", logText)
@@ -25,13 +25,6 @@ fun lw(logText: String) {
 
 fun logError(error: Throwable, groupId: String? = null) {
     error.printStackTrace()
-//    if (Auth.isSignedIn()) {
-//        FirebaseCrash.log("User ID: ${Auth.getUserId()}")
-//    }
-//    if (groupId != null) {
-//        FirebaseCrash.log("Group ID: $groupId")
-//    }
-//    FirebaseCrash.report(error)
 }
 
 var time: Long = 0

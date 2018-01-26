@@ -6,7 +6,7 @@ import io.stepuplabs.settleup.util.extensions.formatHtml
 import java.time.Month
 
 /**
- * TODO: Add description
+ * Dummy data for debugging
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -14,7 +14,7 @@ import java.time.Month
 object DummyData {
 
     fun getGroups(): List<Group> {
-        return listOf(Group("Fashounci", "1"), Group("Mimoni", "2"), Group("Jezuité", "3"))
+        return listOf(Group("Friends", "1"), Group("Family", "2"), Group("Me & Linda", "3"))
     }
 
     fun getToday(): TodayItem {
@@ -28,7 +28,6 @@ object DummyData {
         val thirdGoal = Goal().apply { name = "Travel <b>40</b> Km <b>per week</b>".formatHtml(); type = GoalId.DISTANCE; percentage = 23.0; currentValue =  5.4 ; targetValue = 40.0; averageValue = 36.8; matchedDays = DummyData.getMatchedDays()}
         val fourthGoal = Goal().apply { name = "Be active for <b>50</b> minute <b>per day</b>".formatHtml(); type = GoalId.ACTIVE_TIME; percentage = 130.0; currentValue =  72.4 ; targetValue = 50.0; averageValue = 41.5; matchedDays = DummyData.getMatchedDays()}
         goals.addAll(listOf(firstGoal, secondGoal, thirdGoal, fourthGoal))
-//        goals.addAll(listOf(thirdGoal, fourthGoal))
         return goals
     }
 

@@ -20,7 +20,7 @@ import io.stepuplabs.settleup.util.extensions.toColor
 /**
  * Utils related to changing color of views.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 fun View.setBackgroundDrawableColor(color: Int) {
     this.background?.setColorFilter(color, PorterDuff.Mode.SRC_IN)

@@ -4,7 +4,7 @@ import android.support.v4.view.PagerAdapter
 import cz.pepa.runapp.data.Tab
 
 /**
- * TODO: Add description
+ * Object holding data related to tabs on main screen
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -23,23 +23,6 @@ object Tabs {
     fun setListener(listener: Listener) {
         mListener = listener
     }
-
-//    fun setGroupCircles(groupTabs: CirclesResult) {
-//        val position = mTabs.indexOfFirst { it.id == groupTabs.groupId }
-//        if (position != -1 && mTabs[position].groupTabs != groupTabs) {
-//            mTabs[position].groupTabs = groupTabs
-//            mListener?.topChanged(position)
-//        }
-//    }
-//
-//    fun setOverviewCircles(overviewCircles: OverviewCirclesResult) {
-//        if (mTabs[0].overviewTabs != overviewCircles) {
-//            mTabs[0].overviewTabs = overviewCircles
-////            mTabs[0].overviewStatistics = null
-//            mListener?.topChanged(0)
-//        }
-//    }
-
 
     fun size(): Int {
         return mTabs.size

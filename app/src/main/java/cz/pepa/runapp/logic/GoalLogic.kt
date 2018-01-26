@@ -17,7 +17,7 @@ import ld
 import java.util.concurrent.TimeUnit
 
 /**
- * TODO: Add description
+ * Logic related to goal objects
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */
@@ -25,13 +25,6 @@ import java.util.concurrent.TimeUnit
 object GoalLogic {
 
     val goals = MutableLiveData<Optional<MutableList<Goal>>>()
-
-//    fun loadGoals() {
-//        DatabaseRead.goals().observeOn(AndroidSchedulers.mainThread()).subscribe {
-//            val goals = it.toSome()
-//            formatGoals(goals)
-//        }
-//    }
 
     fun loadGoals() {
         combineLatest(DatabaseRead.goals(), DatabaseRead.lastMonth(), {
@@ -54,7 +47,6 @@ object GoalLogic {
             goals
         }).observeOn(AndroidSchedulers.mainThread()).subscribe {
             GoalLogic.goals.value = it
-            ld("WATAFAKA is : ${it.toNullable()?.size}")
         }
 
     }
@@ -105,7 +97,55 @@ object GoalLogic {
 
     }
 
-    fun formatMetricGoal(goalData: GoalData, days: List<TodayItem>): Goal {
+    fun formatSummaryGoalText(type: Type, value: Float, recurrence: Recurrence): String {
+        val value = value.toString()
+        val recurrenceText =
+                when (recurrence) {
+                    Recurrence.DAILY -> app().getString(R.string.recurrence_day)
+                    Recurrence.WEEKLY -> app().getString(R.string.recurrence_week)
+                    Recurrence.MONTHLY -> app().getString(R.string.recurrence_month)
+                    else -> {"ERROR"}
+                }
+        return when (type) {
+            Type.STEPS -> app().getString(R.string.add_goal_metric_steps, value, recurrenceText)
+            Type.ACTIVE -> app().getString(R.string.add_goal_metric_active, value, recurrenceText)
+            Type.CALORIES -> app().getString(R.string.add_goal_metric_calories, value, recurrenceText)
+            Type.DISTANCE -> app().getString(R.string.add_goal_metric_distance, value, recurrenceText)
+        }
+    }
+
+    fun formatGoalRating(goalRating: Rating): String {
+        return when (goalRating) {
+            Rating.EASY -> app().getString(R.string.rating_easy)
+            Rating.GOOD -> app().getString(R.string.rating_good)
+            Rating.DIFFICULT -> app().getString(R.string.rating_difficult)
+            Rating.INSANE -> app().getString(R.string.rating_insane)
+        }
+    }
+
+    fun calculateTargetValueFromPercentage(averageValues: List<Float>?, targetSelectorPercentage: Int): Float {
+        val monthlyAverage = averageValues!![2]// TODO Fix !!
+        val minimumGoalValue = 0.7 * monthlyAverage
+        val maximumGoalValue = 2 * monthlyAverage
+        val targetValueSpectrum = maximumGoalValue - minimumGoalValue
+        val targetValue = (targetValueSpectrum * (0.01 * targetSelectorPercentage)) + minimumGoalValue
+        return targetValue.toFloat()
+    }
+
+    fun calculateGoalRating(averageValues: List<Float>?, targetValue: Float): Rating {
+        val monthlyAverage = averageValues!![2] // TODO Fix !!
+        return if (targetValue <= monthlyAverage) {
+            Rating.EASY
+        } else if (monthlyAverage < targetValue && monthlyAverage * 1.5 >= targetValue) {
+            Rating.GOOD
+        } else if (monthlyAverage * 1.5 < targetValue && monthlyAverage * 1.8 >= targetValue) {
+            Rating.DIFFICULT
+        } else {
+            Rating.INSANE
+        }
+    }
+
+    private fun formatMetricGoal(goalData: GoalData, days: List<TodayItem>): Goal {
         val goal = Goal()
         val targetValue = goalData.metricObjective?.value ?: 0.0
         goal.targetValue = targetValue
@@ -141,49 +181,9 @@ object GoalLogic {
         goal.percentage = progressPercentage
         goal.currentValue = progressPercentage * targetValue
         return goal
-
     }
 
-//    fun formatFrequencyGoal(goalData: GoalData, days: List<TodayItem>) {
-//        val goal = Goal()
-//        val targetValue = (goalData.frequencyObjective?.frequency ?: 0).toDouble()
-//        goal.targetValue = targetValue
-//        val goalSubject = when (goalData.frequencyObjective?.dataTypeName) {
-//            "com.google.step_count.delta" -> GoalSubject.STEPS
-//            "com.google.distance.delta" -> GoalSubject.DISTANCE
-//            "com.google.calories.expended" -> GoalSubject.CALORIES
-//            else -> GoalSubject.CALORIES // It may not happen
-//        }
-//        var progressPercentage: Double? = null
-//        var goalTitlePeriod: String? = null
-//        when (goalData.recurrence) {
-//            GoalData.GoalRecurrence.DAILY -> {
-//                progressPercentage = calculateGoalProgress(days.take(1), goalSubject, targetValue)
-//                goalTitlePeriod = app().getString(R.string.recurrence_day)
-//            }
-//            GoalData.GoalRecurrence.WEEKLY -> {
-//                progressPercentage = calculateGoalProgress(days.take(7), goalSubject, targetValue)
-//                goalTitlePeriod = app().getString(R.string.recurrence_week)
-//            }
-//            GoalData.GoalRecurrence.MONTHLY -> {
-//                progressPercentage = calculateGoalProgress(days.take(30), goalSubject, targetValue)
-//                goalTitlePeriod = app().getString(R.string.recurrence_month)
-//            }
-//        }
-//        val goalName = when (goalData.metricObjective?.dataTypeName) {
-//            "com.google.step_count.delta" -> app().getString(R.string.goal_metric_steps, targetValue.toString(), goalTitlePeriod)
-//            "com.google.distance.delta" -> app().getString(R.string.goal_metric_distance, targetValue.toString(), goalTitlePeriod)
-//            "com.google.calories.expended" -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod)
-//            else -> app().getString(R.string.goal_metric_calories, targetValue.toString(), goalTitlePeriod) // It may not happen
-//        }
-//        goal.name = goalName
-//        goal.percentage = progressPercentage
-//        goal.currentValue = progressPercentage * targetValue
-//
-//    }
-
-
-    fun calculateGoalProgress(daysOfWeek: List<TodayItem>, goalSubject: GoalSubject, targetValue: Double): Double {
+    private fun calculateGoalProgress(daysOfWeek: List<TodayItem>, goalSubject: GoalSubject, targetValue: Double): Double {
         val overallValue = when (goalSubject) {
             GoalSubject.CALORIES -> daysOfWeek.sumByDouble { it.calories.toDouble() }
             GoalSubject.DISTANCE -> daysOfWeek.sumByDouble { it.distance.toDouble() }
@@ -191,54 +191,6 @@ object GoalLogic {
         }
         val percentageProgess: Double = overallValue / (targetValue / 100)
         return percentageProgess
-    }
-
-    fun formatSummaryGoalText(type: Type, value: Float, recurrence: Recurrence): String {
-        val value = value.toString()
-        val recurrenceText =
-                when (recurrence) {
-                    Recurrence.DAILY -> app().getString(R.string.recurrence_day)
-                    Recurrence.WEEKLY -> app().getString(R.string.recurrence_week)
-                    Recurrence.MONTHLY -> app().getString(R.string.recurrence_month)
-                    else -> {"ERROR"}
-                }
-        return when (type) {
-            Type.STEPS -> app().getString(R.string.add_goal_metric_steps, value, recurrenceText)
-            Type.ACTIVE -> app().getString(R.string.add_goal_metric_active, value, recurrenceText)
-            Type.CALORIES -> app().getString(R.string.add_goal_metric_calories, value, recurrenceText)
-            Type.DISTANCE -> app().getString(R.string.add_goal_metric_distance, value, recurrenceText)
-        }
-    }
-
-    fun formatGoalRating(goalRating: Rating): String {
-        return when (goalRating) {
-            Rating.EASY -> app().getString(R.string.rating_easy)
-            Rating.GOOD -> app().getString(R.string.rating_good)
-            Rating.DIFFICULT -> app().getString(R.string.rating_difficult)
-            Rating.INSANE -> app().getString(R.string.rating_insane)
-        }
-    }
-
-    fun calculateTargetValueFromPercentage(averageValues: List<Float>?, targetSelectorPercentage: Int): Float {
-        val monthlyAverage = averageValues!!.get(2) // TODO Fix later
-        val minimumGoalValue = 0.7 * monthlyAverage
-        val maximumGoalValue = 2 * monthlyAverage
-        val targetValueSpectrum = maximumGoalValue - minimumGoalValue
-        val targetValue = (targetValueSpectrum * (0.01 * targetSelectorPercentage)) + minimumGoalValue
-        return targetValue.toFloat()
-    }
-
-    fun calculateGoalRating(averageValues: List<Float>?, targetValue: Float): Rating {
-        val monthlyAverage = averageValues!!.get(2) // TODO Fix later
-        return if (targetValue <= monthlyAverage) {
-            Rating.EASY
-        } else if (monthlyAverage < targetValue && monthlyAverage * 1.5 >= targetValue) {
-            Rating.GOOD
-        } else if (monthlyAverage * 1.5 < targetValue && monthlyAverage * 1.8 >= targetValue) {
-            Rating.DIFFICULT
-        } else {
-            Rating.INSANE
-        }
     }
 }
 

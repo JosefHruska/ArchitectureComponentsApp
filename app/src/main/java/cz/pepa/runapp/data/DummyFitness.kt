@@ -8,6 +8,4 @@ import java.math.BigDecimal
  * @author Josef Hruška (josef@stepuplabs.io)
  */
 
-data class DummyFittnes(var name: String, var activityType: String, var steps: Int) {
-
-}
+data class DummyFitness(var name: String, var activityType: String, var steps: Int)

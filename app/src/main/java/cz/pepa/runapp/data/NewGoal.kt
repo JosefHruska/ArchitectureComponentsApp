@@ -9,7 +9,6 @@ import cz.pepa.runapp.ui.main.goal.Target
  */
 
 class NewGoal() {
-
     var type: Type = Type.DISTANCE
     var target: Target = Target(0F, FitnessUnit.KCAL )
     var recurrence: Recurrence = Recurrence.DAILY

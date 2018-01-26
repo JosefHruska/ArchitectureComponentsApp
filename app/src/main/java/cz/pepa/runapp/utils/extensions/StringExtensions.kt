@@ -13,7 +13,7 @@ import cz.pepa.runapp.data.GoalId
 /**
  * Utils related to string manipulation.
  *
- * @author David Vávra (david@stepuplabs.io)
+ *  @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun Int.toPlural(number: Int): String {

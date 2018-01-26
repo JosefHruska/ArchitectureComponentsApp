@@ -3,7 +3,7 @@ package cz.pepa.runapp.ui.main.group
 import cz.pepa.runapp.ui.base.BaseController
 
 /**
- * // TODO: Add description
+ * Controller for [GroupTabFragment]
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

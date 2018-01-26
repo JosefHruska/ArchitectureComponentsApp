@@ -3,7 +3,7 @@ package cz.pepa.runapp.ui.main.group
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import cz.pepa.runapp.R
-import cz.pepa.runapp.data.DummyFittnes
+import cz.pepa.runapp.data.DummyFitness
 import cz.pepa.runapp.ui.base.BaseFragment
 import cz.pepa.runapp.ui.common.RecyclerAdapter
 import kotlinx.android.synthetic.main.fragment_tab.*
@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
 
     private var mGroupDataListener: ((GroupTabData) -> Unit)? = null
     private var mGroupColor = 0
-    lateinit var mMembersAdapter: RecyclerAdapter<DummyFittnes>
+    lateinit var mMembersAdapter: RecyclerAdapter<DummyFitness>
 
     override fun getContentResId(): Int {
         return R.layout.fragment_tab
@@ -58,7 +58,7 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
 //    }
 
     private fun subscribeMembers() {
-        val membersObserver = Observer<List<DummyFittnes>> {
+        val membersObserver = Observer<List<DummyFitness>> {
             if (it != null) {
                 mMembersAdapter.setData(it, MembersBinder())
             }
@@ -79,9 +79,9 @@ import kotlinx.android.synthetic.main.include_members_card.view.*
     private fun setupMembersCard() {
         vMembers.vRecycler.isNestedScrollingEnabled = false
         vMembers.vTitle.text = getString(R.string.members)
-        mMembersAdapter = RecyclerAdapter<DummyFittnes>(R.layout.item_member)
+        mMembersAdapter = RecyclerAdapter<DummyFitness>(R.layout.item_member)
         vMembers.vRecycler.adapter = mMembersAdapter
     }
 }
 
-data class GroupTabData(val debts: List<DummyFittnes>, val groupId: String)
+data class GroupTabData(val debts: List<DummyFitness>, val groupId: String)

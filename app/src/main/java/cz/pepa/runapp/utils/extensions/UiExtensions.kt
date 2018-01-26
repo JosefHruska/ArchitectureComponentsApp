@@ -45,7 +45,7 @@ import org.jetbrains.anko.*
 /**
  * UI-related extensions.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun View.snackbar(message: CharSequence, duration: Int = Snackbar.LENGTH_INDEFINITE, actionText: String? = null, action: (() -> Unit)? = null) {
@@ -58,25 +58,6 @@ fun View.snackbar(message: CharSequence, duration: Int = Snackbar.LENGTH_INDEFIN
     }
     snackbar.show()
 }
-//
-//fun BaseActivity.showConfirmationDialog(@StringRes messageRes: Int, @StringRes titleRes: Int, @StringRes positiveButtonRes: Int? = null, @StringRes negativeButtonRes: Int? = null, positiveClicked: (() -> (Unit))? = null, negativeClicked: (() -> (Unit))? = null) {
-//    alert(messageRes.toText(), titleRes.toText()) {
-//        positiveButtonRes?.let { positiveButton(it.toText()) { positiveClicked?.invoke() } }
-//        negativeButtonRes?.let { negativeButton(it.toText()) { negativeClicked?.invoke() } }
-//    }.show()
-//}
-
-//fun View.ownerOnlySnackBar(ownerName: String) {
-//    this.snackbar(R.string.owner_only_warning.toText(ownerName), Snackbar.LENGTH_LONG)
-//}
-//
-//fun View.errorSnackbar(error: Throwable) {
-//    snackbar(R.string.something_went_wrong.toText(), actionText = R.string.report.toText(), action = { context.sendErrorEmail(error) })
-//}
-
-//fun BaseActivity.warning(@StringRes warningRes: Int) {
-//    this.getContentView().snackbar(warningRes.toText(), Snackbar.LENGTH_LONG)
-//}
 
 fun View.popupMenuOnClick(menuRes: Int, onClick: (Int) -> Unit) {
     this.setOnClickListener {
@@ -168,12 +149,6 @@ fun View.setBackgroundColorWithRipple(backgroundColor: Int) {
     val rippleBackground = LayerDrawable(arrayOf(ColorDrawable(backgroundColor), getDrawableCompat(R.drawable.ripple_background)))
     this.background = rippleBackground
 }
-
-//// FinishButton has AppCompatButton wrapped to FrameLayout. We need to apply background to AppCompatButton.
-//fun FinishButton.setBackgroundColorWithRipple(backgroundColor: Int) {
-//    val rippleBackground = LayerDrawable(arrayOf(ColorDrawable(backgroundColor), getDrawableCompat(R.drawable.ripple_background)))
-//    this.setButtonBackground(rippleBackground)
-//}
 
 fun getActionbarSize(): Int {
     val tv = TypedValue()

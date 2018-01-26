@@ -20,7 +20,7 @@ import io.stepuplabs.settleup.util.extensions.toColor
 /**
  * Generates avatars for members.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun ImageView.loadAvatar(members: List<Member>) {

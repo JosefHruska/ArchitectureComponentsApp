@@ -1,11 +1,10 @@
 package cz.pepa.runapp.ui.main.goal
 
-import cz.pepa.runapp.data.Rating
 import cz.pepa.runapp.data.Type
 import cz.pepa.runapp.ui.base.BaseController
 
 /**
- * // TODO: Add description
+ * Controller for [AddGoalActivity]
  *
  * @author Josef Hruška (josef@stepuplabs.io)
  */

@@ -9,7 +9,7 @@ import java.text.NumberFormat
 /**
  * Extensions for formatting numbers.
  *
- * @author David Vávra (david@stepuplabs.io)
+ * @author Josef Hruška (josef@stepuplabs.io)
  */
 
 fun BigDecimal.formatNumber(formatter: NumberFormat): String {
